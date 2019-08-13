@@ -1,0 +1,144 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'page:page-home' %}">
+            <img src="{% static 'assets/images/pcj-logo-full-en.jpg' %}" class="navbar-brand-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Fire Steel Doors & Non-Fire Steel Doors</a>
+                        <a class="dropdown-item" href="#">Fire Dampers</a>
+                        <a class="dropdown-item" href="#">Other Dampers</a>
+                        <a class="dropdown-item" href="#">Duct Silencers & Acoustic Louvers</a>
+                        <a class="dropdown-item" href="#">Air Outlets</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Career</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">EN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TH</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<!-- <nav class="navbar navbar-custom navbar-default navbar-static-top yamm">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <% var logoLang = req.getLocale()=="en"?"pcj-logo-full-en.jpg":"pcj-logo-full-th.jpg";%>
+                <img class="hidden-md hidden-sm hidden-xs company-brand" src="/images/<%=logoLang%>" alt="<%=__('pcj-industries')%>">
+                <img class="visible-md visible-sm visible-xs company-brand" src="/images/pcj-logo.jpg" alt="<%=__('pcj')%>">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav-custom navbar-nav navbar-right">
+                <li><a href="<%=sails.getUrlFor('HomeController.about')%>"><%=__("about")%></a></li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=__("products")%> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="row-flex" id="dropdown-menu-container">
+                                    <div class="col-md-2 col-sm-4 col-xs-6 tag-container category">
+                                        <a href="<%= sails.getUrlFor('ProductController.fsd') %>" class="catg-button">
+                                            <div class="img-frame"><img src="/images/fire_doors.jpg"></div>
+                                            <div class="catg-label"><%-__("fire-steel-doors")%></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6 tag-container category">
+                                        <a href="<%= sails.getUrlFor('ProductController.fd') %>" class="catg-button">
+                                            <div class="img-frame"><img src="/images/fire_dampers.jpg"></div>
+                                            <div class="catg-label"><%=__("fire-dampers")%></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6 tag-container category">
+                                        <a href="<%= sails.getUrlFor('ProductController.fsdul') %>" class="catg-button">
+                                            <div class="img-frame"><img src="/images/fsd_ul.jpg"></div>
+                                            <div class="catg-label"><%=__("fsd-ul")%></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6 tag-container category">
+                                        <a href="<%= sails.getUrlFor('ProductController.dd') %>" class="catg-button">
+                                            <div class="img-frame"><img src="/images/duct_dampers.jpg"></div>
+                                            <div class="catg-label"><%=__("duct-dampers")%></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6 tag-container category">
+                                        <a href="<%= sails.getUrlFor('ProductController.ds') %>" class="catg-button">
+                                            <div class="img-frame"><img src="/images/duct_silencers.jpg"></div>
+                                            <div class="catg-label"><%-__("duct-silencers-br")%></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6 tag-container category">
+                                        <a href="<%= sails.getUrlFor('ProductController.ao') %>" class="catg-button">
+                                            <div class="img-frame"><img src="/images/air_outlets.jpg"></div>
+                                            <div class="catg-label"><%=__("air-outlets")%></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="<%= sails.getUrlFor('ProjectController.view') %>"><%=__("projects")%></a></li>
+                <li><a href="<%= sails.getUrlFor('NewsController.viewList') %>"><%=__("news")%></a></li>
+                <li><a href="<%=sails.getUrlFor('HomeController.contact')%>"><%=__("contact")%></a></li>
+                <li><a href="<%=sails.getUrlFor('HomeController.careers')%>"><%=__("careers")%></a></li>
+                <li><a href="#" class="icon-lang" data-lang="en" rel="nofollow"><img src="/images/flag_en.png" alt="english"></a></li>
+                <li><a href="#" class="icon-lang" data-lang="th" rel="nofollow"><img src="/images/flag_th.png" alt="thai"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script type="text/javascript">
+    $("a.icon-lang").click(function(e) {
+        e.preventDefault();
+
+        var lang = $(e.currentTarget).data("lang");
+        $.get("<%=sails.getUrlFor('HomeController.apiSetLang')%>"+"?lang="+lang, function(data) {
+            location.reload();
+        });
+    });
+</script>
+ -->

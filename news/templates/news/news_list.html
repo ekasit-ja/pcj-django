@@ -1,0 +1,6 @@
+{% for instance in object_list %}
+    <p>
+        {{ instance.title_en|safe }}<br>
+        {{ instance.content_en|safe }}<br>
+    </p>
+{% endfor %}
