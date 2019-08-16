@@ -2,11 +2,14 @@
 
 <nav class="yamm navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <!-- <a class="navbar-brand" href="{% url 'page:page-home' %}">
-            <img src="{% static 'assets/images/pcj-logo-full-en.jpg' %}" class="navbar-brand-img">
-        </a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="{% url 'page:page-home' %}">
+            <img src="{% static 'assets/images/pcj-logo-full-en.jpg' %}" class="navbar-brand-img d-none d-lg-block">
+            <img src="{% static 'assets/images/pcj-logo.jpg' %}" class="navbar-brand-img d-lg-none">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
         </button>
         <div id="navbarNavDropdown" class="navbar-collapse collapse">
             <ul class="navbar-nav mr-auto">
@@ -15,25 +18,33 @@
                 {% for navbar_item in navbar_items %}
                     {% if navbar_item.0 == 'products' %}
                         <li class="nav-item dropdown yamm-fw">
-                            <a class="nav-link text-dark dropdown-toggle" href="{{navbar_item.1}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              {{navbar_item.0}}
+                            <a class="nav-link text-dark text-uppercase dropdown-toggle" href="{{navbar_item.1}}" data-toggle="dropdown">
+                                {{navbar_item.0}}
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu collapse" id="collapseDropdown">
                                 <div class="row">
                                     {% for dropdown_item in navbar_dropdown_items %}
                                         <div class="col-md-2 col-sm-4 col-xs-6">
-                                            <a class="a-thumbnail" href="{{dropdown_item.1}}">
-                                                <img class="img-thumbnail" src="{% static dropdown_item.2 %}">
-                                                <div class="dropdown-menu-label">{{dropdown_item.0}}</div>
+                                            <a class="dropdown-img" href="{{dropdown_item.1}}">
+                                                <div class="dropdown-img-frame">
+                                                    <img src="{% static dropdown_item.2 %}">
+                                                </div>
+                                                <div class="dropdown-img-label">{{dropdown_item.0}}</div>
                                             </a>
                                         </div>
                                     {% endfor %}
                                 </div>
                             </div>
                         </li>
+                    {% elif navbar_item.0 in 'en,th' %}
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-uppercase" href="{{navbar_item.1}}" style="margin: -2px;">
+                                <img src="{% static navbar_item.2 %}">
+                            </a>
+                        </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="{{navbar_item.1}}">{{navbar_item.0}}</a>
+                            <a class="nav-link text-dark text-uppercase" href="{{navbar_item.1}}">{{navbar_item.0}}</a>
                         </li>
                     {% endif %}
                 {% endfor %}

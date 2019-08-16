@@ -1,7 +1,29 @@
-.navbar-brand-img {
-    height: 60px;
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
 }
 
+.navbar {
+    padding: 0.25rem 1rem;
+
+    .navbar-brand {
+        padding: 0px;
+
+        .navbar-brand-img {
+            max-height: 55px;
+        }
+    }
+
+    .nav-item {
+        margin: 0px 2px;
+    }
+}
+
+// .bg-light {
+//     background-color: white !important;
+// }
+
+// css for navbar
 .yamm {
     .yamm-fw {
         .dropdown-menu {
@@ -14,19 +36,26 @@
                     padding-left: 5px;
                     padding-right: 5px;
                     display: flex;
-                    flex-direction: column;
 
-                    .a-thumbnail {
+                    .dropdown-img {
                         display: flex;
                         flex-direction: column;
                         flex-grow: 1;
                     }
 
-                    .img-thumbnail {
-                        border: 0px;
+                    .dropdown-img-frame {
+                        position:relative;
+                        overflow:hidden;
+                        padding-bottom:100%;
+
+                        img {
+                            position: absolute;
+                            max-width: 100%;
+                            height: auto;
+                        }
                     }
 
-                    .dropdown-menu-label {
+                    .dropdown-img-label {
                         background-color: rgba(204,0,0,.9);
                         color: white;
                         font-weight: bold;
@@ -40,7 +69,43 @@
         }
     }
 }
+// --- css for navbar
 
-// .bg-light {
-//     background-color: white !important;
-// }
+// animation for menu button on navbar
+.navbar-toggler {
+    outline: none !important;
+    border: none !important;
+
+    .icon-bar {
+        display: block;
+        height: 2px;
+        width: 22px;
+        transition: all 0.2s;
+        background-color: rgba(204,0,0,.9);
+        margin-top: 4px;
+    }
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+    .middle-bar {
+        opacity: 0;
+    }
+    .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+
+    &.collapsed {
+        .top-bar {
+            transform: rotate(0);
+        }
+        .middle-bar {
+            opacity: 1;
+        }
+        .bottom-bar {
+            transform: rotate(0);
+        }
+    }
+}
+// --- animation for menu button on navbar
