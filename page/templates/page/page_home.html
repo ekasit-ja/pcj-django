@@ -16,13 +16,30 @@
             {% endfor %}
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+            <i class="fas fa-chevron-left fa-2x"></i>
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
+            <i class="fas fa-chevron-right fa-2x"></i>
         </a>
     </div>
 
     <div class="container">
+        <br>
+
+        {% if news_queryset %}
+            <h3 class="text-center">{% trans 'news' %}</h3>
+            <div class="row">
+                {% for news_query in news_queryset %}
+                    <div class="col-sm-6">
+                        {{news_query.title_en|truncatechars:100}}<br>
+                        {{news_query.content_en|truncatechars:250|safe}}<br>
+                        {{news_query.firstNewsImage}}<br>
+                    </div>
+                {% endfor %}
+            </div>
+            <hr>
+        {% endif %}
+
+        <h3 class="text-center">{% trans 'products' %}</h3>
     </div>
 {% endblock content %}

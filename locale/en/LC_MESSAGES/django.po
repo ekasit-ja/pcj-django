@@ -19,5 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/navbar.html:3
-msgid "hello123"
-msgstr " hello en 987"
+msgid "about"
+msgstr "about"
+
+msgid "products"
+msgstr "products"
+
+msgid "projects"
+msgstr "projects"
+
+msgid "news"
+msgstr "news"
+
+msgid "contact"
+msgstr "contact"
+
+msgid "career"
+msgstr "career"
+
+msgid "frd-&-non-frd"
+msgstr "Fire Steel Doors & Non-Fire Steel Doors"
+
+msgid "fdc"
+msgstr "Fire Dampers"
+
+msgid "fsd-ul"
+msgstr "Combination of Fire & Smoke Dampers"
+
+msgid "ddp"
+msgstr "Other Dampers"
+
+msgid "ds"
+msgstr "Duct Silencers & Acoustic Louvers"
+
+msgid "aol"
+msgstr "Air Outlets"

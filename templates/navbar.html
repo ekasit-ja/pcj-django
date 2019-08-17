@@ -29,7 +29,7 @@
                                                 <div class="dropdown-img-frame">
                                                     <img src="{% static dropdown_item.2 %}">
                                                 </div>
-                                                <div class="dropdown-img-label">{{dropdown_item.0}}</div>
+                                                <div class="dropdown-img-label">{% trans dropdown_item.0|safe %}</div>
                                             </a>
                                         </div>
                                     {% endfor %}

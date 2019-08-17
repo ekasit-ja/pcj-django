@@ -19,11 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: templates/navbar.html:3
-msgid "hello123"
-msgstr "สวัสดี 123"
-
-msgid "projects"
-msgstr "โปรเจค"
-
 msgid "about"
 msgstr "เกี่ยวกับเรา"
+
+msgid "products"
+msgstr "สินค้า"
+
+msgid "projects"
+msgstr "ผลงาน"
+
+msgid "news"
+msgstr "ข่าวสาร"
+
+msgid "contact"
+msgstr "ติดต่อเรา"
+
+msgid "career"
+msgstr "ร่วมงานกับเรา"
+
+msgid "frd-&-non-frd"
+msgstr "ประตูเหล็กทนไฟ และ <br>ประตูเหล็กไม่ทนไฟ"
+
+msgid "fdc"
+msgstr "แดมเปอร์ทนไฟ"
+
+msgid "fsd-ul"
+msgstr "ไฟร์และสโมคแดมเปอร์"
+
+msgid "ddp"
+msgstr "แดมเปอร์อื่นๆ"
+
+msgid "ds"
+msgstr "ดักท์ไซเลนเซอร์ และ <br>อคูสติกลูเวอร์"
+
+msgid "aol"
+msgstr "หน้ากากแอร์"

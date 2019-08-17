@@ -1,6 +1,23 @@
-body {
+html {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px; }
+
+.carousel .w-100 {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.carousel [class^="carousel-control-"] i {
+  text-shadow: -1px 0 #999, 0 1px #999, 1px 0 #999, 0 -1px #999; }
+
+.carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  border-top: 0;
+  border-bottom: 0;
+  margin: 0 10px;
+  box-shadow: -1px 0 #999, 0 1px #999, 1px 0 #999, 0 -1px #999; }
 
 .navbar {
   padding: 0.25rem 1rem; }
@@ -32,13 +49,14 @@ body {
           max-width: 100%;
           height: auto; }
       .yamm .yamm-fw .dropdown-menu .row div[class^="col-"] .dropdown-img-label {
-        background-color: rgba(204, 0, 0, 0.9);
+        background-color: #d11919;
         color: white;
         font-weight: bold;
         font-style: italic;
         text-transform: uppercase;
         text-align: center;
-        flex-grow: 1; }
+        flex-grow: 1;
+        padding: 5px 3px; }
 
 .navbar-toggler {
   outline: none !important;
@@ -48,7 +66,7 @@ body {
     height: 2px;
     width: 22px;
     transition: all 0.2s;
-    background-color: rgba(204, 0, 0, 0.9);
+    background-color: #d11919;
     margin-top: 4px; }
   .navbar-toggler .top-bar {
     transform: rotate(45deg);

@@ -32,12 +32,12 @@ def default_context(request):
             ('th', '/th' + request.get_full_path()[3:], 'assets/images/flag_th.png'),
         ],
         'navbar_dropdown_items': [
-            ('Fire Steel Doors & Non-Fire Steel Doors', reverse('page:page-home'), 'assets/images/fire_doors.jpg'),
-            ('Fire Dampers', reverse('page:page-home'), 'assets/images/fire_dampers.jpg'),
-            ('Combination of Fire & Smoke Dampers', reverse('page:page-home'), 'assets/images/fsd_ul.jpg'),
-            ('Other Dampers', reverse('page:page-home'), 'assets/images/duct_dampers.jpg'),
-            ('Duct Silencers & Acoustic Louvers', reverse('page:page-home'), 'assets/images/duct_silencers.jpg'),
-            ('Air Outlets', reverse('page:page-home'), 'assets/images/air_outlets.jpg'),
+            ('frd-&-non-frd', reverse('page:page-home'), 'assets/images/fire_doors.jpg'),
+            ('fdc', reverse('page:page-home'), 'assets/images/fire_dampers.jpg'),
+            ('fsd-ul', reverse('page:page-home'), 'assets/images/fsd_ul.jpg'),
+            ('ddp', reverse('page:page-home'), 'assets/images/duct_dampers.jpg'),
+            ('ds', reverse('page:page-home'), 'assets/images/duct_silencers.jpg'),
+            ('aol', reverse('page:page-home'), 'assets/images/air_outlets.jpg'),
         ],
         'LANG': get_language(),
     }
