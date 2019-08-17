@@ -1,9 +1,9 @@
-{% load static %}
+{% load static i18n %}
 
 <nav class="yamm navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{% url 'page:page-home' %}">
-            <img src="{% static 'assets/images/pcj-logo-full-en.jpg' %}" class="navbar-brand-img d-none d-lg-block">
+            <img src="{% static 'assets/images/pcj-logo-full-'|add:LANG|add:'.jpg' %}" class="navbar-brand-img d-none d-lg-block">
             <img src="{% static 'assets/images/pcj-logo.jpg' %}" class="navbar-brand-img d-lg-none">
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
@@ -19,7 +19,7 @@
                     {% if navbar_item.0 == 'products' %}
                         <li class="nav-item dropdown yamm-fw">
                             <a class="nav-link text-dark text-uppercase dropdown-toggle" href="{{navbar_item.1}}" data-toggle="dropdown">
-                                {{navbar_item.0}}
+                                {% trans navbar_item.0 %}
                             </a>
                             <div class="dropdown-menu collapse" id="collapseDropdown">
                                 <div class="row">
@@ -44,7 +44,7 @@
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link text-dark text-uppercase" href="{{navbar_item.1}}">{{navbar_item.0}}</a>
+                            <a class="nav-link text-dark text-uppercase" href="{{navbar_item.1}}">{% trans navbar_item.0 %}</a>
                         </li>
                     {% endif %}
                 {% endfor %}

@@ -1,6 +1,14 @@
+{% load i18n %}
+{% get_current_language as LANG %}
+
 {% for instance in object_list %}
     <p>
-        {{ instance.title_en|safe }}<br>
-        {{ instance.content_en|safe }}<br>
+        {% if LANG == 'en' %}
+            {{ instance.title_en|safe }}<br>
+            {{ instance.content_en|safe }}<br>
+        {% else %}
+            {{ instance.title_th|safe }}<br>
+            {{ instance.content_th|safe }}<br>
+        {% endif %}
     </p>
 {% endfor %}

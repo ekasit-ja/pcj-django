@@ -1,4 +1,6 @@
 from django.urls import reverse
+from django.utils.translation import get_language
+
 
 CONSTANTS = {
     'product_choices': [
@@ -26,8 +28,8 @@ def default_context(request):
             ('news', reverse('page:page-home')),
             ('contact', reverse('page:page-home')),
             ('career', reverse('page:page-home')),
-            ('en', reverse('page:page-home'), 'assets/images/flag_en.png'),
-            ('th', reverse('page:page-home'), 'assets/images/flag_th.png'),
+            ('en', '/en' + request.get_full_path()[3:], 'assets/images/flag_en.png'),
+            ('th', '/th' + request.get_full_path()[3:], 'assets/images/flag_th.png'),
         ],
         'navbar_dropdown_items': [
             ('Fire Steel Doors & Non-Fire Steel Doors', reverse('page:page-home'), 'assets/images/fire_doors.jpg'),
@@ -37,4 +39,5 @@ def default_context(request):
             ('Duct Silencers & Acoustic Louvers', reverse('page:page-home'), 'assets/images/duct_silencers.jpg'),
             ('Air Outlets', reverse('page:page-home'), 'assets/images/air_outlets.jpg'),
         ],
+        'LANG': get_language(),
     }
