@@ -28,12 +28,18 @@
 
         {% if news_queryset %}
             <h3 class="text-center">{% trans 'news' %}</h3>
-            <div class="row">
+            <div class="row justify-content-center">
                 {% for news_query in news_queryset %}
-                    <div class="col-sm-6">
-                        {{news_query.title_en|truncatechars:100}}<br>
-                        {{news_query.content_en|truncatechars:250|safe}}<br>
-                        {{news_query.firstNewsImage}}<br>
+                    <div class="col-md-6 col-card">
+                        <a href="#" class="card box-shadow text-dark">
+                            <div class="card-body">
+                                <div class="card-img h45" style="background-image:url('{{news_query.firstNewsImage}}')"></div>
+                                <div class="card-text">
+                                    <h5>{{news_query.title_en|truncatechars:100}}</h5>
+                                    <span>{{news_query.content_en|striptags|truncatechars:220}}</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 {% endfor %}
             </div>

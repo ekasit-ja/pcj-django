@@ -24,12 +24,18 @@
                             <div class="dropdown-menu collapse" id="collapseDropdown">
                                 <div class="row">
                                     {% for dropdown_item in navbar_dropdown_items %}
-                                        <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <!-- <div class="col-md-2 col-sm-4 col-xs-6">
                                             <a class="dropdown-img" href="{{dropdown_item.1}}">
                                                 <div class="dropdown-img-frame">
                                                     <img src="{% static dropdown_item.2 %}">
                                                 </div>
                                                 <div class="dropdown-img-label">{% trans dropdown_item.0|safe %}</div>
+                                            </a>
+                                        </div> -->
+                                        <div class="col-md-2 col-sm-4 col-xs-6 col-card">
+                                            <a class="card card-nav" href="{{dropdown_item.1}}">
+                                                <div class="card-img sq" style="background-image:url('{% static dropdown_item.2 %}')"></div>
+                                                <div class="card-text">{% trans dropdown_item.0|safe %}</div>
                                             </a>
                                         </div>
                                     {% endfor %}

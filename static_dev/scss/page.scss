@@ -1,10 +1,65 @@
-$black: #333;
-$grey: #999;
-$red: #d11919;
+$black: rgb(51,51,51);
+$grey: rgb(153,153,153);
+$red: rgb(209,25,25);
 
 html {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif ;
     font-size: 14px;
+}
+
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba($black, .05);
+    transition: all .25s linear;
+}
+
+.box-shadow:hover {
+    box-shadow: 0 0.25rem 0.75rem rgba($red, .25);
+}
+
+.col-card {
+    display: flex;
+
+    .card {
+        width: 100%;
+        margin-bottom: 0.5em;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .card-img {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &.h45 {
+            padding-bottom: 45%;
+        }
+
+        &.sq {
+            padding-bottom: 100%;
+        }
+    }
+
+    .card-text {
+        padding-top: 0.5em;
+    }
+
+    .card-nav {
+        background-color: $red;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+
+        .card-text {
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0.2em;
+        }
+    }
 }
 
 // css fpr carousel
@@ -53,7 +108,7 @@ html {
 .yamm {
     .yamm-fw {
         .dropdown-menu {
-            padding: 0px 5px 5px 5px;
+            padding: 0px 5px;
 
             .row {
                 margin: 0px -5px;
