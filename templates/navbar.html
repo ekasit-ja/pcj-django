@@ -22,16 +22,7 @@
                                 {% trans navbar_item.0 %}
                             </a>
                             <div class="dropdown-menu collapse" id="collapseDropdown">
-                                <div class="row">
-                                    {% for dropdown_item in navbar_dropdown_items %}
-                                        <div class="col-md-2 col-sm-4 col-xs-6 col-card">
-                                            <a class="card card-nav" href="{{dropdown_item.1}}">
-                                                <div class="card-img square" style="background-image:url('{% static dropdown_item.2 %}')"></div>
-                                                <div class="card-text">{% trans dropdown_item.0|safe %}</div>
-                                            </a>
-                                        </div>
-                                    {% endfor %}
-                                </div>
+                                {% include 'row_product.html' %}
                             </div>
                         </li>
                     {% elif navbar_item.0 in 'en,th' %}

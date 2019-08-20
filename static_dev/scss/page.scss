@@ -1,68 +1,130 @@
 $black: rgb(51,51,51);
 $grey: rgb(153,153,153);
 $red: rgb(209,25,25);
+$product-padding: 0.5em;
+$project-padding: 1em;
+$news-padding: 1em;
 
 html {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif ;
     font-size: 14px;
 }
 
-.box-shadow {
-    box-shadow: 0 0.25rem 0.75rem rgba($black, .05);
-    transition: all .25s linear;
+.btn-outline-primary {
+    color: $red;
+    border-color: $red;
+}
 
-    &:hover {
-        box-shadow: 0 0.25rem 0.75rem rgba($red, .25);
+.btn-outline-primary:hover {
+    color: white;
+    background-color: $red;
+    border-color: $red;
+}
+
+// css for footer
+.footer {
+    background-color: $red;
+    color: white;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    a {
+        color: white;
+    }
+
+    .follow-us {
+        font-size: 1.1em;
+    }
+
+    .sub-button {
+        width: 2.5em;
+        height: auto;
+        margin-left: 0.5em;
+    }
+}
+// --- css for footer
+
+// css for specific type of card
+.row-card {
+    &.news {
+        & .col-card {
+            padding-bottom: $news-padding;
+        }
+    }
+
+    &.product {
+        padding: 0 $product-padding/2;
+
+        & .col-card {
+            padding: $product-padding $product-padding/2;
+        }
+    }
+
+    &.project {
+        padding: 0 $project-padding/2;
+
+        & .col-card {
+            padding: $project-padding $project-padding/2;
+        }
     }
 }
 
-.col-card {
-    display: flex;
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 0.5em;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    .card-img {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        &.h45 {
-            padding-bottom: 45%;
-        }
-
-        &.square {
-            padding-bottom: 100%;
-        }
-    }
+.card-label {
+    border: 0;
 
     .card-text {
-        padding: 0.1em;
+        background-color: $red;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        text-align: center;
+        flex-grow: 1;
     }
+}
+// --- css for specific type of card
 
-    .card-nav {
-        border: 0;
-        margin-bottom: 0;
+// css for general card
+.row-card {
+    margin-left: 0;
+    margin-right: 0;
+    .col-card {
+        display: flex;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-shadow: 0 0.25rem 0.75rem rgba($black, .1);
+            transition: all .2s;
+
+            &:hover {
+                text-decoration: none;
+                box-shadow: 0 0.25rem 0.75rem rgba($red, .5);
+            }
+        }
+
+        .card-img {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &.h45 {
+                padding-bottom: 45%;
+            }
+
+            &.square {
+                padding-bottom: 100%;
+            }
+        }
 
         .card-text {
-            background-color: $red;
-            color: white;
-            font-weight: bold;
-            font-style: italic;
-            text-transform: uppercase;
-            text-align: center;
-            flex-grow: 1;
+            padding: 0.2em;
         }
     }
 }
+// --- css for general card
 
 // css for carousel
 .carousel {
@@ -88,7 +150,7 @@ html {
         box-shadow: -1px 0 $grey, 0 1px $grey, 1px 0 $grey, 0 -1px $grey;
     }
 }
-// --- css fpr carousel
+// --- css for carousel
 
 // css for navbar
 .navbar {
@@ -150,15 +212,5 @@ html {
 // css for dropdown menu
 .dropdown-menu {
     padding: 0;
-
-    .row {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0 0.15em;
-    }
-
-    [class^="col-"] {
-        padding: 0.3em 0.15em;
-    }
 }
 // --- css for dropdown menu

@@ -1,0 +1,34 @@
+{% load static i18n %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div>
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="icon-text">
+                        {% if LANG == 'en' %}
+                            <a href="tel:{{PHONE1_en}}">{{PHONE1_en}}</a>,&nbsp;
+                            <a href="tel:{{PHONE2_en}}">{{PHONE2_en}}</a>
+                        {% else %}
+                            <a href="tel:{{PHONE1_th}}">{{PHONE1_th}}</a>,&nbsp;
+                            <a href="tel:{{PHONE2_th}}">{{PHONE2_th}}</a>
+                        {% endif %}
+                    </span>
+                    &nbsp;
+                    <i class="fas fa-envelope"></i>&nbsp;
+                    <span class="icon-text">
+                        <a href="mailto:{{EMAIL_SALES}}">{{EMAIL_SALES}}</a>
+                    </span>
+                </div>
+                <div style="padding-top: 0.5em;">Copyright © 2002-{% now "Y" %} All Rights Reserved.</div>
+                <div>PCJ INDUSTRIES CO., LTD.</div>
+            </div>
+            <div class="col-sm-4 text-capitalize text-right">
+                <span class="follow-us">{% trans 'follow-us' %}</span>
+                <a href="{{FACEBOOK}}" target="_blank"><img src="{% static 'assets/images/sub-fb.png' %}" class="sub-button"></a>
+                <a href="{{YOUTUBE}}" target="_blank"><img src="{% static 'assets/images/sub-youtube.png' %}" class="sub-button"></a>
+            </div>
+        </div>
+    </div>
+</footer>

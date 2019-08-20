@@ -1,6 +1,6 @@
 from django.urls import reverse
 from django.utils.translation import get_language
-
+import datetime
 
 CONSTANTS = {
     'product_choices': [
@@ -40,4 +40,12 @@ def default_context(request):
             ('aol', reverse('page:page-home'), 'assets/images/air_outlets.jpg'),
         ],
         'LANG': get_language(),
+        'AGE': datetime.datetime.now().year-1998,
+        'PHONE1_en': '+66 2 279 4166',
+        'PHONE1_th': '02 279 4166',
+        'PHONE2_en': '+66 2 616 0184',
+        'PHONE2_th': '02 616 0184',
+        'EMAIL_SALES': 'sales@pcjindustries.co.th',
+        'FACEBOOK': "https://www.facebook.com/pcjindustries/",
+        'YOUTUBE': "https://www.youtube.com/channel/UCGl6i4eh4_ctQNTyeiIPssQ",
     }

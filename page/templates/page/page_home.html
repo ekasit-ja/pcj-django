@@ -27,13 +27,13 @@
         <br>
 
         {% if news_queryset %}
-            <h3 class="text-center">{% trans 'news' %}</h3>
-            <div class="row justify-content-center">
+            <h3 class="text-center text-capitalize">{% trans 'news' %}</h3>
+            <div class="row justify-content-center row-card news">
                 {% for news_query in news_queryset %}
                     <div class="col-md-6 col-card">
-                        <a href="#" class="card box-shadow text-dark">
+                        <a href="#" class="card text-dark">
                             <div class="card-body">
-                                <div class="card-img h45" style="background-image:url('{{news_query.firstNewsImage}}')"></div>
+                                <div class="card-img h45" style="background-image:url('{{news_query.firstNewsImage.image.url}}')"></div>
                                 <div class="card-text">
                                     <h5>{{news_query.title_en|truncatechars:100}}</h5>
                                     <span>{{news_query.content_en|striptags|truncatechars:220}}</span>
@@ -46,6 +46,34 @@
             <hr>
         {% endif %}
 
-        <h3 class="text-center">{% trans 'products' %}</h3>
+        <h3 class="text-center text-capitalize">{% trans 'quality-you-can-trust' %}</h3>
+        <div class="row justify-content-center">
+            <p class="col-md-8 text-justify">
+                {% trans 'quality-you-can-trust-content-1' %} {{AGE}} {% trans 'quality-you-can-trust-content-2' %}
+            </p>
+        </div>
+        <img src="{% static 'assets/images/certificate.jpg' %}" class="img-fluid">
+        <hr>
+
+        <h3 class="text-center text-capitalize">{% trans 'products' %}</h3>
+        {% include 'row_product.html' %}
+        <hr>
+
+        <h3 class="text-center text-capitalize">{% trans 'projects' %}</h3>
+        <div class="row row-card project">
+            {% for project_query in project_queryset %}
+                <div class="col-md-4 col-card">
+                    <a href="#" class="card card-label">
+                        <div class="card-img h45" style="background-image:url('{{project_query.image.url}}')"></div>
+                        <div class="card-text">{{project_query.title_en}}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <a href="#" class="btn btn-outline-primary text-capitalize">{% trans 'view-all-projects' %}</a>
+        </div>
+        <br>
+
     </div>
 {% endblock content %}

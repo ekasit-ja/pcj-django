@@ -54,3 +54,18 @@ msgstr "Duct Silencers & Acoustic Louvers"
 
 msgid "aol"
 msgstr "Air Outlets"
+
+msgid "quality-you-can-trust"
+msgstr "Quality you can trust"
+
+msgid "quality-you-can-trust-content-1"
+msgstr "For over"
+
+msgid "quality-you-can-trust-content-2"
+msgstr "years of experience, PCJ INDUSTRIES has delivered high quality products to all regions of Thailand and many countries around the world. We have been known throughout the construction field for high quality products and reliable services.  With leading technologies on product lines, team of professional in this field, certificates from Underwriter Laboratories, British Standards Institution, Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute, and quality management system ISO 9001:2008, you can put your trust in our products and services. Our objective is to ensure fast delivery of exceptional products to let your projects complete as planned without interruption."
+
+msgid "view-all-projects"
+msgstr "view all projects"
+
+msgid "follow-us"
+msgstr "follow us"
