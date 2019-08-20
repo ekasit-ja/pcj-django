@@ -35,12 +35,28 @@ html {
 
     .follow-us {
         font-size: 1.1em;
+        display: inline-block;
+        line-height: 1.7em;
     }
 
     .sub-button {
-        width: 2.5em;
-        height: auto;
+        display: inline-block;
+        background-color: white;
+        color: $red;
+        width: 1.8em;
+        line-height: 1.8em;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1.4em;
         margin-left: 0.5em;
+        box-sizing: contain;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $red;
+            color: white;
+            box-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+        }
     }
 }
 // --- css for footer
