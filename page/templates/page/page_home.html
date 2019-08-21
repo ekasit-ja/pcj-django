@@ -11,7 +11,7 @@
         <div class="carousel-inner">
             {% for i in '12345'|make_list %}
                 <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                    <img src="{% static 'assets/images/carousel_'|add:i|add:'_'|add:LANG|add:'.jpg' %}" class="d-block w-100">
+                    <img src="{% static 'images/carousel_'|add:i|add:'_'|add:LANG|add:'.jpg' %}" class="d-block w-100">
                 </div>
             {% endfor %}
         </div>
@@ -52,7 +52,7 @@
                 {% trans 'quality-you-can-trust-content-1' %} {{AGE}} {% trans 'quality-you-can-trust-content-2' %}
             </p>
         </div>
-        <img src="{% static 'assets/images/certificate.jpg' %}" class="img-fluid">
+        <img src="{% static 'images/certificate.jpg' %}" class="img-fluid">
         <hr>
 
         <h3 class="text-center text-capitalize">{% trans 'products' %}</h3>
