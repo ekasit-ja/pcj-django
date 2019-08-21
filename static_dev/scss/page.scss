@@ -25,6 +25,14 @@ html {
     display: inline-block;
 }
 
+.img-factory div {
+    margin-bottom: 1em;
+
+    img {
+        border-radius: 3px;
+    }
+}
+
 // css for footer
 .footer {
     background-color: $red;

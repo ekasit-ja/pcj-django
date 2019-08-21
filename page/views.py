@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from news.views import news_list
 from project.views import project_list
-
+from django.conf import settings
+import os
 
 # Create your views here.
 def page_home(request, *args, **kwargs):
@@ -14,4 +15,12 @@ def page_home(request, *args, **kwargs):
     })
 
 def page_about(request, *args, **kwargs):
-    return render(request, 'page/page_about.html')
+    path = os.path.join(settings.STATICFILES_DIRS[0], 'images', 'factory')
+    factory_images = os.listdir(path)
+    for i, img in enumerate(factory_images):
+        factory_images[i] = 'images/factory/' + img
+
+    return render(request, 'page/page_about.html' , {
+        'factory_images': factory_images,
+        }
+    )
