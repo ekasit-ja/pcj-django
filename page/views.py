@@ -24,3 +24,9 @@ def page_about(request, *args, **kwargs):
         'factory_images': factory_images,
         }
     )
+
+def page_contact(request, *args, **kwargs):
+    return render(request, 'page/page_contact.html')
+
+def page_career(request, *args, **kwargs):
+    return render(request, 'page/page_career.html')

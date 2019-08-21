@@ -87,3 +87,90 @@ msgstr "มาร่วมเป็นส่วนหนึ่งกับคร
 
 msgid "career-content-2"
 msgstr "หรือยื่นเอกสารที่สำนักงานใหญ่ของเราโดยตรงตามที่อยู่ด้านล่างนี้ เราจะทำการติดต่อกลับโดยเร็วที่สุด"
+
+msgid "contact-us"
+msgstr "ติดต่อเรา"
+
+msgid "pcj-industries-full"
+msgstr "บริษัท พีซีเจ อุตสาหกรรม จำกัด"
+
+msgid "headquarters"
+msgstr "สำนักงานใหญ่"
+
+msgid "factory"
+msgstr "โรงงาน"
+
+msgid "pcj-office-road"
+msgstr "199/24-25 ถนนวิภาวดีรังสิต"
+
+msgid "pcj-office-area"
+msgstr "แขวงสามเสนใน เขตพญาไท"
+
+msgid "pcj-office-province"
+msgstr "จังหวัดกรุงเทพ 10400, ประเทศไทย"
+
+msgid "pcj-office-work-hour"
+msgstr "จันทร์ - เสาร์, เวลา 8:30 - 17:30"
+
+msgid "pcj-factory-road"
+msgstr "45/2 ถนนแก่งคอย-แสลงพัน หมู่ 8"
+
+msgid "pcj-factory-area"
+msgstr "ตำบลบ้านป่า อำเภอแก่งคอย"
+
+msgid "pcj-factory-province"
+msgstr "จังหวัดสระบุรี 18110 ประเทศไทย"
+
+msgid "pcj-factory-work-hour"
+msgstr "จันทร์ - เสาร์, เวลา 8:30 - 17:30"
+
+msgid "job-positions-available"
+msgstr "ตำแหน่งที่เปิดรับ"
+
+msgid "Sales Executive(lnternational)"
+msgstr "พนักงานขาย (ต่างประเทศ)"
+
+msgid "Sales Executive(Domestic)"
+msgstr "พนักงานขาย (ในประเทศ)"
+
+msgid "Sales Coordinator"
+msgstr "พนักงานประสานงานขาย"
+
+msgid "Marketing Executive"
+msgstr "พนักงานการตลาด"
+
+msgid "Purchasing Admin."
+msgstr "พนักงานจัดซื้อ"
+
+msgid "Accountant"
+msgstr "พนักงานบัญชี"
+
+msgid "Finance Staff"
+msgstr "พนักงานการเงิน"
+
+msgid "HR Admin."
+msgstr "พนักงงานบุคคล"
+
+msgid "Production Engineer"
+msgstr "วิศวกรการผลิต"
+
+msgid "R&D Engineer"
+msgstr "วิศวกรวิจัยและพัฒนา"
+
+msgid "QA Engineer"
+msgstr "วิศวกรประกันคุณภาพ"
+
+msgid "Construction & Maintenance Engineer"
+msgstr "วิศวกรก่อสร้างและซ่อมบำรุง"
+
+msgid "CAD Operator"
+msgstr "พนักงานเขียนแบบ Auto CAD"
+
+msgid "Operator/Technician"
+msgstr "ช่างเทคนิค"
+
+msgid "Warehouse Admin."
+msgstr "พนักงานดูแลคลังสินค้า"
+
+msgid "Production Admin."
+msgstr "พนักงานธุรการฝ่ายผลิต"

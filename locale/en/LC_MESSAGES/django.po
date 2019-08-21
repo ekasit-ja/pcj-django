@@ -87,3 +87,88 @@ msgstr "We are pleased to have you join our PCJ family and grow together. We are
 
 msgid "career-content-2"
 msgstr "Or drop hard copy of your documents at our headquarters at below address.  We promise to contact you back at soonest."
+
+
+msgid "pcj-industries-full"
+msgstr "PCJ INDUSTRIES COMPANY LIMITED"
+
+msgid "headquarters"
+msgstr "Headquarters"
+
+msgid "factory"
+msgstr "Factory"
+
+msgid "pcj-office-road"
+msgstr "199/24-25 Vibhavadeerangsit road,"
+
+msgid "pcj-office-area"
+msgstr "Samsennai, Phayathai,"
+
+msgid "pcj-office-province"
+msgstr "Bangkok 10400, Thailand"
+
+msgid "pcj-office-work-hour"
+msgstr "Mon - Sat, 8:30AM - 5:30PM (ICT)"
+
+msgid "pcj-factory-road"
+msgstr "45/2 Kaengkhoi-Salaengpan Road, Moo 8,"
+
+msgid "pcj-factory-area"
+msgstr "Banpa, Kaengkhoi,"
+
+msgid "pcj-factory-province"
+msgstr "Saraburi 18110, Thailand"
+
+msgid "pcj-factory-work-hour"
+msgstr "Mon - Sat, 8:30AM - 5:30PM (ICT)"
+
+msgid "job-positions-available"
+msgstr "Available Job Positions"
+
+msgid "Sales Executive(lnternational)"
+msgstr "Sales Executive(lnternational)"
+
+msgid "Sales Executive(Domestic)"
+msgstr "Sales Executive(Domestic)"
+
+msgid "Sales Coordinator"
+msgstr "Sales Coordinator"
+
+msgid "Marketing Executive"
+msgstr "Marketing Executive"
+
+msgid "Purchasing Admin."
+msgstr "Purchasing Admin."
+
+msgid "Accountant"
+msgstr "Accountant"
+
+msgid "Finance Staff"
+msgstr "Finance Staff"
+
+msgid "HR Admin."
+msgstr "HR Admin."
+
+msgid "Production Engineer"
+msgstr "Production Engineer"
+
+msgid "R&D Engineer"
+msgstr "R&D Engineer"
+
+msgid "QA Engineer"
+msgstr "QA Engineer"
+
+msgid "Construction & Maintenance Engineer"
+msgstr "Construction & Maintenance Engineer"
+
+msgid "CAD Operator"
+msgstr "CAD Operator"
+
+msgid "Operator/Technician"
+msgstr "Operator/Technician"
+
+msgid "Warehouse Admin."
+msgstr "Warehouse Admin."
+
+msgid "Production Admin."
+msgstr "Production Admin."
