@@ -24,7 +24,7 @@ def default_context(request):
             ('about', reverse('page:page-about')),
             ('products', reverse('page:page-home')),
             ('projects', reverse('page:page-home')),
-            ('news', reverse('page:page-home')),
+            ('news', reverse('news:news-list')),
             ('contact', reverse('page:page-contact')),
             ('career', reverse('page:page-career')),
             ('en', '/en' + request.get_full_path()[3:], 'images/flag_en.png'),

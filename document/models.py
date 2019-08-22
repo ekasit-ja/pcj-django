@@ -22,6 +22,14 @@ class Document(models.Model):
     doc_th      = models.FileField(upload_to='document', blank=True, verbose_name='document thai')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
 
+    @property
+    def title(self):
+        return self.title_th if get_language()=='th' and self.title_th else self.title_en
+
+    @property
+    def doc(self):
+        return self.doc_th if get_language()=='th' and self.doc_th else self.doc_en
+
     class Meta:
         ordering = ('order',)
 

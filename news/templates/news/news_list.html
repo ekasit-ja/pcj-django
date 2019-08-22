@@ -1,14 +1,25 @@
-{% load i18n %}
-{% get_current_language as LANG %}
+{% extends 'base.html' %}
+{% load static i18n %}
 
-{% for instance in object_list %}
-    <p>
-        {% if LANG == 'en' %}
-            {{ instance.title_en|safe }}<br>
-            {{ instance.content_en|safe }}<br>
-        {% else %}
-            {{ instance.title_th|safe }}<br>
-            {{ instance.content_th|safe }}<br>
-        {% endif %}
-    </p>
-{% endfor %}
+{% block content %}
+    <br>
+    <div class="container">
+        <h3 class="text-center text-capitalize">{% trans 'news' %}</h3>
+
+        <div class="row justify-content-center row-card news">
+            {% for news_query in object_list %}
+                <div class="col-md-6 col-card">
+                    <a href="{% url 'news:news-detail' id=news_query.id %}" class="card text-dark" target="_blank">
+                        <div class="card-body">
+                            <div class="card-img h45" style="background-image:url('{{news_query.firstNewsImage.image.url}}')"></div>
+                            <div class="card-text">
+                                <h5>{{news_query.title_short}}</h5>
+                                <span>{{news_query.content_short}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

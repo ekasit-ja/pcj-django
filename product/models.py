@@ -16,6 +16,14 @@ class Product(models.Model):
     image       = models.ImageField(upload_to='product')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
 
+    @property
+    def title(self):
+        return self.title_th if get_language()=='th' and self.title_th else self.title_en
+
+    @property
+    def desc(self):
+        return self.desc_th if get_language()=='th' and self.desc_th else self.desc_en
+
     class Meta:
         ordering = ('order',)
 

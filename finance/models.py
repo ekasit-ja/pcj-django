@@ -11,6 +11,14 @@ class Finance(models.Model):
     content_th  = RichTextUploadingField(default='', blank=True, verbose_name='content thai')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
 
+    @property
+    def title(self):
+        return self.title_th if get_language()=='th' and self.title_th else self.title_en
+
+    @property
+    def content(self):
+        return self.content_th if get_language()=='th' and self.content_th else self.content_en
+
     class Meta:
         ordering = ('-order',)
         verbose_name_plural = "finance"

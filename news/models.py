@@ -2,6 +2,7 @@ from django.db import models
 from django.template.defaultfilters import truncatechars, striptags
 from django.db.models import Max
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils.translation import get_language
 
 # Create your models here.
 class News(models.Model):
@@ -24,6 +25,22 @@ class News(models.Model):
     @property
     def short_content_en(self):
         return truncatechars(striptags(self.content_en), 50)
+
+    @property
+    def title(self):
+        return self.title_th if get_language()=='th' and self.title_th else self.title_en
+
+    @property
+    def content(self):
+        return self.content_th if get_language()=='th' and self.content_th else self.content_en
+
+    @property
+    def title_short(self):
+        return truncatechars(self.title, 100)
+
+    @property
+    def content_short(self):
+        return truncatechars(striptags(self.content), 220)
 
 class NewsImage(models.Model):
     news        = models.ForeignKey(News, related_name='images', on_delete=models.CASCADE)

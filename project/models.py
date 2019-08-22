@@ -11,6 +11,10 @@ class Project(models.Model):
     image       = models.ImageField(upload_to='project')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
 
+    @property
+    def title(self):
+        return self.title_th if get_language()=='th' and self.title_th else self.title_en
+
     class Meta:
         ordering = ('order',)
 
