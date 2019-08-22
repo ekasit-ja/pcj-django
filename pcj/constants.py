@@ -23,7 +23,7 @@ def default_context(request):
         'navbar_items': [
             ('about', reverse('page:page-about')),
             ('products', reverse('page:page-home')),
-            ('projects', reverse('page:page-home')),
+            ('projects', reverse('project:project-list')),
             ('news', reverse('news:news-list')),
             ('contact', reverse('page:page-contact')),
             ('career', reverse('page:page-career')),

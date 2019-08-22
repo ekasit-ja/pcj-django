@@ -2,6 +2,7 @@ from django.db import models
 from django.template.defaultfilters import truncatechars
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils.translation import get_language
 
 # Create your models here.
 class Finance(models.Model):

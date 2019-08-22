@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import get_language
 
 # Create your models here.
 class Project(models.Model):

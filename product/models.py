@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from ckeditor.fields import RichTextField
+from django.utils.translation import get_language
 
 # Create your models here.
 class Product(models.Model):

@@ -29,6 +29,7 @@ urlpatterns += i18n_patterns(
     path('news/', include('news.urls')),
     path('', include('page.urls')),
     path('product/', include('product.urls')),
+    path('project/', include('project.urls')),
 )
 
 if settings.DEBUG:
