@@ -4,11 +4,13 @@ from project.views import project_list
 from django.conf import settings
 from django.utils.translation import get_language
 import os
+import datetime
 
 # Create your views here.
 def page_home(request, *args, **kwargs):
     news_queryset = news_list(request, 2)
     project_queryset = project_list(request, 3)
+    AGE = datetime.datetime.now().year-1998
 
     LANG = get_language()
     path = os.path.join(settings.STATICFILES_DIRS[0], 'images', 'carousel', LANG)
@@ -20,6 +22,7 @@ def page_home(request, *args, **kwargs):
         'news_queryset': news_queryset,
         'project_queryset': project_queryset,
         'carousel_images': carousel_images,
+        'AGE': AGE,
     })
 
 def page_about(request, *args, **kwargs):

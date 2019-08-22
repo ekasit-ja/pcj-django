@@ -1,5 +1,4 @@
 from django.urls import reverse
-import datetime
 
 CONSTANTS = {
     'product_choices': [
@@ -38,7 +37,6 @@ def default_context(request):
             ('ds', reverse('page:page-home'), 'images/duct_silencers.jpg'),
             ('aol', reverse('page:page-home'), 'images/air_outlets.jpg'),
         ],
-        'AGE': datetime.datetime.now().year-1998,
         'PHONE1_en': '+66 2 279 4166',
         'PHONE1_th': '02 279 4166',
         'PHONE2_en': '+66 2 616 0184',
@@ -50,6 +48,7 @@ def default_context(request):
         'FAX_FACTORY_en': '+66 36 262 334',
         'FAX_FACTORY_th': '036 262 334',
         'EMAIL_SALES': 'sales@pcjindustries.co.th',
+        'EMAIL_CAREER': 'careers@pcjindustries.co.th',
         'FACEBOOK': "https://www.facebook.com/pcjindustries/",
         'YOUTUBE': "https://www.youtube.com/channel/UCGl6i4eh4_ctQNTyeiIPssQ",
     }

@@ -35,7 +35,7 @@ msgid "contact"
 msgstr "contact"
 
 msgid "career"
-msgstr "career"
+msgstr "careers"
 
 msgid "frd-&-non-frd"
 msgstr "Fire Steel Doors & Non-Fire Steel Doors"
@@ -72,6 +72,9 @@ msgstr "follow us"
 
 msgid "about-us"
 msgstr "about us"
+
+msgid "contact-us"
+msgstr "contact us"
 
 msgid "about-us-content-1"
 msgstr "PCJ INDUSTRIES CO., LTD. was established in Thailand since 1998, with an objective to introduce high quality building materials, which are Fire Steel Doors, Fire Dampers, Other Dampers, Duct Silencers, Acoustic Louvers, and Air Outlets, in order to promote safety and standards of buildings. Our products are certified by worldwide accepted organization, which are Underwriter Laboratories, British Standards Institution, Standards Australia, Air Diffusion Council, and Thai Industrial Standards Institute. In addition, our company has been certified by ISO 9001:2008 at full system as well."

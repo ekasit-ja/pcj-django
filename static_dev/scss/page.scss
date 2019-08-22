@@ -44,6 +44,17 @@ html {
   font-size: 1.2em;
 }
 
+.email-career {
+    color: $red;
+    text-align: center;
+    display: block;
+    padding: 0.5em 0;
+
+    a {
+        color: $red;
+    }
+}
+
 // css for contact page
 .contact-card {
     border: 1px solid $light-grey;
@@ -237,6 +248,7 @@ html {
 // css for navbar
 .navbar {
     padding: 0.25rem 1rem;
+    border-bottom: 1px solid $light-grey;
 
     .navbar-brand {
         padding: 0px;

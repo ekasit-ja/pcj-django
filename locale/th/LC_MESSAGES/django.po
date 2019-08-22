@@ -73,6 +73,9 @@ msgstr "ติดตามเรา"
 msgid "about-us"
 msgstr "เกี่ยวกับเรา"
 
+msgid "contact-us"
+msgstr "ติดต่อเรา"
+
 msgid "about-us-content-1"
 msgstr "บริษัท พีซีเจ อุตสาหกรรม จำกัด ก่อตั้งขึ้นในประเทศไทยเมื่อปี พ.ศ. 2541 โดยมีจุดมุ่งหมายในการผลิตวัสดุก่อสร้างคุณภาพสูง ได้แก่ ประตูเหล็กทนไฟ แดมเปอร์ทนไฟ แดมเปอร์อื่นๆ ดักท์ไซเลนเซอร์ อคูสติกลูเวอร์ และหน้ากากแอร์ เพื่อยกระดับมาตรฐาน และความปลอดภัยของอาคาร สินค้าของเราได้รับการรับรองคุณภาพจากองค์กรชั้นนำทั่วโลก ได้แก่ Underwriter Laboratories, British Standards Institution, Standards Australia, Air Diffusion Council, และ สำนักงานมาตรฐานผลิตภัณฑ์อุตสาหกรรม อีกทั้งบริษัทยังได้รับการรับรองมาตรฐาน ISO 9001:2008 อย่างเต็มระบบอีกด้วย"
 
@@ -87,9 +90,6 @@ msgstr "มาร่วมเป็นส่วนหนึ่งกับคร
 
 msgid "career-content-2"
 msgstr "หรือยื่นเอกสารที่สำนักงานใหญ่ของเราโดยตรงตามที่อยู่ด้านล่างนี้ เราจะทำการติดต่อกลับโดยเร็วที่สุด"
-
-msgid "contact-us"
-msgstr "ติดต่อเรา"
 
 msgid "pcj-industries-full"
 msgstr "บริษัท พีซีเจ อุตสาหกรรม จำกัด"
@@ -164,7 +164,7 @@ msgid "Construction & Maintenance Engineer"
 msgstr "วิศวกรก่อสร้างและซ่อมบำรุง"
 
 msgid "CAD Operator"
-msgstr "พนักงานเขียนแบบ Auto CAD"
+msgstr "พนักงานเขียนแบบ AutoCAD"
 
 msgid "Operator/Technician"
 msgstr "ช่างเทคนิค"
