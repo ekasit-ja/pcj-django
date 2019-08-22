@@ -1,4 +1,5 @@
 from django.urls import reverse
+from django.utils.translation import get_language
 
 CONSTANTS = {
     'product_choices': [
@@ -37,6 +38,7 @@ def default_context(request):
             ('ds', reverse('page:page-home'), 'images/duct_silencers.jpg'),
             ('aol', reverse('page:page-home'), 'images/air_outlets.jpg'),
         ],
+        'LANG': get_language(),
         'PHONE1_en': '+66 2 279 4166',
         'PHONE1_th': '02 279 4166',
         'PHONE2_en': '+66 2 616 0184',
