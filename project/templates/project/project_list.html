@@ -8,10 +8,17 @@
         <h3 class="text-center text-capitalize">{% trans 'projects' %}</h3>
 
         <form action="{% url 'project:project-list' %}" method="GET" class="form-inline filter-form text-capitalize">
-            {% trans 'filter-by' %} :
-            <span>{% trans 'country' %}</span>{{ form.country|add_class:'form-control text-capitalize' }}
-            <span>{% trans 'year' %}</span>{{ form.year|add_class:'form-control text-capitalize' }}
-            <input type="submit" value="{% trans 'select' %}" class="btn btn-outline-primary text-capitalize">
+            {% trans 'filter-by' %} :&nbsp;
+            <div class="form-group">
+                <span>{% trans 'country' %}</span>{{ form.country|add_class:'form-control text-capitalize' }}
+            </div>
+            <div class="form-group">
+                <span>{% trans 'year' %}</span>{{ form.year|add_class:'form-control text-capitalize' }}
+            </div>
+            <div class="form-group">
+                <span></span>
+                <input type="submit" value="{% trans 'select' %}" class="btn btn-outline-primary text-capitalize form-control">
+            </div>
         </form>
         <hr>
 
