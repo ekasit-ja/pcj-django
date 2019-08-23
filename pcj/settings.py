@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'django_cleanup.apps.CleanupConfig',
     'sass_processor',
+    'widget_tweaks',
 
     'document',
     'finance',

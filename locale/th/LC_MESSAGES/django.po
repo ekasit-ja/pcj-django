@@ -174,3 +174,24 @@ msgstr "พนักงานดูแลคลังสินค้า"
 
 msgid "Production Admin."
 msgstr "พนักงานธุรการฝ่ายผลิต"
+
+msgid "filter-by"
+msgstr "เลือกดูเฉพาะ"
+
+msgid "select"
+msgstr "เลือก"
+
+msgid "country"
+msgstr "ประเทศ"
+
+msgid "year"
+msgstr "ปี"
+
+msgid "all"
+msgstr "ทั้งหมด"
+
+msgid "area"
+msgstr "ที่ตั้ง"
+
+msgid "company"
+msgstr "เครือบริษัท"

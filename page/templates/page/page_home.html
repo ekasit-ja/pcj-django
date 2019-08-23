@@ -27,21 +27,7 @@
     <div class="container">
         {% if news_queryset %}
             <h3 class="text-center text-capitalize">{% trans 'news' %}</h3>
-            <div class="row justify-content-center row-card news">
-                {% for news_query in news_queryset %}
-                    <div class="col-md-6 col-card">
-                        <a href="{% url 'news:news-detail' id=news_query.id %}" class="card text-dark" target="_blank">
-                            <div class="card-body">
-                                <div class="card-img h45" style="background-image:url('{{news_query.firstNewsImage.image.url}}')"></div>
-                                <div class="card-text">
-                                    <h5>{{news_query.title_short}}</h5>
-                                    <span>{{news_query.content_short}}</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
+            {% include 'news/row_news.html' %}
             <hr>
         {% endif %}
 
@@ -55,20 +41,11 @@
         <hr>
 
         <h3 class="text-center text-capitalize">{% trans 'products' %}</h3>
-        {% include 'row_product.html' %}
+        {% include 'product/row_product.html' %}
         <hr>
 
         <h3 class="text-center text-capitalize">{% trans 'projects' %}</h3>
-        <div class="row row-card project">
-            {% for project_query in project_queryset %}
-                <div class="col-md-4 col-card">
-                    <a href="#" class="card card-label">
-                        <div class="card-img h45" style="background-image:url('{{project_query.image.url}}')"></div>
-                        <div class="card-text">{{project_query.title}}</div>
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
+        {% include 'project/row_project.html' %}
         <div class="text-center">
             <a href="{% url 'project:project-list' %}" class="btn btn-outline-primary text-capitalize">{% trans 'view-all-projects' %}</a>
         </div>
@@ -76,3 +53,7 @@
 
     </div>
 {% endblock content %}
+
+{% block extra_js %}
+    <script src="{% static 'js/projectModal.js' %}"></script>
+{% endblock extra_js %}

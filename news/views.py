@@ -6,6 +6,7 @@ from .models import News, NewsImage
 # Create your views here.
 class NewsListView(ListView):
     template_name = 'news/news_list.html'
+    context_object_name = 'news_queryset'
 
     def get_queryset(self):
         queryset = News.objects.all()

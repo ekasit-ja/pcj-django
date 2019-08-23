@@ -1,19 +1,24 @@
 {% extends 'base.html' %}
 {% load static i18n %}
+{% load widget_tweaks %}
 
 {% block content %}
     <br>
     <div class="container">
         <h3 class="text-center text-capitalize">{% trans 'projects' %}</h3>
-        <div class="row row-card project">
-            {% for project_query in object_list %}
-                <div class="col-md-6 col-lg-4 col-card">
-                    <a href="#" class="card card-label">
-                        <div class="card-img h45" style="background-image:url('{{project_query.image.url}}')"></div>
-                        <div class="card-text">{{project_query.title}}</div>
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
+
+        <form action="{% url 'project:project-list' %}" method="GET" class="form-inline filter-form text-capitalize">
+            {% trans 'filter-by' %} :
+            <span>{% trans 'country' %}</span>{{ form.country|add_class:'form-control text-capitalize' }}
+            <span>{% trans 'year' %}</span>{{ form.year|add_class:'form-control text-capitalize' }}
+            <input type="submit" value="{% trans 'select' %}" class="btn btn-outline-primary text-capitalize">
+        </form>
+        <hr>
+
+        {% include 'project/row_project.html' %}
     </div>
 {% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/projectModal.js' %}"></script>
+{% endblock extra_js %}

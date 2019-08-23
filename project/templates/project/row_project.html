@@ -1,0 +1,43 @@
+{% load static i18n %}
+
+<div class="row row-card project">
+    {% for project_query in project_queryset %}
+        <div class="col-md-4 col-card">
+            <a href="{% url 'project:project-detail' id=project_query.id %}" class="card card-label card-project" data-toggle="modal" data-target="#modalCenter">
+                <div class="card-img h45" style="background-image:url('{{project_query.image.url}}')"></div>
+                <div class="card-text">{{project_query.title}}</div>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="modal fade" id="modalCenter" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title w-100 text-center text-capitalize" id="modalTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span></span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <img src="" class="img-fluid" id="modalImg">
+                </div>
+                <div class="row justify-content-center">
+                    <table class="text-capitalize">
+                        <tr>
+                            <td><strong>{% trans 'area' %}</strong></td><td id="modalAddress"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>{% trans 'company' %}</strong></td><td id="modalCompany"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>{% trans 'year' %}</strong></td><td id="modalYear"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

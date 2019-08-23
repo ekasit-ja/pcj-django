@@ -22,6 +22,24 @@ html {
     border-color: $red;
 }
 
+.form-control:focus {
+    background-color: white;
+    border-color: $red;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($red, 0.25);
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba($red, 0.5);
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+    background-color: $red;
+    border-color: $red;
+}
+
 .bg-light {
     background-color: white !important;
 }
@@ -52,6 +70,33 @@ html {
 
     a {
         color: $red;
+    }
+}
+
+.filter-form {
+    span {
+        margin-left: 1em;
+        margin-right: 0.5em;
+    }
+
+    input {
+        margin-left: 1.5em;
+    }
+}
+
+.modal-title {
+    color: $red;
+}
+
+.modal-body {
+    img {
+        padding-bottom: 0.5em;
+        max-width: 700px;
+        max-height: 700px;
+    }
+
+    table td:nth-child(2) {
+        padding-left: 1em;
     }
 }
 

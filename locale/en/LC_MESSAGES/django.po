@@ -175,3 +175,24 @@ msgstr "Warehouse Admin."
 
 msgid "Production Admin."
 msgstr "Production Admin."
+
+msgid "filter-by"
+msgstr "filter by"
+
+msgid "select"
+msgstr "select"
+
+msgid "country"
+msgstr "country"
+
+msgid "year"
+msgstr "year"
+
+msgid "all"
+msgstr "all"
+
+msgid "area"
+msgstr "area"
+
+msgid "company"
+msgstr "company"

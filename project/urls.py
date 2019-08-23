@@ -1,11 +1,11 @@
 from django.urls import path
 from .views import (
-    ProjectDetailView,
     ProjectListView,
+    project_detail,
 )
 
 app_name = 'project'
 urlpatterns = [
     path('', ProjectListView.as_view(), name='project-list'),
-    path('<int:id>/', ProjectDetailView.as_view(), name='project-detail'),
+    path('<int:id>/', project_detail, name='project-detail'),
 ]
