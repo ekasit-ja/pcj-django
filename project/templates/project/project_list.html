@@ -7,18 +7,16 @@
     <div class="container">
         <h3 class="text-center text-capitalize">{% trans 'projects' %}</h3>
 
-        <form action="{% url 'project:project-list' %}" method="GET" class="form-inline filter-form text-capitalize">
-            {% trans 'filter-by' %} :&nbsp;
-            <div class="form-group">
-                <span>{% trans 'country' %}</span>{{ form.country|add_class:'form-control text-capitalize' }}
-            </div>
-            <div class="form-group">
-                <span>{% trans 'year' %}</span>{{ form.year|add_class:'form-control text-capitalize' }}
-            </div>
-            <div class="form-group">
-                <span></span>
-                <input type="submit" value="{% trans 'select' %}" class="btn btn-outline-primary text-capitalize form-control">
-            </div>
+        <form action="{% url 'project:project-list' %}" method="GET" class="form-inline text-capitalize">
+            <label>{% trans 'filter-by' %} &nbsp;&nbsp;</label>
+
+            {{ form.country|add_label_class:'mr-1'}}
+            {{ form.country|add_class:'form-control text-capitalize mr-sm-3 mb-2 mb-sm-0' }}
+
+            {{ form.year|add_label_class:'mr-1'}}
+            {{ form.year|add_class:'form-control text-capitalize mr-sm-3 mb-2 mb-sm-0' }}
+
+            <input type="submit" value="{% trans 'select' %}" class="btn btn-outline-primary text-capitalize mt-2 mt-sm-0">
         </form>
         <hr>
 
