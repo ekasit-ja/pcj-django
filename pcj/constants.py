@@ -12,9 +12,9 @@ CONSTANTS = {
     ],
 
     'document_choices': [
-        ('catg', 'Catalog'),
-        ('inst', 'Installation'),
         ('cert', 'Certificate'),
+        ('inst', 'Installation'),
+        ('catg', 'Catalog'),
     ],
 }
 
@@ -31,12 +31,12 @@ def default_context(request):
             ('th', '/th' + request.get_full_path()[3:], 'images/flag_th.png'),
         ],
         'navbar_dropdown_items': [
-            ('frd-&-non-frd', reverse('page:page-home'), 'images/fire_doors.jpg'),
-            ('fdc', reverse('page:page-home'), 'images/fire_dampers.jpg'),
-            ('fsd-ul', reverse('page:page-home'), 'images/fsd_ul.jpg'),
-            ('ddp', reverse('page:page-home'), 'images/duct_dampers.jpg'),
-            ('ds', reverse('page:page-home'), 'images/duct_silencers.jpg'),
-            ('aol', reverse('page:page-home'), 'images/air_outlets.jpg'),
+            ('frd-&-non-frd', reverse('product:product-frd'), 'images/fire_doors.jpg'),
+            ('fdc', reverse('product:product-fdc'), 'images/fire_dampers.jpg'),
+            ('fsd-ul', reverse('product:product-fsd-ul'), 'images/fsd_ul.jpg'),
+            ('ddp', reverse('product:product-ddp'), 'images/duct_dampers.jpg'),
+            ('ds', reverse('product:product-ds'), 'images/duct_silencers.jpg'),
+            ('aol', reverse('product:product-aol'), 'images/air_outlets.jpg'),
         ],
         'LANG': get_language(),
         'PHONE1_en': '+66 2 279 4166',

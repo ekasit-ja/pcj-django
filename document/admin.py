@@ -8,7 +8,7 @@ from .models import Document
 
 class DocumentAdmin(SortableAdminMixin, admin.ModelAdmin):
     list_per_page = 10
-    list_display = ['order', 'image_preview', 'title_en', ]
+    list_display = ['order', 'image_preview', 'title_en', 'product_type', 'document_type' ]
     list_display_links = ['image_preview', 'title_en', ]
 
     def image_preview(self, obj):

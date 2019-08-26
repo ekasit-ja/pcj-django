@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4 red-text">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'frd-vdo-commercial' %}</h5>
+            </div>
+            <div class="col-md-4 red-text">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'frd-vdo-ul-01' %}</h5>
+            </div>
+            <div class="col-md-4 red-text">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'frd-vision-vdo-ul-01' %}</h5>
+            </div>
+        </div>
+        <hr>
+
+        <h2 class="text-center text-capitalize">{% trans 'fire-steel-doors' %}</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-justify">
+                {% trans 'frd-p1' %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <img src="{% static 'images/cert fsd.jpg' %}" class="img-fluid product-cert">
+        </div>
+
+        <h3 class="text-center text-capitalize">{% trans 'option-you-can-choose' %}</h3>
+
+        <div class="option-table">
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col-3">{% trans 'size' %}</div>
+                <div class="col-sm-9 col-9">{% trans 'available-upon-request-doors' %}</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col-3">{% trans 'fire-rating' %}</div>
+                <div class="col-sm-9 col-9">{% trans '0-3-hours' %}</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col-3">{% trans 'door-style' %}</div>
+                <div class="col-sm-9 col-9">{% trans 'door-style-p1' %}</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col-3">{% trans 'door-type' %}</div>
+                <div class="col-sm-9 col-9">{% trans 'door-type-p1' %}</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col-3">{% trans 'vision-panel' %}</div>
+                <div class="col-sm-9 col-9">{% trans 'vision-panel-p1' %}</div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <br>
+
+        {% for hw in dhw %}
+            {{hw.title}} /// {{hw.image.url}}<br>
+        {% endfor %}
+        <hr>
+
+        {% for doc in docs.catg %}
+            {{doc.title}} <br> {{doc.doc.url}}<br>
+        {% endfor %}
+        <hr>
+
+        {% for doc in docs.inst %}
+            {{doc.title}} <br> {{doc.doc.url}}<br>
+        {% endfor %}
+        <hr>
+
+        {% for doc in docs.cert %}
+            {{doc.title}} <br> {{doc.doc.url}}<br>
+        {% endfor %}
+
+    </div>
+{% endblock %}

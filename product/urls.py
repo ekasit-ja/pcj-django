@@ -1,17 +1,19 @@
 from django.urls import path
 from .views import (
-    # ArticleCreateView,
-    # ArticleDeleteView,
-    # ArticleDetailView,
-    ProductListView,
-    # ArticleUpdateView,
+    list_fire_door,
+    list_fire_damper,
+    list_fsd_ul,
+    list_other_damper,
+    list_duct_silencer,
+    list_air_outlet,
 )
 
 app_name = 'product'
 urlpatterns = [
-    path('', ProductListView.as_view(), name='product-list'),
-    # path('create/', ArticleCreateView.as_view(), name='article-create'),
-    # path('<int:id>/', ArticleDetailView.as_view(), name='article-detail'),
-    # path('<int:id>/update/', ArticleUpdateView.as_view(), name='article-update'),
-    # path('<int:id>/delete/', ArticleDeleteView.as_view(), name='article-delete'),
+    path('fire-steel-door', list_fire_door, name='product-frd'),
+    path('fire-damper', list_fire_door, name='product-fdc'),
+    path('fsd-ul', list_fire_door, name='product-fsd-ul'),
+    path('duct-damper', list_fire_door, name='product-ddp'),
+    path('duct-silencer', list_fire_door, name='product-ds'),
+    path('air-outlet', list_fire_door, name='product-aol'),
 ]

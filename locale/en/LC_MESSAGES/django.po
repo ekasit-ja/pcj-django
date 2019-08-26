@@ -196,3 +196,206 @@ msgstr "area"
 
 msgid "company"
 msgstr "company"
+
+
+
+
+
+
+msgid "fire-steel-doors"
+msgstr "Fire Steel Doors & Non-Fire Steel Doors"
+
+msgid "frd-vdo-commercial"
+msgstr "PCJ Fire Steel Doors TV advertisement"
+
+msgid "fire-dampers"
+msgstr "Fire Dampers"
+
+msgid "vertical-only"
+msgstr ", Vertical only"
+
+msgid "fdc-vdo-demonstrate"
+msgstr "VDO demonstrates function of the Fire Dampers, Model : FDC"
+
+msgid "fdc-vdo-ul-01"
+msgstr "Fire Damper of PCJ INDUSTRIES CO., LTD. tested for 3 hours in accordance with ANSI/UL 555 & CAN/ULC-S112 at UL LLC Northbrook, USA"
+
+msgid "frd-vdo-ul-01"
+msgstr "Fire Steel Door of PCJ INDUSTRIES CO., LTD. tested for 3 hours in accordance with ANSI/UL 10C & CAN/ULC-S104 at UL LLC Northbrook, USA"
+
+msgid "frd-vision-vdo-ul-01"
+msgstr "Fire Door Glass Light Frame of PCJ INDUSTRIES CO., LTD. tested for 3 hours in accordance with ANSI/UL 10C & CAN/ULC-S104 at UL LLC Northbrook, USA"
+
+msgid "duct-dampers"
+msgstr "Other Dampers"
+
+msgid "air-outlets"
+msgstr "Air Outlets"
+
+msgid "duct-silencers"
+msgstr "Duct Silencers & Acoustic Louvers"
+
+msgid "duct-silencers-br"
+msgstr "Duct Silencers & Acoustic Louvers"
+
+msgid "quality-you-can-trust-detail-p1"
+msgstr "For over"
+
+msgid "quality-you-can-trust-detail-p2"
+msgstr "years of experience, PCJ INDUSTRIES has delivered high quality products to all regions of Thailand and many countries around the world. We have been known throughout the construction field for high quality products and reliable services. With leading technologies on product lines, team of professional in this field, certificates from Underwriter Laboratories, British Standards Institution, Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute, and quality management system ISO 9001:2008, you can put your trust in our products and services. Our objective is to ensure fast delivery of exceptional products to let your projects complete as planned without interruption."
+
+msgid "view-all"
+msgstr "View All"
+
+msgid "type"
+msgstr "Type"
+
+msgid "model-you-can-choose"
+msgstr "Model you can choose"
+
+msgid "model"
+msgstr "Model"
+
+msgid "no-models-available"
+msgstr "No requested model is available at this time."
+
+msgid "option-you-can-choose"
+msgstr "Product available"
+
+msgid "size"
+msgstr "Size"
+
+msgid "available-upon-request-doors"
+msgstr "Available upon request up to maximum 1200mm X 2400mm (for Single Door) and 2400mm X 2400mm (for Double Door)"
+
+msgid "available-upon-request-dampers"
+msgstr "Available upon request up to maximum 48” X 48” (for Single Section) and 96” X 96” (for Multiple Section)"
+
+msgid "available-upon-request-fsd-ul"
+msgstr "Available upon request up to maximum 48” X 48”"
+
+msgid "fire-rating"
+msgstr "Fire Rating"
+
+msgid "0-3-hours"
+msgstr "3 hours in accordance with ANSI/UL 10C & CAN/ULC-S104"
+
+msgid "3-hour-dampers"
+msgstr "3 hours in accordance with ANSI/UL 555 & CAN/ULC-S112"
+
+msgid "3-hour"
+msgstr "3 hours"
+
+msgid "door-style"
+msgstr "Door Style"
+
+msgid "door-style-p1"
+msgstr "Flush Style, Flush Style with Vision Panel, Embossed Style"
+
+msgid "door-type"
+msgstr "Door Type"
+
+msgid "door-type-p1"
+msgstr "Single Door, Double Door"
+
+msgid "vision-panel"
+msgstr "Vision Panel"
+
+msgid "vision-panel-p1"
+msgstr "Optional (Maximum exposed area of glazing is 100 square inches)"
+
+msgid "louvers"
+msgstr "Louvers"
+
+msgid "louvers-p1"
+msgstr "Optional"
+
+msgid "door-closers"
+msgstr "Door Closers"
+
+msgid "door-locks"
+msgstr "Door Locks"
+
+msgid "wheel-set"
+msgstr "Wheel Set"
+
+msgid "door-handles"
+msgstr "Door Handles"
+
+msgid "door-holders"
+msgstr "Door Holders"
+
+msgid "fire-exit-devices"
+msgstr "Fire Exit Devices"
+
+msgid "etc"
+msgstr "Etc."
+
+msgid "door-hinge"
+msgstr "Door Hinges"
+
+msgid "seal"
+msgstr "Seal"
+
+msgid "automatic-door-bottom"
+msgstr "Automatic Door Seal"
+
+msgid "fire-door-coordinator"
+msgstr "Door Coordinator"
+
+msgid "hardware-you-can-add"
+msgstr "Hardware available"
+
+msgid "get-a-quote"
+msgstr "Get A Quote"
+
+msgid "description"
+msgstr "Description"
+
+msgid "certificate"
+msgstr "Certificate"
+
+msgid "installation"
+msgstr "Installation"
+
+msgid "catalogue"
+msgstr "Catalogue"
+
+msgid "download"
+msgstr "Download"
+
+msgid "no-file-available"
+msgstr "No file is available at this time."
+
+msgid "frd-p1"
+msgstr "We manufacture and distribute Fire Steel Doors, 3 Hr Fire Rating, ANSI/UL 10C & CAN/ULC-S104. Various type, styles, finish : Single Doors, Double Doors, Flush Doors, Flush with Vision Panels, Embossed Doors, Powder Finish, Wood Grain Finish as well as various types of hardware are available upon request. 2 Hr Fire Steel Doors and Non-Fire Steel Doors are also available upon request to fulfill most requirements."
+
+msgid "fdc-p1"
+msgstr "We manufacture and distribute fire dampers, 3 Hr Fire Rating, ANSI/UL 555 & CAN/ULC-S112 that can be mounted vertically on masonry/gypsum walls.  The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C) in order to block the spread of flame pass through the walls."
+
+msgid "ddp-p1"
+msgstr "We manufacture and distribute various types of dampers, ie. : Fire Dampers, 3 Hr Fire Rating, tested by KMIT in accordance with UL 555, Combination of Fire Dampers and Smoke Dampers, 3 Hr Fire Rating, tested by KMIT in accordance with UL 555&UL 555S, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers. Each type is designed suitable for each particular function."
+
+msgid "aol-p1"
+msgstr "We manufacture and distribute various types of Air Outlets : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers.  Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84.  Each type is designed suitable for each particular function."
+
+msgid "ds-p1"
+msgstr "We manufacture and distribute Duct Silencers and Acoustic Louvers.  The duct silencers have been dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277.  Available for rectangular and round shape at any sizes (made to order) upon request that can be mounted vertically or horizontally to reduce sound to desire levels as requrements."
+
+msgid "fsd-ul-p1"
+msgstr "We manufacture and distribute combination of Fire and Smoke Dampers, 3 Hr Fire Rating, that can be mounted vertically on masonry/gypsum walls, for both In-Wall and Out-of-Wall installation.  The dampers are designed to automatically close by Actuators in the event of fire when temperature at the dampers and/or at the heat detectors that linked to the dampers reach up to 165°F (74°C), and/or when smoke at the smoke detector that linked to the dampers in order to block the spread of flame and/or smoke pass through the walls."
+
+msgid "low-leak"
+msgstr "Low Leak"
+
+msgid "low-leak-p1"
+msgstr "Optional"
+
+msgid "motorized"
+msgstr "Motorized"
+
+msgid "motorized-p1"
+msgstr "Optional"
+
+msgid "no-finance-record"
+msgstr "No finance record is available at this moment"
