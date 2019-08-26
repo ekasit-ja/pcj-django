@@ -41,7 +41,6 @@
         </div>
 
         <h3 class="text-center text-capitalize">{% trans 'option-you-can-choose' %}</h3>
-
         <div class="option-table">
             <div class="row justify-content-center">
                 <div class="col-sm-2 col-3">{% trans 'size' %}</div>
@@ -64,36 +63,58 @@
                 <div class="col-sm-9 col-9">{% trans 'vision-panel-p1' %}</div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
         <br>
 
-        {% for hw in dhw %}
-            {{hw.title}} /// {{hw.image.url}}<br>
-        {% endfor %}
+        <h3 class="text-center text-capitalize">{% trans 'hardware-you-can-add' %}</h3>
+        <div class="row door-hardware-section">
+            {% for hw in dhw %}
+                <div class="col-sm-4">
+                    <div class="img-frame">
+                        <img src="{{hw.image.url}}" class="img-fluid">
+                    </div>
+                    <strong class="red-text">{{hw.title}}</strong>
+                    {{hw.desc|safe}}
+                </div>
+            {% endfor %}
+        </div>
+        <br>
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active text-uppercase" id="nav-desc-tab" data-toggle="tab" href="#nav-desc" role="tab">{% trans 'description' %}</a>
+                <a class="nav-item nav-link text-uppercase" id="nav-cert-tab" data-toggle="tab" href="#nav-cert" role="tab">{% trans 'certificate' %}</a>
+                <a class="nav-item nav-link text-uppercase" id="nav-inst-tab" data-toggle="tab" href="#nav-inst" role="tab">{% trans 'installation' %}</a>
+                <a class="nav-item nav-link text-uppercase" id="nav-catg-tab" data-toggle="tab" href="#nav-catg" role="tab">{% trans 'catalogue' %}</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <br>
+            <div class="tab-pane fade show active" id="nav-desc" role="tabpanel">
+                <div class="col-md-9 text-justify">
+                    <p>{% trans 'frd-desc' %}</p>
+                    {% trans 'please-click' %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-cert" role="tabpanel">
+                {% for doc in docs.cert %}
+                    {{doc.title}} <br> {{doc.doc.url}}<br>
+                {% endfor %}
+            </div>
+            <div class="tab-pane fade" id="nav-inst" role="tabpanel">
+                {% for doc in docs.inst %}
+                    {{doc.title}} <br> {{doc.doc.url}}<br>
+                {% endfor %}
+            </div>
+            <div class="tab-pane fade" id="nav-catg" role="tabpanel">
+                {% for doc in docs.catg %}
+                    {{doc.title}} <br> {{doc.doc.url}}<br>
+                {% endfor %}
+            </div>
+        </div>
         <hr>
 
-        {% for doc in docs.catg %}
-            {{doc.title}} <br> {{doc.doc.url}}<br>
-        {% endfor %}
-        <hr>
-
-        {% for doc in docs.inst %}
-            {{doc.title}} <br> {{doc.doc.url}}<br>
-        {% endfor %}
-        <hr>
-
-        {% for doc in docs.cert %}
-            {{doc.title}} <br> {{doc.doc.url}}<br>
-        {% endfor %}
-
+        <div class="text-center">
+            <a href="mailto:{{EMAIL_SALES}}" class="btn btn-outline-primary text-capitalize">{% trans 'get-a-quote' %}</a>
+        </div>
     </div>
 {% endblock %}

@@ -92,6 +92,29 @@ html {
     }
 }
 
+.door-hardware-section {
+    padding: 0.75em;
+    background-color: $super-light-grey;
+    border-radius: 0.25em;
+
+    .img-frame {
+        text-align: center;
+    }
+
+    img {
+        max-height: 150px;
+    }
+
+    [class^="col-"] {
+        border: 1px solid $light-grey;
+        background-color: white;
+    }
+
+    ul {
+        padding-left: 1em;
+    }
+}
+
 // css for modal
 .modal-title {
     color: $red;

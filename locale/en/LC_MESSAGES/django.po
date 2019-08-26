@@ -399,3 +399,9 @@ msgstr "Optional"
 
 msgid "no-finance-record"
 msgstr "No finance record is available at this moment"
+
+msgid "frd-desc"
+msgstr "Constructed of steel sheets with high technic of reinforcement to be very strong (very heavy duty). The doors have been tested and certified for 3 hr fire rating as per ANSI/UL 10C & CAN/ULC-S104. Various type, styles, finish : Single Doors, Double Doors, Flush Doors, Flush with Vision Panels, Embossed Doors, Powder Finish, Wood Grain Finish as well as various types of hardware are available upon request to fulfill most requirements. Sizes can be made to order up to 1200 mm. x 2400 mm. for single door, and 2400 mm. x 2400 mm. for double door. Recommend to be used not only for fire escape doors, but also for room doors where fire/burglar protection are needed. 2 Hr Fire Steel Doors and Non-Fire Steel Doors are also available upon request to fulfill most requirements."
+
+msgid "please-click"
+msgstr "Please click catalogue tab to download the catalogue for more details."
