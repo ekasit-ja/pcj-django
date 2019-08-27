@@ -352,13 +352,13 @@ msgstr "Get A Quote"
 msgid "description"
 msgstr "Description"
 
-msgid "certificate"
+msgid "cert"
 msgstr "Certificate"
 
-msgid "installation"
+msgid "inst"
 msgstr "Installation"
 
-msgid "catalogue"
+msgid "catg"
 msgstr "Catalogue"
 
 msgid "download"

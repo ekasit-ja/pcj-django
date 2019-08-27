@@ -6,6 +6,7 @@ $red: rgb(209,25,25);
 $product-padding: 0.5em;
 $project-padding: 1em;
 $news-padding: 1em;
+$pill-padding: 1em;
 
 html {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif ;
@@ -112,6 +113,18 @@ html {
 
     ul {
         padding-left: 1em;
+    }
+}
+
+a.nav-item {
+    color: $red;
+}
+
+a.red-text {
+    color: $red;
+
+    &:hover {
+        color: $red;
     }
 }
 
@@ -229,6 +242,16 @@ html {
             padding: $project-padding $project-padding/2;
         }
     }
+
+    &.pill {
+        .col-card {
+            margin: $pill-padding/2 $pill-padding;
+        }
+
+        .card-img {
+            background-size: contain !important;
+        }
+    }
 }
 
 .card-label {
@@ -290,6 +313,10 @@ html {
         .card-text {
             padding: 0.2em;
         }
+    }
+
+    .col-125 {
+        width: 125px;
     }
 }
 // --- css for general card

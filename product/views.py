@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.utils.translation import gettext as _
 
 from .models import Product
 from document.views import doc_list
@@ -7,7 +8,10 @@ from document.views import doc_list
 def list_fire_door(request):
     dhw = Product.objects.filter(product_type='dhw')
     docs = doc_list('frd')
+
     return render(request, 'product/frd_list.html', {
+        'product_desc': _('frd-desc'),
+        'please_click': _('please-click'),
         'dhw': dhw,
         'docs': docs,
     })

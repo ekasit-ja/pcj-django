@@ -352,13 +352,13 @@ msgstr "ขอใบเสนอราคา"
 msgid "description"
 msgstr "ข้อมูลสินค้า"
 
-msgid "certificate"
+msgid "cert"
 msgstr "ใบรับรอง"
 
-msgid "installation"
+msgid "inst"
 msgstr "คู่มือการติดตั้ง"
 
-msgid "catalogue"
+msgid "catg"
 msgstr "แค็ตตาล็อก"
 
 msgid "download"

@@ -79,38 +79,7 @@
         </div>
         <br>
 
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active text-uppercase" id="nav-desc-tab" data-toggle="tab" href="#nav-desc" role="tab">{% trans 'description' %}</a>
-                <a class="nav-item nav-link text-uppercase" id="nav-cert-tab" data-toggle="tab" href="#nav-cert" role="tab">{% trans 'certificate' %}</a>
-                <a class="nav-item nav-link text-uppercase" id="nav-inst-tab" data-toggle="tab" href="#nav-inst" role="tab">{% trans 'installation' %}</a>
-                <a class="nav-item nav-link text-uppercase" id="nav-catg-tab" data-toggle="tab" href="#nav-catg" role="tab">{% trans 'catalogue' %}</a>
-            </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <br>
-            <div class="tab-pane fade show active" id="nav-desc" role="tabpanel">
-                <div class="col-md-9 text-justify">
-                    <p>{% trans 'frd-desc' %}</p>
-                    {% trans 'please-click' %}
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-cert" role="tabpanel">
-                {% for doc in docs.cert %}
-                    {{doc.title}} <br> {{doc.doc.url}}<br>
-                {% endfor %}
-            </div>
-            <div class="tab-pane fade" id="nav-inst" role="tabpanel">
-                {% for doc in docs.inst %}
-                    {{doc.title}} <br> {{doc.doc.url}}<br>
-                {% endfor %}
-            </div>
-            <div class="tab-pane fade" id="nav-catg" role="tabpanel">
-                {% for doc in docs.catg %}
-                    {{doc.title}} <br> {{doc.doc.url}}<br>
-                {% endfor %}
-            </div>
-        </div>
+        {% include 'tab.html' %}
         <hr>
 
         <div class="text-center">
