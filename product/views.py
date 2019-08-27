@@ -6,12 +6,14 @@ from document.views import doc_list
 
 # Create your views here.
 def list_fire_door(request):
+    frd = Product.objects.filter(product_type='frd')
     dhw = Product.objects.filter(product_type='dhw')
     docs = doc_list('frd')
 
     return render(request, 'product/frd_list.html', {
         'product_desc': _('frd-desc'),
         'please_click': _('please-click'),
+        'frd': frd,
         'dhw': dhw,
         'docs': docs,
     })

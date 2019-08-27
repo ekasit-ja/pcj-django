@@ -128,6 +128,62 @@ a.red-text {
     }
 }
 
+.product-section {
+    background-color: $super-light-grey;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+
+    .product-text {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 0.5em;
+    }
+
+    .frame {
+        text-align: center;
+        border: 1px solid $light-grey;
+        background-color: white;
+
+        &.product {
+            height: 400px;
+            width: 100%;
+        }
+
+        &.thumbnail {
+            margin: 0.5em;
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    .selected {
+        border: 1px solid $red;
+        box-shadow: -1px -1px 0.75rem rgba($red, .1),
+            1px -1px 0.75rem rgba($red, .1),
+            -1px 1px 0.75rem rgba($red, .1),
+            1px 1px 0.75rem rgba($red, .1);
+    }
+
+    .product-thumbnail {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+}
+
 // css for modal
 .modal-title {
     color: $red;
@@ -280,7 +336,6 @@ a.red-text {
             display: flex;
             flex-direction: column;
             width: 100%;
-            // box-shadow: 0 0.25rem 0.75rem rgba($black, .1);
             box-shadow: -1px -1px 0.75rem rgba($black, .05),
               1px -1px 0.75rem rgba($black, .05),
               -1px 1px 0.75rem rgba($black, .05),

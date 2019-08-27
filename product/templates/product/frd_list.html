@@ -40,6 +40,21 @@
             <img src="{% static 'images/cert fsd.jpg' %}" class="img-fluid product-cert">
         </div>
 
+
+        <div class="product-section">
+            <div class="product-text red-text">{{frd.0.title}}</div>
+            <div class="frame product">
+                <span class="helper"></span><img src="{{frd.0.image.url}}">
+            </div>
+            <div class="product-thumbnail">
+                {% for p in frd %}
+                    <div class="frame thumbnail {% if forloop.first %} selected {% endif %}">
+                        <span class="helper"></span><img src="{{p.image.url}}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
         <h3 class="text-center text-capitalize">{% trans 'option-you-can-choose' %}</h3>
         <div class="option-table">
             <div class="row justify-content-center">
