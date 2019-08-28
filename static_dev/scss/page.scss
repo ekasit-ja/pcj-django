@@ -75,7 +75,7 @@ html {
     }
 }
 
-.red-text {
+.text-red {
     color: $red;
 }
 
@@ -120,7 +120,7 @@ a.nav-item {
     color: $red;
 }
 
-a.red-text {
+a.text-red {
     color: $red;
 
     &:hover {
@@ -133,11 +133,12 @@ a.red-text {
     border-radius: 5px;
     padding: 0.5em 1em;
 
-    .product-text {
+    .product-title {
         font-size: 1.2em;
         font-weight: bold;
         text-align: center;
         padding-bottom: 0.5em;
+        transition: all .5s;
     }
 
     .frame {
@@ -148,12 +149,32 @@ a.red-text {
         &.product {
             height: 400px;
             width: 100%;
+            position: relative;
         }
 
         &.thumbnail {
             margin: 0.5em;
             height: 60px;
             width: 60px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        .fade-in, .fade-out {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .fade-in {
+            z-index: 1;
+        }
+
+        .fade-out {
+            z-index: 2;
         }
     }
 

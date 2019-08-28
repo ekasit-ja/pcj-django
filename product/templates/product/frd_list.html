@@ -6,21 +6,21 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-4 red-text">
+            <div class="col-md-4 text-red">
                 <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd.jpg'}}">
                     <source src="{{MEDIA_URL|add:'videos/pcj_frd_'|add:LANG|add:'.mp4'}}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <h5>{% trans 'frd-vdo-commercial' %}</h5>
             </div>
-            <div class="col-md-4 red-text">
+            <div class="col-md-4 text-red">
                 <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.jpg'}}">
                     <source src="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <h5>{% trans 'frd-vdo-ul-01' %}</h5>
             </div>
-            <div class="col-md-4 red-text">
+            <div class="col-md-4 text-red">
                 <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.jpg'}}">
                     <source src="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
                     Your browser does not support the video tag.
@@ -39,21 +39,24 @@
         <div class="row justify-content-center">
             <img src="{% static 'images/cert fsd.jpg' %}" class="img-fluid product-cert">
         </div>
-
+        <br>
 
         <div class="product-section">
-            <div class="product-text red-text">{{frd.0.title}}</div>
-            <div class="frame product">
-                <span class="helper"></span><img src="{{frd.0.image.url}}">
+            <div class="product-title text-red">{{frd.0.title}}</div>
+            <div class="product frame">
+                <span class="helper"></span>
+                <img src="{{frd.0.image.url}}" class="fade-in">
+                <img src="{{frd.0.image.url}}" class="fade-out">
             </div>
             <div class="product-thumbnail">
                 {% for p in frd %}
-                    <div class="frame thumbnail {% if forloop.first %} selected {% endif %}">
-                        <span class="helper"></span><img src="{{p.image.url}}">
+                    <div class="thumbnail frame {% if forloop.first %} selected {% endif %}">
+                        <span class="helper"></span><img src="{{p.image.url}}" data-title="{{p.title}}">
                     </div>
                 {% endfor %}
             </div>
         </div>
+        <br>
 
         <h3 class="text-center text-capitalize">{% trans 'option-you-can-choose' %}</h3>
         <div class="option-table">
@@ -83,11 +86,11 @@
         <h3 class="text-center text-capitalize">{% trans 'hardware-you-can-add' %}</h3>
         <div class="row door-hardware-section">
             {% for hw in dhw %}
-                <div class="col-sm-4">
+                <div class="col-6 col-sm-4">
                     <div class="img-frame">
                         <img src="{{hw.image.url}}" class="img-fluid">
                     </div>
-                    <strong class="red-text">{{hw.title}}</strong>
+                    <strong class="text-red">{{hw.title}}</strong>
                     {{hw.desc|safe}}
                 </div>
             {% endfor %}
@@ -102,3 +105,7 @@
         </div>
     </div>
 {% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/thumbnail.js' %}"></script>
+{% endblock extra_js %}
