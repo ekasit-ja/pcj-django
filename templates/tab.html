@@ -4,21 +4,24 @@
     <div class="nav nav-tabs" id="nav-tab">
         <a class="nav-item nav-link active text-uppercase" data-toggle="tab" href="#nav-desc">{% trans 'description' %}</a>
         {% for doc in docs.items %}
-            <a class="nav-item nav-link text-uppercase" data-toggle="tab" href="#nav-{{doc.0}}">{% trans doc.0 %}</a>
+            {% if doc.1 %}
+                <a class="nav-item nav-link text-uppercase" data-toggle="tab" href="#nav-{{doc.0}}">{% trans doc.0 %}</a>
+            {% endif %}
         {% endfor %}
     </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
     <br>
     <div class="tab-pane fade show active" id="nav-desc">
-            <div class="col-md-9 text-justify">
-                <p>{{product_desc}}</p>
-                {{please_click}}
-            </div>
+        <div class="col-md-9 text-justify">
+            <p>{{product_desc|safe}}</p>
+            {{please_click}}
         </div>
-        {% for doc in docs.items %}
-            <div class="tab-pane fade" id="nav-{{doc.0}}">
-                <div class="row row-card pill">
+    </div>
+    {% for doc in docs.items %}
+        <div class="tab-pane fade" id="nav-{{doc.0}}">
+            <div class="row row-card pill">
+                {% if doc.1 %}
                     {% for item in doc.1 %}
                     <div class="col-125 col-card">
                         <a class="card text-red" href="{{item.doc.url}}" target="_blank">
@@ -27,7 +30,8 @@
                         </a>
                     </div>
                     {% endfor %}
-                </div>
+                {% endif %}
             </div>
-        {% endfor %}
+        </div>
+    {% endfor %}
 </div>

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <br>
+    <div class="container">
+
+        <h2 class="text-center text-capitalize">{% trans 'aol' %}</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-justify">
+                {% trans 'aol-p1' %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <img src="{% static 'images/cert ao.jpg' %}" class="img-fluid product-cert">
+        </div>
+        <br>
+
+        <div class="product-section">
+            <div class="product-title text-red">{{aol.0.title}}</div>
+            <div class="product frame">
+                <span class="helper"></span>
+                <img src="{{aol.0.image.url}}" class="fade-in">
+                <img src="{{aol.0.image.url}}" class="fade-out">
+            </div>
+            <div class="product-thumbnail">
+                {% for p in aol %}
+                    <div class="thumbnail frame {% if forloop.first %} selected {% endif %}">
+                        <span class="helper"></span><img src="{{p.image.url}}" data-title="{{p.title}}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+
+        {% include 'tab.html' %}
+        <hr>
+
+        <div class="text-center">
+            <a href="mailto:{{EMAIL_SALES}}" class="btn btn-outline-primary text-capitalize">{% trans 'get-a-quote' %}</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/thumbnail.js' %}"></script>
+{% endblock extra_js %}

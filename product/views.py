@@ -19,16 +19,56 @@ def list_fire_door(request):
     })
 
 def list_fire_damper(request):
-    pass
+    fdc = Product.objects.filter(product_type='fdc')
+    docs = doc_list('fdc')
+
+    return render(request, 'product/fdc_list.html', {
+        'product_desc': _('fdc-desc'),
+        'please_click': _('please-click'),
+        'fdc': fdc,
+        'docs': docs,
+    })
 
 def list_fsd_ul(request):
-    pass
+    fsd_ul = Product.objects.filter(product_type='fsd-ul')
+    docs = doc_list('fsd-ul')
+
+    return render(request, 'product/fsd_ul_list.html', {
+        'product_desc': _('fsd-ul-desc'),
+        'please_click': _('please-click'),
+        'fsd_ul': fsd_ul,
+        'docs': docs,
+    })
 
 def list_other_damper(request):
-    pass
+    ddp = Product.objects.filter(product_type='ddp')
+    docs = doc_list('ddp')
+
+    return render(request, 'product/ddp_list.html', {
+        'product_desc': _('ddp-desc'),
+        'please_click': _('please-click'),
+        'ddp': ddp,
+        'docs': docs,
+    })
 
 def list_duct_silencer(request):
-    pass
+    ds = Product.objects.filter(product_type='ds')
+    docs = doc_list('ds')
+
+    return render(request, 'product/ds_list.html', {
+        'product_desc': _('ds-desc-1') + "<br><br>" + _('ds-desc-2'),
+        'please_click': _('please-click'),
+        'ds': ds,
+        'docs': docs,
+    })
 
 def list_air_outlet(request):
-    pass
+    aol = Product.objects.filter(product_type='aol')
+    docs = doc_list('aol')
+
+    return render(request, 'product/aol_list.html', {
+        'product_desc': _('aol-desc'),
+        'please_click': _('please-click'),
+        'aol': aol,
+        'docs': docs,
+    })

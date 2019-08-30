@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 text-red">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_fdc.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_fdc_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'fdc-vdo-demonstrate' %}</h5>
+            </div>
+            <div class="col-md-6 text-red">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_fdc_ul_01_'|add:LANG|add:'.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_fdc_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'fdc-vdo-ul-01' %}</h5>
+            </div>
+        </div>
+        <hr>
+
+        <h2 class="text-center text-capitalize">{% trans 'fire-dampers' %}</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-justify">
+                {% trans 'fdc-p1' %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <img src="{% static 'images/cert fd.jpg' %}" class="img-fluid product-cert">
+        </div>
+        <br>
+
+        <div class="product-section">
+            <div class="product-title text-red">{{fdc.0.title}}</div>
+            <div class="product frame">
+                <span class="helper"></span>
+                <img src="{{fdc.0.image.url}}" class="fade-in">
+                <img src="{{fdc.0.image.url}}" class="fade-out">
+            </div>
+            <div class="product-thumbnail">
+                {% for p in fdc %}
+                    <div class="thumbnail frame {% if forloop.first %} selected {% endif %}">
+                        <span class="helper"></span><img src="{{p.image.url}}" data-title="{{p.title}}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+
+        <h3 class="text-center text-capitalize">{% trans 'option-you-can-choose' %}</h3>
+        <div class="option-table">
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col-3">{% trans 'size' %}</div>
+                <div class="col-sm-9 col-9">{% trans 'available-upon-request-dampers' %}</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col-3">{% trans 'fire-rating' %}</div>
+                <div class="col-sm-9 col-9">{% trans '3-hour-dampers' %}</div>
+            </div>
+        </div>
+        <br>
+
+        {% include 'tab.html' %}
+        <hr>
+
+        <div class="text-center">
+            <a href="mailto:{{EMAIL_SALES}}" class="btn btn-outline-primary text-capitalize">{% trans 'get-a-quote' %}</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/thumbnail.js' %}"></script>
+{% endblock extra_js %}

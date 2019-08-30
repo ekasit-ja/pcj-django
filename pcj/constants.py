@@ -5,6 +5,7 @@ CONSTANTS = {
     'product_choices': [
         ('frd', 'Fire Doors'),
         ('fdc', 'Fire Dampers'),
+        ('fsd-ul', 'Fire & Smoke Dampers'),
         ('ddp', 'Duct Dampers'),
         ('ds', 'Duct Silencers'),
         ('aol', 'Air Outlets'),
