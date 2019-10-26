@@ -6,7 +6,7 @@ $('.card-project').click(function(e) {
         $('#modalTitle').text(data.title);
         $('#modalImg').attr('src', data.image);
         $('#modalAddress').text(data.area + ', ' + data.country);
-        $('#modalCompany').text(data.area + ', ' + data.company);
+        $('#modalCompany').text(data.company ? data.company:data.title);
         $('#modalYear').text(data.year);
     });
 });

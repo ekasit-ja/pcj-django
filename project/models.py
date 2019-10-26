@@ -8,7 +8,7 @@ class Project(models.Model):
     country     = models.CharField(max_length=255)
     area        = models.CharField(max_length=255)
     year        = models.CharField(max_length=10)
-    company     = models.CharField(max_length=255)
+    company     = models.CharField(max_length=255, blank=True)
     image       = models.ImageField(upload_to='project')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
 
@@ -17,7 +17,7 @@ class Project(models.Model):
         return self.title_th if get_language()=='th' and self.title_th else self.title_en
 
     class Meta:
-        ordering = ('order',)
+        ordering = ('-order',)
 
     def __str__(self):
         return self.title_en
