@@ -13,6 +13,10 @@ html {
     font-size: 14px;
 }
 
+.news-content img {
+    max-width: 100%;
+}
+
 .btn-outline-primary {
     color: $red;
     border-color: $red;

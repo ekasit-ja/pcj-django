@@ -3,7 +3,7 @@
 <div class="row row-card project">
     {% for project_query in project_queryset %}
         <div class="col-md-4 col-card">
-            <a href="{% url 'project:project-detail' id=project_query.id %}" class="card card-label" data-toggle="modal" data-target="#modalCenter">
+            <a href="{% url 'project:project-detail' id=project_query.id %}" class="card card-label card-project" data-toggle="modal" data-target="#modalCenter">
                 <div class="card-img h45" style="background-image:url('{{project_query.image.url}}')"></div>
                 <div class="card-text">{{project_query.title}}</div>
             </a>
