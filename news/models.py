@@ -10,6 +10,7 @@ class News(models.Model):
     title_th    = models.TextField(blank=True, verbose_name='title thai')
     content_en  = RichTextUploadingField(verbose_name='content english')
     content_th  = RichTextUploadingField(default='', blank=True, verbose_name='content thai')
+    image       = models.ImageField(upload_to='news')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
 
     class Meta:
@@ -41,17 +42,3 @@ class News(models.Model):
     @property
     def content_short(self):
         return truncatechars(striptags(self.content), 220)
-
-class NewsImage(models.Model):
-    news        = models.ForeignKey(News, related_name='images', on_delete=models.CASCADE)
-    image       = models.ImageField(upload_to='news')
-    order       = models.PositiveIntegerField(default=0, blank=False, null=False)
-
-    class Meta:
-        ordering = ('order',)
-
-    def __str__(self):
-        return self.image.url
-
-    def news_id(self):
-        return self.news.id
