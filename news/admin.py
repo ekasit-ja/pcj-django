@@ -7,7 +7,7 @@ from .models import News
 # Register your models here.
 
 class NewsAdmin(SortableAdminMixin, admin.ModelAdmin):
-    list_per_page = 10
+    list_per_page = 20
     list_display = ['order', 'short_title_en', 'short_content_en', 'image_preview', ]
     list_display_links = ['short_title_en', 'image_preview', ]
 

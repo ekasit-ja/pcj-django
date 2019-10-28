@@ -7,7 +7,7 @@ from .models import Project
 # Register your models here.
 
 class ProjectAdmin(SortableAdminMixin, admin.ModelAdmin):
-    list_per_page = 10
+    list_per_page = 20
     list_display = ['order', 'title_en', 'image_preview', 'country', 'year', ]
     list_display_links = ['title_en', 'image_preview', ]
 

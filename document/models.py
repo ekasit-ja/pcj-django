@@ -18,7 +18,7 @@ class Document(models.Model):
 
     title_en    = models.CharField(max_length=255, verbose_name='title english')
     title_th    = models.CharField(max_length=255, blank=True, verbose_name='title thai')
-    image       = models.ImageField(upload_to='document')
+    image       = models.ImageField(upload_to='document', blank=True)
     doc_en      = models.FileField(upload_to='document', verbose_name='document english')
     doc_th      = models.FileField(upload_to='document', blank=True, verbose_name='document thai')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)

@@ -7,7 +7,7 @@ from .models import Product
 # Register your models here.
 
 class ProductAdmin(SortableAdminMixin, admin.ModelAdmin):
-    list_per_page = 10
+    list_per_page = 20
     list_display = ['order', 'title_en', 'image_preview', 'product_type', ]
     list_display_links = ['title_en', 'image_preview', ]
 
