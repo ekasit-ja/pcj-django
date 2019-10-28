@@ -86,10 +86,8 @@
         <h3 class="text-center text-capitalize">{% trans 'hardware-you-can-add' %}</h3>
         <div class="row door-hardware-section">
             {% for hw in dhw %}
-                <div class="col-6 col-sm-4">
-                    <div class="img-frame">
-                        <img src="{{hw.image.url}}" class="img-fluid">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <div class="img-frame" style="background-image:url('{{hw.image.url}}')"></div>
                     <strong class="text-red">{{hw.title}}</strong>
                     {{hw.desc|safe}}
                 </div>
