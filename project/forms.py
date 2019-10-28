@@ -8,11 +8,21 @@ class ProjectForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(ProjectForm, self).__init__(*args, **kwargs)
 
+        projects = Project.objects.all()
+        # c = kwargs['initial']['country']
+        # y = kwargs['initial']['year']
+
+        # if c and c != 'all':
+        #     projects = projects.filter(country=c)
+        # if y and y != 'all':
+        #     projects = projects.filter(year=y)
+
         # Distinct for SQLite is not supported
         # Therefore, have to implement distinct value manually
         countries = set()
         years = set()
-        for p in Project.objects.all():
+
+        for p in projects:
             countries.add((p.country, p.country))
             years.add((p.year, p.year))
 

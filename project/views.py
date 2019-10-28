@@ -3,6 +3,7 @@ from django.views.generic import ListView
 from django.views.generic.edit import FormMixin
 from django.http import JsonResponse
 from django.utils.translation import get_language
+from django.core.paginator import Paginator
 
 from .models import Project
 from .forms import ProjectForm
@@ -29,6 +30,10 @@ class ProjectListView(FormMixin, ListView):
 
         if country and country != 'all':
             queryset = queryset.filter(country=country)
+
+        paginator = Paginator(queryset, 15)
+        page = self.request.GET.get('page')
+        queryset = paginator.get_page(page)
 
         return queryset
 
