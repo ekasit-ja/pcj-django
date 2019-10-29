@@ -18,12 +18,9 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
+from django.views.generic import RedirectView
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
-
-urlpatterns += i18n_patterns(
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('finance/', include('finance.urls')),
@@ -31,6 +28,9 @@ urlpatterns += i18n_patterns(
     path('', include('page.urls')),
     path('product/', include('product.urls')),
     path('project/', include('project.urls')),
+
+    path('webmail/', RedirectView.as_view(url='https://server.pcjindustries.co.th:2096/')),
+    path('whm/', RedirectView.as_view(url='https://server.pcjindustries.co.th:2087/')),
 )
 
 if settings.DEBUG:
