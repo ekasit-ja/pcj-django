@@ -1,0 +1,120 @@
+.product-section {
+    background-color: $super-light-grey;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+
+    .product-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 0.5em;
+        transition: all .5s;
+    }
+
+    .frame {
+        text-align: center;
+        border: 1px solid $light-grey;
+        background-color: white;
+
+        &.product {
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        &.thumbnail {
+            margin: 0.5em;
+            height: 60px;
+            width: 60px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        .fade-in, .fade-out {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .fade-in {
+            z-index: 1;
+        }
+
+        .fade-out {
+            z-index: 2;
+        }
+    }
+
+    .selected {
+        border: 1px solid $red;
+        box-shadow: -1px -1px 0.75rem rgba($red, .1),
+            1px -1px 0.75rem rgba($red, .1),
+            -1px 1px 0.75rem rgba($red, .1),
+            1px 1px 0.75rem rgba($red, .1);
+    }
+
+    .product-thumbnail {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+}
+
+// css for door hardware section
+.door-hardware-section {
+    padding: 0.75em;
+    background-color: $super-light-grey;
+    border-radius: 0.25em;
+
+    .img-frame {
+        text-align: center;
+        padding-bottom: 45%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 10px 0px;
+    }
+
+    img {
+        max-height: 150px;
+    }
+
+    [class^="col-"] {
+        border: 1px solid $light-grey;
+        background-color: white;
+    }
+
+    ul {
+        padding-left: 1em;
+    }
+}
+// --- css for door hardware section
+
+// css for TAB section
+a.nav-item {
+    color: $red;
+}
+
+a.text-red {
+    color: $red;
+
+    &:hover {
+        color: $red;
+    }
+}
+// --- css for TAB section

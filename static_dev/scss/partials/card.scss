@@ -1,0 +1,104 @@
+// css for general card
+.row-card {
+    margin-left: 0;
+    margin-right: 0;
+    .col-card {
+        display: flex;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-shadow: -1px -1px 0.75rem rgba($black, .05),
+              1px -1px 0.75rem rgba($black, .05),
+              -1px 1px 0.75rem rgba($black, .05),
+              1px 1px 0.75rem rgba($black, .05);
+            transition: all .2s;
+
+            &:hover {
+                text-decoration: none;
+                box-shadow: -1px -1px 0.75rem rgba($red, .25),
+                    1px -1px 0.75rem rgba($red, .25),
+                    -1px 1px 0.75rem rgba($red, .25),
+                    1px 1px 0.75rem rgba($red, .25),;
+            }
+        }
+
+        .card-img {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &.h45 {
+                padding-bottom: 45%;
+            }
+
+            &.square {
+                padding-bottom: 100%;
+            }
+        }
+
+        .card-text {
+            padding: 0.2em;
+        }
+    }
+
+    .col-125 {
+        width: 125px;
+    }
+}
+// --- css for general card
+
+// css for specific type of card
+.row-card {
+    &.news {
+        & .col-card {
+            padding-bottom: $news-padding;
+        }
+    }
+
+    &.product {
+        padding: 0 $product-padding/2;
+
+        & .col-card {
+            padding: $product-padding $product-padding/2;
+        }
+    }
+
+    &.project {
+        padding: 0 $project-padding/2;
+
+        & .col-card {
+            padding: $project-padding $project-padding/2;
+        }
+    }
+
+    &.pill {
+        .col-card {
+            margin: $pill-padding/2 $pill-padding;
+        }
+
+        .card-img {
+            background-size: contain !important;
+        }
+
+        .card-border {
+            padding: .5em 1em 0 1em;
+        }
+    }
+}
+
+.card-label {
+    border: 0;
+
+    .card-text {
+        background-color: $red;
+        color: white;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        text-align: center;
+        flex-grow: 1;
+    }
+}
+// --- css for specific type of card

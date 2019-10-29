@@ -1,0 +1,13 @@
+.modal-title {
+    color: $red;
+}
+
+.modal-body {
+    img {
+        padding: 0 1em 0.5em 1em;
+    }
+
+    table td:nth-child(2) {
+        padding-left: 1em;
+    }
+}

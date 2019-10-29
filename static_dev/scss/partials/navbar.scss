@@ -1,0 +1,63 @@
+// css for navbar
+.navbar {
+    padding: 0.25rem 1rem;
+    border-bottom: 1px solid $light-grey;
+
+    .navbar-brand {
+        padding: 0px;
+
+        img {
+            max-height: 3em;
+        }
+    }
+
+    .nav-item {
+        margin: 0px 2px;
+    }
+}
+// --- css for navbar
+
+// animation for menu button on navbar
+.navbar-toggler {
+    outline: none !important;
+    border: none !important;
+
+    .icon-bar {
+        display: block;
+        height: 2px;
+        width: 22px;
+        transition: all 0.2s;
+        background-color: $red;
+        margin-top: 4px;
+    }
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+    .middle-bar {
+        opacity: 0;
+    }
+    .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+
+    &.collapsed {
+        .top-bar {
+            transform: rotate(0);
+        }
+        .middle-bar {
+            opacity: 1;
+        }
+        .bottom-bar {
+            transform: rotate(0);
+        }
+    }
+}
+// --- animation for menu button on navbar
+
+// css for dropdown menu
+.dropdown-menu {
+    padding: 0;
+}
+// --- css for dropdown menu
