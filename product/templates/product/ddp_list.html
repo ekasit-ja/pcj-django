@@ -13,21 +13,7 @@
         </div>
         <br>
 
-        <div class="product-section">
-            <div class="product-title text-red">{{ddp.0.title}}</div>
-            <div class="product frame">
-                <span class="helper"></span>
-                <img src="{{ddp.0.image.url}}" class="fade-in">
-                <img src="{{ddp.0.image.url}}" class="fade-out">
-            </div>
-            <div class="product-thumbnail">
-                {% for p in ddp %}
-                    <div class="thumbnail frame {% if forloop.first %} selected {% endif %}">
-                        <span class="helper"></span><img src="{{p.image.url}}" data-title="{{p.title}}">
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
+        {% include 'product/product_section.html' %}
         <br>
 
         {% include 'tab.html' %}

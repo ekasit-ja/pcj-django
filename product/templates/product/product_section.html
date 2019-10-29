@@ -1,0 +1,23 @@
+<div class="product-section">
+    <div class="product-title text-red">{{products.0.title}}</div>
+    <div class="product frame">
+        <span class="helper"></span>
+        <img src="{{products.0.image.url}}" class="fade-in">
+        <img src="{{products.0.image.url}}" class="fade-out">
+
+        <a class="control prev" href="#carouselIndicators" data-slide="prev">
+            <span class="icon-chevron-left"></span>
+        </a>
+        <a class="control next" href="#carouselIndicators" data-slide="next">
+            <span class="icon-chevron-right"></span>
+        </a>
+
+    </div>
+    <div class="product-thumbnail">
+        {% for p in products %}
+            <div class="thumbnail frame {% if forloop.first %} selected {% endif %}">
+                <span class="helper"></span><img src="{{p.image.url}}" data-title="{{p.title}}" data-index="{{forloop.counter}}" {% if forloop.last %} data-last="1" {% endif %}>
+            </div>
+        {% endfor %}
+    </div>
+</div>

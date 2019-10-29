@@ -33,3 +33,32 @@ scope.find('.thumbnail.frame').click(function(e) {
         fade_out.removeClass('fade-out').addClass('fade-in').css('z-index', 1);
     });
 });
+
+// for prev, next control button
+scope.find('.control').click(function(e) {
+    var this_ = $(this)
+
+    var move = 0;
+    if(this_.hasClass('prev')) {
+        move = -1;
+    }
+    else {
+        move = 1;
+    }
+
+    var selected = scope.find('.selected').find('img')
+    var lastIndex = scope.find('[data-last]').data('index')
+    var currentIndex = selected.data('index');
+
+    var nextIndex = 0;
+
+    if(move == 1 && currentIndex == lastIndex) {
+        nextIndex = 1;
+    } else if (move == -1 && currentIndex == 1) {
+        nextIndex = lastIndex
+    } else {
+        nextIndex = currentIndex + move;
+    }
+
+    scope.find('[data-index="' + nextIndex +'"]').parent().click();
+});

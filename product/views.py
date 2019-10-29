@@ -13,7 +13,7 @@ def list_fire_door(request):
     return render(request, 'product/frd_list.html', {
         'product_desc': _('frd-desc'),
         'please_click': _('please-click'),
-        'frd': frd,
+        'products': frd,
         'dhw': dhw,
         'docs': docs,
     })
@@ -25,7 +25,7 @@ def list_fire_damper(request):
     return render(request, 'product/fdc_list.html', {
         'product_desc': _('fdc-desc'),
         'please_click': _('please-click'),
-        'fdc': fdc,
+        'products': fdc,
         'docs': docs,
     })
 
@@ -36,7 +36,7 @@ def list_fsd_ul(request):
     return render(request, 'product/fsd_ul_list.html', {
         'product_desc': _('fsd-ul-desc'),
         'please_click': _('please-click'),
-        'fsd_ul': fsd_ul,
+        'products': fsd_ul,
         'docs': docs,
     })
 
@@ -47,7 +47,7 @@ def list_other_damper(request):
     return render(request, 'product/ddp_list.html', {
         'product_desc': _('ddp-desc'),
         'please_click': _('please-click'),
-        'ddp': ddp,
+        'products': ddp,
         'docs': docs,
     })
 
@@ -58,7 +58,7 @@ def list_duct_silencer(request):
     return render(request, 'product/ds_list.html', {
         'product_desc': _('ds-desc-1') + "<br><br>" + _('ds-desc-2'),
         'please_click': _('please-click'),
-        'ds': ds,
+        'products': ds,
         'docs': docs,
     })
 
@@ -69,6 +69,6 @@ def list_air_outlet(request):
     return render(request, 'product/aol_list.html', {
         'product_desc': _('aol-desc'),
         'please_click': _('please-click'),
-        'aol': aol,
+        'products': aol,
         'docs': docs,
     })
