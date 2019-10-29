@@ -6,12 +6,9 @@ function toggleDropdown (e) {
     _m.toggleClass('show', shouldOpen);
     _d.toggleClass('show', shouldOpen);
     $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-  }, e.type === 'mouseleave' ? 400 : 0);
+  }, e.type === 'mouseleave' ? 200 : 0);
 }
 
 $('body')
   .on('mouseenter mouseleave','.dropdown',toggleDropdown)
   .on('click', '.dropdown-menu a', toggleDropdown);
-
-/* not needed, prevents page reload for SO example on menu link clicked */
-$('.dropdown a').on('click tap', e => e.preventDefault())
