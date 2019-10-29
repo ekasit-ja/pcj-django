@@ -6,5 +6,7 @@ from .models import Finance
 
 class FinanceAdmin(SortableAdminMixin, admin.ModelAdmin):
     list_per_page = 20
+    list_display = ['order', 'short_title_en', 'short_content_en' ]
+    list_display_links = ['short_title_en', 'short_content_en', ]
 
 admin.site.register(Finance, FinanceAdmin)

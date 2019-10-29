@@ -1,5 +1,5 @@
 from django.db import models
-from django.template.defaultfilters import truncatechars
+from django.template.defaultfilters import truncatechars, striptags
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.translation import get_language
@@ -11,6 +11,13 @@ class Finance(models.Model):
     content_en  = RichTextUploadingField(verbose_name='content english')
     content_th  = RichTextUploadingField(default='', blank=True, verbose_name='content thai')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
+
+    @property
+    def short_title_en(self):
+        return truncatechars(striptags(self.title_en), 50)
+    @property
+    def short_content_en(self):
+        return truncatechars(striptags(self.content_en), 100)
 
     @property
     def title(self):

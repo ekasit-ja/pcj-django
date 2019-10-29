@@ -4,12 +4,17 @@
     <br>
     <div class="container">
         <div class="row justify-content-center">
-            <h3 class="text-center text-capitalize">
-                {{ finance.title_en|safe }}
-            </h3>
-            <br>
-            <br>
-            {{ finance.content_en|safe }}
+            <div class="col-md-8">
+                <h5>{{ finance.title|safe }}</h5>
+            </div>
         </div>
+        <br>
+
+        <div class="row justify-content-center">
+            <div class="finance-content">
+                {{ finance.content|safe }}
+            </div>
+        </div>
+        <br>
     </div>
 {% endblock %}
