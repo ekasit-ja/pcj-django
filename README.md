@@ -18,7 +18,7 @@
 │   │
 │   └── static_dev          # folder containing actual static files for development
 │
-├── static                  # for gathering static files via command "python manage.py collectstatic"
+├── static                  # for gathering static files via command "python3 manage.py collectstatic"
 │
 └── upload                  # for uploaded files via admin page or CKEditor
 ```
@@ -32,6 +32,6 @@
 2. then `source bin/activate`
    - if this is first run, execute `git clone https://github.com/ekasit-ja/pcj-django.git source` to clone source code first
 3. then `cd source`
-   - if this is first run, execute `pip install -r pip_packages.txt` to install all required packages
-   - then execute `python manage.py collectstatic` to acquire all static files into **static** folder
+   - if this is first run, execute `pip3 install -r pip_packages.txt` to install all required packages
+   - then execute `python3 manage.py collectstatic` to acquire all static files into **static** folder
 4. then `python3 manage.py runserver` and webpage can now be accessed via [localhost:8000](localhost:8000)
