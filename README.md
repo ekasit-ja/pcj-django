@@ -2,7 +2,7 @@
 
 ### This is development and deployment note for future use.
 
-#### Development is conducted on Windows 10.  use _Ubuntu_ CLI to work with UNIX command in Windows environment.
+### Development is conducted on Windows 10.  use _Ubuntu_ CLI to work with UNIX command in Windows environment.
 1. install **Python version 3** (note that command will be `python3` not just `python`)
 2. use `pip3` command for installing packages (not `pip`)
 3. use **Bisvise SSH Client** application for terminal and FTP to server
@@ -26,14 +26,14 @@
 ```
 ---
 
-#### Problem with SQLite3 on Cent OS 7
+### Problem with SQLite3 on Cent OS 7
 Default python in Cent OS 7 persist to use Sqlite version **3.7.17** while django requires Sqlite version **3.8.3 or higher**.  Ordinary update will not change version acknowledgded by python at all.  Therefore, follow this [instruction](http://www.djaodjin.com/blog/django-2-2-with-sqlite-3-on-centos-7.blog.html) on how to solve this issue.
 
 Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile and restart terminal so when we execute `python3 -c "import sqlite3; print(sqlite3.sqlite_version)"`, it will return a newer version of sqlite.
 
 ---
 
-#### Initiating development server instruction (using python virtual environment is recommended)
+### Initiating development server instruction (using python virtual environment is recommended)
 1. `cd` to project folder first
    - if this is first run, install python virtual environment first by executing `pip3 install virtualenv`
    - then execute `virtualenv -p python3 .` to create python virtual environment first
@@ -54,13 +54,13 @@ Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile 
 
 ---
 
-#### Working with CLI
+### Working with CLI
 - we can use `Ctrl + Z` to put a process into background
 - use `jobs` to see all background processes
 - use `fg` to bring a background process to foreground.
 - use `fg %#` in case there are more than one background processes
 
-#### Working with GIT
+### Working with GIT
 Without `python3 manage.py makemigrations` and `python3 manage.py migrate` command on remote server, code still works fine.  However, migration files will be modified automatically when we run the server.  Use `git reset --hard` to discard all changes.  Then use `git pull` to update source code from GIT.
 
 ---
