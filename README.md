@@ -4,7 +4,8 @@
 ### Development is conducted on Windows 10.  use _Ubuntu_ CLI to work with UNIX command in Windows environment.
 1. install **Python version 3** (note that command will be **python3** not just **python**)
 2. use **pip3** command for installing packages (not **pip**)
-3. folder structure will be like below (not mentioned folders are auto-generated)
+3. use **Bisvise SSH Client** application for terminal and FTP to server
+4. folder structure will be like below (not mentioned folders are auto-generated)
 
 ```
 .                           # project folder
@@ -22,6 +23,11 @@
 │
 └── upload                  # for uploaded files via admin page or CKEditor
 ```
+
+### Problem of Cent OS 7 with SQLite
+Default python in Cent OS 7 persist to use Sqlite version 3.7.17 while django requires Sqlite version 3.8.3 or higher.  Ordinary update will not change version acknowledgde in python at all.  Therefore, follow this [link](http://www.djaodjin.com/blog/django-2-2-with-sqlite-3-on-centos-7.blog.html) on how to work on with this issue.
+
+Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile so when we execute `python3 -c "import sqlite3; print(sqlite3.sqlite_version)"`, it will return newer version of sqlite.
 
 ### To run development server, we must use virtual environment by
 1. `cd` to project folder first
