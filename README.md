@@ -23,13 +23,15 @@
 │
 └── upload                  # for uploaded files via admin page or CKEditor
 ```
+---
 
-### Problem of Cent OS 7 with SQLite
-Default python in Cent OS 7 persist to use Sqlite version 3.7.17 while django requires Sqlite version 3.8.3 or higher.  Ordinary update will not change version acknowledgde in python at all.  Therefore, follow this [link](http://www.djaodjin.com/blog/django-2-2-with-sqlite-3-on-centos-7.blog.html) on how to work on with this issue.
+### Problem with SQLite3 on Cent OS 7
+Default python in Cent OS 7 persist to use Sqlite version 3.7.17 while django requires Sqlite version 3.8.3 or higher.  Ordinary update will not change version acknowledgded by python at all.  Therefore, follow this [instruction](http://www.djaodjin.com/blog/django-2-2-with-sqlite-3-on-centos-7.blog.html) on how to solve this issue.
 
-Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile so when we execute `python3 -c "import sqlite3; print(sqlite3.sqlite_version)"`, it will return newer version of sqlite.
+Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile and restart terminal so when we execute `python3 -c "import sqlite3; print(sqlite3.sqlite_version)"`, it will return newer version of sqlite.
+---
 
-### To run development server, we must use virtual environment by
+### Initiating development server instruction (using python virtual environment is recommended)
 1. `cd` to project folder first
    - if this is first run, install python virtual environment first by executing `pip3 install virtualenv`
    - then execute `virtualenv -p python3 .` to create python virtual environment first
@@ -44,4 +46,4 @@ Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile 
      - `pip3 install rjsmin --install-option="--without-c-extensions"`
    - if this is first run, execute `pip3 install -r pip_packages.txt` to install all required packages
    - then execute `python3 manage.py collectstatic` to acquire all static files into **static** folder
-4. then `python3 manage.py runserver` and webpage can now be accessed via [localhost:8000](http://127.0.0.1:8000/)
+4. then `python3 manage.py runserver 0.0.0.0:8000`.  Note that this is remotely access to server.  127.0.0.1:8000 is **NOT** remotely accessible.
