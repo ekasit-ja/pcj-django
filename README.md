@@ -26,8 +26,8 @@
 ---
 
 ### Problem with SQLite3 on Cent OS 7
-Default python in Cent OS 7 persist to use Sqlite version 3.7.17 while django requires Sqlite version 3.8.3 or higher.  Ordinary update will not change version acknowledgded by python at all.  Therefore, follow this [instruction](http://www.djaodjin.com/blog/django-2-2-with-sqlite-3-on-centos-7.blog.html) on how to solve this issue.
-
+Default python in Cent OS 7 persist to use Sqlite version 3.7.17 while django requires Sqlite version 3.8.3 or higher.  Ordinary update will not change version acknowledgded by python at all.  Therefore, follow this [instruction](http://www.djaodjin.com/blog/django-2-2-with-sqlite-3-on-centos-7.blog.html) on how to solve this issue.<br/>
+<br/>
 Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile and restart terminal so when we execute `python3 -c "import sqlite3; print(sqlite3.sqlite_version)"`, it will return newer version of sqlite.
 ---
 
@@ -47,3 +47,13 @@ Be sure to add `export LD_LIBRARY_PATH=/usr/local/lib` into `~/.bashrc` profile 
    - if this is first run, execute `pip3 install -r pip_packages.txt` to install all required packages
    - then execute `python3 manage.py collectstatic` to acquire all static files into **static** folder
 4. then `python3 manage.py runserver 0.0.0.0:8000`.  Note that this is remotely access to server.  127.0.0.1:8000 is **NOT** remotely accessible.
+---
+
+###Working with CLI
+- We can use `Ctrl+z` to put process into background
+- use `jobs` to see all background processes
+- use `fg` to bring a background process to foreground.  Use `fg %#` in case there are more than one background processes
+
+###Working with GIT
+Without `makemigrations` and `migrate` command on remote server, it still does work fine.  However, migrations files will be modified automatically.  Use `git reset --hard` to discard all changes.  Then use `git pull` to update source code from GIT.
+---
