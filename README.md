@@ -39,7 +39,7 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
 ---
 
 ### Preparation for deployment
-**Do NOT place project folder in** `/root`.  Place somewhere else like `/home/ekasit` (in this case). Many services do not have root access.
+**Do NOT place project folder in** `/root`.  Place somewhere else like `/home/ekasit` (in this case). We will not give nginx permission to access root folder.
 1. First of all, create project folder with `mkdir pcj-django && cd pcj-django`
 2. execute `mkdir source static upload site`
    - if this is first run, install python virtual environment executing `pip3 install virtualenv`
@@ -152,3 +152,16 @@ at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
 We will use **certbot** software to handle **Let’s Encrypt** certificate automatically.
 1. install certbot by executing `yum install certbot python2-certbot-nginx`
 2. then `certbot --nginx` to let certbot configure nginx automatically
+3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d pcjindustries.co.th -d www.pcjindustries.co.th -d server.pcjindustries.co.th` then choose option 2 (renew and replace cert)
+4. edit `/etc/nginx/nginx.conf` by adding `.well-known` url above `/` as below.
+```
+location /.well-known/ {
+    alias /home/ekasit/pcj-django/.well-known/;
+}
+
+location / {
+    include uwsgi_params;
+    uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+}
+```
+5. restart nginx with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
