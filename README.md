@@ -39,11 +39,11 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
 ---
 
 ### Preparation for deployment
-0. **Do not place project folder in** `/root`.  Place in something like `/home/ekasit` (in this case). Many services does not have root access.
+**Do NOT place project folder in** `/root`.  Place somewhere else like `/home/ekasit` (in this case). Many services do not have root access.
 1. First of all, create project folder with `mkdir pcj-django && cd pcj-django`
 2. execute `mkdir source static upload site`
    - if this is first run, install python virtual environment executing `pip3 install virtualenv`
-   - also copy everything into **upload** folder.  We use SQLite database so the data is already in repository.
+   - also copy everything into `upload` folder.  We use SQLite database so the data is already in repository.
 3. execute `virtualenv -p python3 venv` to create python virtual environment
 4. then `source venv/bin/activate`
 5. then `cd source`
@@ -52,7 +52,7 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
    - on **Cent OS**, there may be problem with installing **django-compressor** package.  Run below first to solve the issue.
      - `pip3 install rcssmin --install-option="--without-c-extensions"`
      - `pip3 install rjsmin --install-option="--without-c-extensions"`
-   - then execute `python3 manage.py collectstatic` to gather all static files and put them into **static** folder
+   - then execute `python3 manage.py collectstatic` to gather all static files and put them into `static` folder
 6. then `python3 manage.py runserver 0.0.0.0:8000`.  Note that this is remotely access to server.  127.0.0.1:8000 is **NOT** remotely accessible.
 
 **Note that video elements are all non-seekable on Django development environment**
@@ -70,7 +70,7 @@ Without `python3 manage.py makemigrations` and `python3 manage.py migrate` comma
 ## Deployment
 1. `deactivate` virtual environment first
 2. We install uWSGI globally with `pip3 install uwsgi`
-3. create file `pcj.ini` (uwsgi initial file) in folder **site**
+3. create file `pcj.ini` (uwsgi initial file) in folder `site`
 4. paste below configuration in the file
 ```
 [uwsgi]
@@ -85,7 +85,7 @@ http = 0.0.0.0:8000
 #chmod-socket = 666
 ```
 5. execute `uwsgi tutorial.ini` and browse website to check if it is working or not. (static files will not be served at this point)
-6. if everything is fine. comment line `http = 0.0.0.0:8000` and remove comment from the rest
+6. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
 7. create service file at `/etc/systemd/system/uwsgi.service` to start uwsgi automatically at boot in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
 ```
 [Unit]
@@ -119,8 +119,8 @@ WantedBy=multi-user.target
 11. then add below code instead
 ```
 server {
-    listen 8000;
-    server_name    pcjindustries.co.th www.pcjindustries.com server.pcjindustries.com;
+    listen 80;
+    server_name    pcjindustries.co.th www.pcjindustries.co.th server.pcjindustries.co.th;
 
     access_log     /home/ekasit/pcj-django/site/access.log;
     error_log      /home/ekasit/pcj-django/site/error.log;
@@ -142,5 +142,13 @@ server {
 ```
 12. check syntax with `nginx -t`
 13. restart service to apply changes by `service nginx restart && service uwsgi restart`
+14. browse to website to check if it is working
 
 at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
+
+---
+
+### SSL for https
+We will use **certbot** software to handle **Let’s Encrypt** certificate automatically.
+1. install certbot by executing `yum install certbot python2-certbot-nginx`
+2. then `certbot --nginx` to let certbot configure nginx automatically
