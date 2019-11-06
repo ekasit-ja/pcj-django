@@ -1,9 +1,15 @@
 Django==2.1.14
 django-admin-sortable2==0.7.3
+django-appconf==1.0.3
 django-ckeditor==5.7.1
 django-cleanup==4.0.0
+django-compressor==2.3
 django-js-asset==1.2.2
 django-sass-processor==0.7.4
 django-widget-tweaks==1.4.5
+libsass==0.19.4
 Pillow==6.2.1
 pytz==2019.3
+rcssmin==1.0.6
+rjsmin==1.1.0
+six==1.13.0
