@@ -39,7 +39,7 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
 ---
 
 ### Preparation for deployment
-0. **Do not place project folder in /root**.  Place some place like `/home/ekasit` (in this case). Many services does not have root access.
+0. **Do not place project folder in** `/root`.  Place in something like `/home/ekasit` (in this case). Many services does not have root access.
 1. First of all, create project folder with `mkdir pcj-django && cd pcj-django`
 2. execute `mkdir source static upload site`
    - if this is first run, install python virtual environment executing `pip3 install virtualenv`
