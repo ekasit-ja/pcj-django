@@ -127,11 +127,11 @@ server {
 
     location = favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        root /root/pcj-django/static;
+        alias /home/ekasit/pcj-django/static/;
     }
 
     location /media/ {
-        root /root/pcj-django/upload;
+        alias /home/ekasit/pcj-django/upload/;
     }
 
     location / {
