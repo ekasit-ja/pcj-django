@@ -157,7 +157,7 @@ We will use **certbot** software to handle **Let’s Encrypt** certificate autom
 1. install certbot by executing `yum install certbot python2-certbot-nginx`
 2. then `certbot --nginx` to let certbot configure nginx automatically
 3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d pcjindustries.co.th -d www.pcjindustries.co.th -d server.pcjindustries.co.th` then choose option 2 (renew and replace cert)
-4. we have to force all non-www to www as well as provide `.well-known` path by changing below
+4. we have to force all `non-www` to `www` as well as provide `.well-known` path by changing below
 ```
 location / {
     include uwsgi_params;
@@ -223,4 +223,4 @@ if ($host = pcjindustries.co.th) {
 ---
 
 ### Before signing off
-Do not forget to change `DEBUG=False` in `settings.py` and `service nginx restart`
+Do not forget to change `DEBUG=False` in `settings.py` and restart nginx with `service nginx restart`
