@@ -23,17 +23,14 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
 ```
 .                         # project folder
 │
+├── site                  # contains log, initiate, and socket file used in deployment
 ├── source                # source code folder
-│   │
 │   ├── ...
-│   ├── pip_packages.txt  # file containing all required python packages
-│   └── static_dev        # contains actual static files used in development
-├── ...
+│   ├── static_dev        # contains actual static files used in development
+│   └── pip_packages.txt  # file containing all required python packages
 ├── static                # for gathering all static files via command "python3 manage.py collectstatic"
 ├── upload                # contains uploaded files via admin page or CKEditor
-├── venv                  # contains virtual environment files
-└── site                  # contains log, initiate, and socket file used in deployment
-
+└── venv                  # contains virtual environment files
 ```
 
 ---
@@ -160,7 +157,14 @@ We will use **certbot** software to handle **Let’s Encrypt** certificate autom
 1. install certbot by executing `yum install certbot python2-certbot-nginx`
 2. then `certbot --nginx` to let certbot configure nginx automatically
 3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d pcjindustries.co.th -d www.pcjindustries.co.th -d server.pcjindustries.co.th` then choose option 2 (renew and replace cert)
-4. edit `/etc/nginx/nginx.conf` by adding `.well-known` url above `/` as below.
+4. we have to force all non-www to www as well as provide `.well-known` path by changing below
+```
+location / {
+    include uwsgi_params;
+    uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+}
+```
+to
 ```
 location /.well-known/ {
     alias /home/ekasit/pcj-django/.well-known/;
@@ -170,5 +174,53 @@ location / {
     include uwsgi_params;
     uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
 }
+
+if ($host = server.pcjindustries.co.th) {
+    return 301 https://www.pcjindustries.co.th$request_uri;
+} # managed by Certbot
+
+if ($host = pcjindustries.co.th) {
+    return 301 https://www.pcjindustries.co.th$request_uri;
+} # managed by Certbot
 ```
-5. restart nginx with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
+5. in server directive which listen to port 80, change
+```
+server {
+if ($host = www.pcjindustries.co.th) {
+    return 301 https://$host$request_uri;
+} # managed by Certbot
+
+
+if ($host = server.pcjindustries.co.th) {
+    return 301 https://$host$request_uri;
+} # managed by Certbot
+
+
+if ($host = pcjindustries.co.th) {
+    return 301 https://$host$request_uri;
+} # managed by Certbot
+```
+to
+```
+if ($host = www.pcjindustries.co.th) {
+    return 301 https://www.pcjindustries.co.th$request_uri;
+} # managed by Certbot
+
+
+if ($host = server.pcjindustries.co.th) {
+    return 301 https://www.pcjindustries.co.th$request_uri;
+} # managed by Certbot
+
+
+if ($host = pcjindustries.co.th) {
+    return 301 https://www.pcjindustries.co.th$request_uri;
+} # managed by Certbot
+```
+6. restart nginx with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
+7. set job to auto-renew certificate by executing `crontab -e`. cronjob file will be opened
+8. then put `0 4 2 * * /usr/bin/certbot renew >> /home/ekasit/pcj-django/site/renew_cert.log 2>&1` on the last line. (it means every month, on 2nd day at 04.00, execute `certbot renew` and log it in that file either output is normal or error)
+
+---
+
+### Before signing off
+Do not forget to change `DEBUG=False` in `settings.py` and `service nginx restart`
