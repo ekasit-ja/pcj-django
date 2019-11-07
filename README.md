@@ -86,7 +86,7 @@ http = 0.0.0.0:8000
 ```
 5. execute `uwsgi tutorial.ini` and browse website to check if it is working or not. (static files will not be served at this point)
 6. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
-7. create service file at `/etc/systemd/system/uwsgi.service` to start uwsgi automatically at boot in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
+7. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uwsgi in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
 ```
 [Unit]
 Description=uWSGI service (in emporer mode) for www.pcjindustries.co.th run by Django
@@ -145,6 +145,13 @@ server {
 14. browse to website to check if it is working
 
 at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
+
+---
+
+### Set up auto-start at boot
+1. execute `systemctl enable uwsgi.service nginx`
+2. then `reboot` to restart server
+3. then `service nginx status` and `service uwsgi status` and browse to the website to check if everything is working.
 
 ---
 
