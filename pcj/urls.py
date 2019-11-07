@@ -29,8 +29,8 @@ urlpatterns = i18n_patterns(
     path('product/', include('product.urls')),
     path('project/', include('project.urls')),
 
-    path('webmail/', RedirectView.as_view(url='https://server.pcjindustries.co.th:2096/')),
-    path('whm/', RedirectView.as_view(url='https://server.pcjindustries.co.th:2087/')),
+    path('webmail/', RedirectView.as_view(url='https://www.pcjindustries.co.th:2096/')),
+    path('whm/', RedirectView.as_view(url='https://www.pcjindustries.co.th:2087/')),
 )
 
 if settings.DEBUG:
