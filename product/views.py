@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.utils.translation import gettext as _
+from django.template.defaultfilters import striptags, truncatechars
+from django.templatetags.static import static
 
 from .models import Product
 from document.views import doc_list
@@ -16,6 +18,10 @@ def list_fire_door(request):
         'products': frd,
         'dhw': dhw,
         'docs': docs,
+        'meta_title': _('meta-title-frd')+" | "+_('pcj-industries-short'),
+        'meta_desc': _('meta-desc-frd'),
+        'meta_img': request.build_absolute_uri(static('images/fire_doors.jpg')),
+        'meta_robots': 'index, nofollow',
     })
 
 def list_fire_damper(request):
@@ -27,6 +33,10 @@ def list_fire_damper(request):
         'please_click': _('please-click'),
         'products': fdc,
         'docs': docs,
+        'meta_title': _('meta-title-fdc')+" | "+_('pcj-industries-short'),
+        'meta_desc': _('meta-desc-fdc'),
+        'meta_img': request.build_absolute_uri(static('images/fire_dampers.jpg')),
+        'meta_robots': 'index, nofollow',
     })
 
 def list_fsd_ul(request):
@@ -38,6 +48,10 @@ def list_fsd_ul(request):
         'please_click': _('please-click'),
         'products': fsd_ul,
         'docs': docs,
+        'meta_title': _('meta-title-fsd-ul')+" | "+_('pcj-industries-short'),
+        'meta_desc': _('meta-desc-fsd-ul'),
+        'meta_img': request.build_absolute_uri(static('images/fsd_ul.jpg')),
+        'meta_robots': 'index, nofollow',
     })
 
 def list_other_damper(request):
@@ -49,6 +63,10 @@ def list_other_damper(request):
         'please_click': _('please-click'),
         'products': ddp,
         'docs': docs,
+        'meta_title': _('meta-title-ddp')+" | "+_('pcj-industries-short'),
+        'meta_desc': _('meta-desc-ddp'),
+        'meta_img': request.build_absolute_uri(static('images/duct_dampers.jpg')),
+        'meta_robots': 'index, nofollow',
     })
 
 def list_duct_silencer(request):
@@ -60,6 +78,10 @@ def list_duct_silencer(request):
         'please_click': _('please-click'),
         'products': ds,
         'docs': docs,
+        'meta_title': _('meta-title-ds')+" | "+_('pcj-industries-short'),
+        'meta_desc': _('meta-desc-ds'),
+        'meta_img': request.build_absolute_uri(static('images/duct_silencers.jpg')),
+        'meta_robots': 'index, nofollow',
     })
 
 def list_air_outlet(request):
@@ -71,4 +93,8 @@ def list_air_outlet(request):
         'please_click': _('please-click'),
         'products': aol,
         'docs': docs,
+        'meta_title': _('meta-title-aol')+" | "+_('pcj-industries-short'),
+        'meta_desc': _('meta-desc-aol'),
+        'meta_img': request.build_absolute_uri(static('images/air_outlets.jpg')),
+        'meta_robots': 'index, nofollow',
     })

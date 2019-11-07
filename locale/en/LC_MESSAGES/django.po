@@ -91,9 +91,11 @@ msgstr "We are pleased to have you join our PCJ family and grow together. We are
 msgid "career-content-2"
 msgstr "Or drop hard copy of your documents at our headquarters at below address.  We promise to contact you back at soonest."
 
-
 msgid "pcj-industries-full"
 msgstr "PCJ INDUSTRIES COMPANY LIMITED"
+
+msgid "pcj-industries-short"
+msgstr "PCJ INDUSTRIES"
 
 msgid "headquarters"
 msgstr "Headquarters"
@@ -196,6 +198,7 @@ msgstr "area"
 
 msgid "company"
 msgstr "company"
+
 
 
 
@@ -423,3 +426,50 @@ msgstr "Constructed of extruded aluminum (some types are constructed of aluminum
 
 msgid "please-click"
 msgstr "Please click catalogue tab to download the catalogue for more details."
+
+#
+#
+#
+# This part is for search engine optimization and open graph mark up
+#
+#
+#
+
+msgid "meta-desc-home"
+msgstr "We are one of the leading manufacturers of fire doors, duct dampers, duct silencers, and air grilles of Thailand. Our objective is to ensure fast delivery of exceptional products to let your projects complete as planned without interruption."
+
+msgid "meta-title-frd"
+msgstr "Fire steel doors, UL certified"
+
+msgid "meta-desc-frd"
+msgstr "We manufacture and distribute Fire Steel Doors, 3 Hr Fire Rating (UL 10C), 2 Hr Fire Rating (BS 476), and Non-Fire Steel upon any requests to fulfill most requirements."
+
+msgid "meta-title-fdc"
+msgstr "Fire dampers, UL certified"
+
+msgid "meta-desc-fdc"
+msgstr "We manufacture and distribute Fire Dampers, 3 Hr Fire Rating (UL 555). The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C)"
+
+msgid "meta-title-fsd-ul"
+msgstr "Fire & smoke dampers"
+
+msgid "meta-desc-fsd-ul"
+msgstr "We manufacture and distribute combination of Fire and Smoke Dampers, 3 Hr Fire Rating. The dampers are designed to automatically close by Actuators in the event of fire to block the spread of flame and/or smoke pass through the walls."
+
+msgid "meta-title-ddp"
+msgstr "Duct dampers, Other dampers"
+
+msgid "meta-desc-ddp"
+msgstr "We manufacture and distribute various types of dampers, i.e. : Fire Dampers (KMIT UL555 tested), Fire & Smoke Dampers (KMIT UL 555 and UL555S tested), Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers."
+
+msgid "meta-title-ds"
+msgstr "Duct silencers"
+
+msgid "meta-desc-ds"
+msgstr "We manufacture and distribute Duct Silencers and Acoustic Louvers which are dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277. Available for rectangular and round shape at any sizes (made to order) upon request."
+
+msgid "meta-title-aol"
+msgstr "Air outlets, Air grilles"
+
+msgid "meta-desc-aol"
+msgstr "We manufacture and distribute various types of Air Outlets, i.e. : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers. Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84. Each type is designed suitable for each particular function."

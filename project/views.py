@@ -4,6 +4,7 @@ from django.views.generic.edit import FormMixin
 from django.http import JsonResponse
 from django.utils.translation import get_language
 from django.core.paginator import Paginator
+from django.utils.translation import gettext as _
 
 from .models import Project
 from .forms import ProjectForm
@@ -36,6 +37,12 @@ class ProjectListView(FormMixin, ListView):
         queryset = paginator.get_page(page)
 
         return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['meta_title'] = _('projects').capitalize()
+        context['meta_robots'] = 'noindex, nofollow'
+        return context
 
 def project_detail(request, id):
         project = Project.objects.filter(id=id)
