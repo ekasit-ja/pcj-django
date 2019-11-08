@@ -199,6 +199,9 @@ msgstr "ที่ตั้ง"
 msgid "company"
 msgstr "เครือบริษัท"
 
+msgid "404-text"
+msgstr "ขออภัย เราไม่พบหน้าที่คุณต้องการ"
+
 
 
 

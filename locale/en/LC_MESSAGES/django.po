@@ -199,6 +199,9 @@ msgstr "area"
 msgid "company"
 msgstr "company"
 
+msgid "404-text"
+msgstr "Sorry, we couldn't find a page you are looking for."
+
 
 
 

@@ -29,7 +29,7 @@ def page_home(request):
         'AGE': AGE,
         'meta_title': _('pcj-industries-short'),
         'meta_desc': _('meta-desc-home'),
-        'meta_img': request.build_absolute_uri(static('images/pcj-logo.jpg')),
+        'meta_img': request.build_absolute_uri(static('images/pcj-logo-og.jpg')),
         'meta_robots': 'index, follow',
     })
 
@@ -54,7 +54,7 @@ def page_contact(request):
                      _('pcj-office-road')+" "+ \
                      _('pcj-office-area')+" "+ \
                      _('pcj-office-province'),
-        'meta_img': request.build_absolute_uri(static('images/pcj-logo.jpg')),
+        'meta_img': request.build_absolute_uri(static('images/pcj-logo-og.jpg')),
         'meta_robots': 'index, nofollow',
     })
 
@@ -62,6 +62,6 @@ def page_career(request):
     return render(request, 'page/page_career.html', {
         'meta_title': _('career').capitalize(),
         'meta_desc': truncatechars(_('career-content-1')+" "+_('career-content-2'), 200),
-        'meta_img': request.build_absolute_uri(static('images/pcj-logo.jpg')),
+        'meta_img': request.build_absolute_uri(static('images/pcj-logo-og.jpg')),
         'meta_robots': 'index, nofollow',
     })
