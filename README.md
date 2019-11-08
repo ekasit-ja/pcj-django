@@ -223,4 +223,4 @@ if ($host = pcjindustries.co.th) {
 ---
 
 ### Before signing off
-Do not forget to change `DEBUG=False` in `settings.py` and restart nginx with `service nginx restart`
+Do not forget to change `DEBUG=False` in `settings.py` and restart both services with `service nginx restart && service uwsgi restart`
