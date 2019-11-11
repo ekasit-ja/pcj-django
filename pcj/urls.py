@@ -20,6 +20,8 @@ from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.views.generic import RedirectView
 
+from finance.views import finance_view
+
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
@@ -31,6 +33,9 @@ urlpatterns = i18n_patterns(
 
     path('webmail/', RedirectView.as_view(url='https://www.pcjindustries.co.th:2096/')),
     path('whm/', RedirectView.as_view(url='https://www.pcjindustries.co.th:2087/')),
+
+    # legacy path for this url 'index.php?tpid=0031&pgname=finance&count=1'
+    path('index.php/', finance_view, name='finance-view-2'),
 )
 
 if settings.DEBUG:
