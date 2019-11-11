@@ -224,3 +224,6 @@ if ($host = pcjindustries.co.th) {
 
 ### Before signing off
 Do not forget to change `DEBUG=False` in `settings.py` and restart both services with `service nginx restart && service uwsgi restart`
+
+### Every update
+Do not forget to `python3 manange.py collectstatic` (under virtual environment) and restart both services.
