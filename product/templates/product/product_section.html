@@ -1,3 +1,5 @@
+{% load thumbnail %}
+
 <div class="product-section">
     <div class="product-title text-red">{{products.0.title}}</div>
     <div class="product frame">
@@ -15,9 +17,11 @@
     </div>
     <div class="product-thumbnail">
         {% for p in products %}
+        {% thumbnail p.image "50x50" crop="center" as small %}
             <div class="thumbnail frame {% if forloop.first %} selected {% endif %}">
-                <span class="helper"></span><img src="{{p.image.url}}" data-title="{{p.title}}" data-index="{{forloop.counter}}" {% if forloop.last %} data-last="1" {% endif %}>
+                <span class="helper"></span><img src="{{small.url}}" data-title="{{p.title}}" data-index="{{forloop.counter}}" data-src="{{p.image.url}}" {% if forloop.last %} data-last="1" {% endif %}>
             </div>
+        {% endthumbnail %}
         {% endfor %}
     </div>
 </div>

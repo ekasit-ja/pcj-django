@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from ckeditor.fields import RichTextField
 from django.utils.translation import get_language
+from sorl.thumbnail import ImageField
 
 # Create your models here.
 class Product(models.Model):
@@ -14,7 +15,7 @@ class Product(models.Model):
     title_th    = models.CharField(max_length=255, blank=True, verbose_name='title thai')
     desc_en     = RichTextField(default='', blank=True, verbose_name='description english')
     desc_th     = RichTextField(default='', blank=True, verbose_name='description thai')
-    image       = models.ImageField(upload_to='product')
+    image       = ImageField(upload_to='product')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
 
     @property

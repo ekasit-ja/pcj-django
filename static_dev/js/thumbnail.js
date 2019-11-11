@@ -22,14 +22,14 @@ scope.find('.thumbnail.frame').click(function(e) {
     title.text(img.data('title'));
 
     // change fade-in item  to be fade-out
-    fade_in.attr('src', img.attr('src'));
+    fade_in.attr('src', img.data('src'));
     fade_in.fadeIn(s, function() {
         fade_in.removeClass('fade-in').addClass('fade-out').css('z-index', 2);
     });
 
     // change fade-out item  to be fade-in
     fade_out.fadeOut(s, function() {
-        fade_out.attr('src', img.attr('src'));
+        fade_out.attr('src', img.data('src'));
         fade_out.removeClass('fade-out').addClass('fade-in').css('z-index', 1);
     });
 });
