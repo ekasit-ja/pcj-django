@@ -3,9 +3,9 @@
 ### This is development and deployment note for future use.
 
 ### Problem on Cent OS 7 with SQLite3 and mod-wsgi
-Default python in Cent OS 7 persist to use Sqlite version **3.7.17** while django version 2.2.x requires sqlite version **3.8.3 or higher**. Many attempts to install sqlite newer version succeeded at development level. However, it failed at deployment stage. As a result, the latest version of django we can use is **2.1.x**.
+Default python in Cent OS 7 persist to use Sqlite version **3.7.17** while Django version 2.2.x requires sqlite version **3.8.3 or higher**. Many attempts to install sqlite newer version succeeded at development level. However, it failed at deployment stage. As a result, the latest version of Django we can use is **2.1.x**.
 
-EasyApache4 on Cent OS also prevents us to use normal version of Apache2 and mod_wsgi.  Experiment (customized) version of mod_wsgi for EasyApache4 is not working neither. Therefore, deploying django using EasyApache4 is not possible.
+EasyApache4 on Cent OS also prevents us to use normal version of Apache2 and mod_wsgi.  Experiment (customized) version of mod_wsgi for EasyApache4 is not working neither. Therefore, deploying Django using EasyApache4 is not possible.
 
 Deployment option is narrowed to **NGINX**. After doing research, we chose **uWSGI** for middleware over GUnicorn because deployment tutorial and community on Cent OS prefers uWSGI to GUnicorn.
 
@@ -36,7 +36,7 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
 ---
 
 ### Preparation for deployment
-**Do NOT place project folder in** `/root`.  Place somewhere else like `/home/ekasit` (in this case). We will not give nginx permission to access root folder.
+**Do NOT place project folder in** `/root`.  Place somewhere else like `/home/ekasit` (in this case). We will not give NGINX permission to access root folder.
 1. First of all, create project folder with `mkdir pcj-django && cd pcj-django`
 2. execute `mkdir source static upload site`
    - if this is first run, install python virtual environment executing `pip3 install virtualenv`
@@ -59,15 +59,12 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
 ### Working with CLI
 Note that Django is **NOT** working when we put the process into background.
 
-### Working with GIT
-Without `python3 manage.py makemigrations` and `python3 manage.py migrate` command on remote server, code still works fine.  However, migration files will be modified automatically when we run the server.  Use `git reset --hard` to discard all changes.  Then use `git pull` to update source code from GIT.
-
 ---
 
 ## Deployment
 1. `deactivate` virtual environment first
 2. We install uWSGI globally with `pip3 install uwsgi`
-3. create file `pcj.ini` (uwsgi initial file) in folder `site`
+3. create file `pcj.ini` (uWSGI initial file) in folder `site`
 4. paste below configuration in the file
 ```
 [uwsgi]
@@ -83,7 +80,7 @@ http = 0.0.0.0:8000
 ```
 5. execute `uwsgi tutorial.ini` and browse website to check if it is working or not. (static files will not be served at this point)
 6. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
-7. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uwsgi in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
+7. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uWSGI in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
 ```
 [Unit]
 Description=uWSGI service (in emporer mode) for www.pcjindustries.co.th run by Django
@@ -100,8 +97,8 @@ NotifyAccess=all
 WantedBy=multi-user.target
 ```
 8. execute `systemctl daemon-reload` to inform system there is change from service files
-9. install nginx with `yum install nginx`
-10. configure nginx at `/etc/nginx/nginx.conf` by comment server directive (see below)
+9. install NGINX with `yum install nginx`
+10. configure NGINX at `/etc/nginx/nginx.conf` by comment server directive (see below)
 ```
 ...
     include /etc/nginx/conf.d/*.conf;
@@ -155,7 +152,7 @@ at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
 ### SSL for https
 We will use **certbot** software to handle **Let’s Encrypt** certificate automatically.
 1. install certbot by executing `yum install certbot python2-certbot-nginx`
-2. then `certbot --nginx` to let certbot configure nginx automatically
+2. then `certbot --nginx` to let certbot configure NGINX automatically
 3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d pcjindustries.co.th -d www.pcjindustries.co.th -d server.pcjindustries.co.th` then choose option 2 (renew and replace cert)
 4. we have to force all `non-www` to `www` as well as provide `.well-known` path by changing below
 ```
@@ -216,14 +213,13 @@ if ($host = pcjindustries.co.th) {
     return 301 https://www.pcjindustries.co.th$request_uri;
 } # managed by Certbot
 ```
-6. restart nginx with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
+6. restart NGINX with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
 7. set job to auto-renew certificate by executing `crontab -e`. cronjob file will be opened
 8. then put `0 4 2 * * /usr/bin/certbot renew >> /home/ekasit/pcj-django/site/renew_cert.log 2>&1` on the last line. (it means every month, on 2nd day at 04.00, execute `certbot renew` and log it in that file either output is normal or error)
 
 ---
 
-### Before signing off
-Do not forget to change `DEBUG=False` in `settings.py` and restart both services with `service nginx restart && service uwsgi restart`
-
-### Every update
-Do not forget to `python3 manange.py collectstatic` (under virtual environment) and restart both services.
+### Before signing off & Every later update
+1. Do not forget to change `DEBUG=False` in `settings.py`
+2. execute `python3 manange.py collectstatic` (under virtual environment) to collect all updated static files
+3. and restart both services with `service nginx restart && service uwsgi restart`
