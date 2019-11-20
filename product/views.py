@@ -20,6 +20,7 @@ def list_fire_door(request):
         'docs': docs,
         'meta_title': _('meta-title-frd')+" | "+_('pcj-industries-short'),
         'meta_desc': _('meta-desc-frd'),
+        'meta_kw': _('meta-kw-frd'),
         'meta_img': request.build_absolute_uri(static('images/fire_doors.jpg')),
         'meta_robots': 'index, nofollow',
     })
@@ -35,6 +36,7 @@ def list_fire_damper(request):
         'docs': docs,
         'meta_title': _('meta-title-fdc')+" | "+_('pcj-industries-short'),
         'meta_desc': _('meta-desc-fdc'),
+        'meta_kw': _('meta-kw-fdc'),
         'meta_img': request.build_absolute_uri(static('images/fire_dampers.jpg')),
         'meta_robots': 'index, nofollow',
     })
@@ -50,6 +52,7 @@ def list_fsd_ul(request):
         'docs': docs,
         'meta_title': _('meta-title-fsd-ul')+" | "+_('pcj-industries-short'),
         'meta_desc': _('meta-desc-fsd-ul'),
+        'meta_kw': _('meta-kw-fsd-ul'),
         'meta_img': request.build_absolute_uri(static('images/fsd_ul.jpg')),
         'meta_robots': 'index, nofollow',
     })
@@ -65,6 +68,7 @@ def list_other_damper(request):
         'docs': docs,
         'meta_title': _('meta-title-ddp')+" | "+_('pcj-industries-short'),
         'meta_desc': _('meta-desc-ddp'),
+        'meta_kw': _('meta-kw-ddp'),
         'meta_img': request.build_absolute_uri(static('images/duct_dampers.jpg')),
         'meta_robots': 'index, nofollow',
     })
@@ -80,6 +84,7 @@ def list_duct_silencer(request):
         'docs': docs,
         'meta_title': _('meta-title-ds')+" | "+_('pcj-industries-short'),
         'meta_desc': _('meta-desc-ds'),
+        'meta_kw': _('meta-kw-ds'),
         'meta_img': request.build_absolute_uri(static('images/duct_silencers.jpg')),
         'meta_robots': 'index, nofollow',
     })
@@ -95,6 +100,7 @@ def list_air_outlet(request):
         'docs': docs,
         'meta_title': _('meta-title-aol')+" | "+_('pcj-industries-short'),
         'meta_desc': _('meta-desc-aol'),
+        'meta_kw': _('meta-kw-aol'),
         'meta_img': request.build_absolute_uri(static('images/air_outlets.jpg')),
         'meta_robots': 'index, nofollow',
     })

@@ -476,3 +476,24 @@ msgstr "Air outlets, Air grilles"
 
 msgid "meta-desc-aol"
 msgstr "We manufacture and distribute various types of Air Outlets, i.e. : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers. Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84. Each type is designed suitable for each particular function."
+
+msgid "meta-kw-home"
+msgstr "Fire Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Steel Door, Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type, Fire Smoke Damper, Duct Damper, Other Damper, Damper, Duct Silencer, Acoutic Louver, Air Outlet, Air Grille"
+
+msgid "meta-kw-frd"
+msgstr "Fire Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Steel Door"
+
+msgid "meta-kw-fdc"
+msgstr "Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type"
+
+msgid "meta-kw-fsd-ul"
+msgstr "Fire Smoke Damper"
+
+msgid "meta-kw-ddp"
+msgstr "Duct Damper, Other Damper, Damper"
+
+msgid "meta-kw-ds"
+msgstr "Duct Silencer, Acoutic Louver"
+
+msgid "meta-kw-aol"
+msgstr "Air Outlet, Air Grille"
