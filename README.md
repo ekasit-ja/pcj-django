@@ -17,7 +17,7 @@ In conclusion, we use **NGINX** for web server (which will serve static files). 
 Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX command in Windows environment.
 1. install **Python version 3** (note that command will be `python3` not just `python`)
 2. use `pip3` command for installing packages (not `pip`)
-3. use **Bisvise SSH Client** application for SSH and FTP to server
+3. use **Bitvise SSH Client** application for SSH and FTP to server
 4. folder structure will be like below (not mentioned folders are auto-generated)
 
 ```
