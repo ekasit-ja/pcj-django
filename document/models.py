@@ -5,7 +5,7 @@ from django.utils.translation import get_language
 # Create your models here.
 class Document(models.Model):
     product_type = models.CharField(
-        max_length=5,
+        max_length=6,
         choices=settings.CONSTANTS['product_choices'],
         default=settings.CONSTANTS['product_choices'][0][0],
     )
