@@ -36,7 +36,7 @@ def page_home(request):
 
 def page_about(request):
     path = os.path.join(settings.STATICFILES_DIRS[0], 'images', 'factory')
-    factory_images = os.listdir(path)
+    factory_images = sorted(os.listdir(path))
     for i, img in enumerate(factory_images):
         factory_images[i] = 'images/factory/' + img
 
