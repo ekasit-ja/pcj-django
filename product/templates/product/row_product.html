@@ -2,7 +2,7 @@
 
 <div class="row row-card product">
     {% for dropdown_item in navbar_dropdown_items %}
-        <div class="col-6 col-sm-4 col-md-2 col-card">
+        <div class="col-6 col-sm-4 col-md col-card">
             <a class="card card-label" href="{{dropdown_item.1}}">
                 <div class="card-img square" style="background-image:url('{% static dropdown_item.2 %}')"></div>
                 <div class="card-text">{% trans dropdown_item.0|safe %}</div>
