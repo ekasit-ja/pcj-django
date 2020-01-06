@@ -51,9 +51,15 @@
 
         <div class="row img-factory">
             {% for img in factory_images %}
-                <div class="col-md-6">
-                    <img src="{% static img %}" class="img-fluid">
-                </div>
+                {% if forloop.first %}
+                    <div class="col-md-12">
+                        <img src="{% static img %}" class="img-fluid">
+                    </div>
+                {% else %}
+                    <div class="col-md-6">
+                        <img src="{% static img %}" class="img-fluid">
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
