@@ -222,6 +222,14 @@ if ($host = pcjindustries.co.th) {
 
 ---
 
+### Auto restart service
+After long period of deployment time, service alawys crashes for unknown reason.  Therefore, we need to restart service automatically by `crontab`.  Thus set up to restart the service daily.
+1. Open file `/var/spool/cron/root`
+2. add `0 4 * * * service nginx restart && service uwsgi restart >> /home/ekasit/pcj-django/site/daily_restart.log 2>&1` on the last line
+3. save the file
+
+---
+
 ### Before signing off & Every later update
 1. Do not forget to change `DEBUG=False` in `settings.py`
 2. execute `python3 manange.py collectstatic` (under virtual environment) to collect all updated static files
