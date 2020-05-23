@@ -77,10 +77,12 @@ http = 0.0.0.0:8000
 #vacuum = true
 #chown-socket = root:root
 #chmod-socket = 666
+#listen = 512
 ```
-5. execute `uwsgi tutorial.ini` and browse website to check if it is working or not. (static files will not be served at this point)
-6. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
-7. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uWSGI in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
+5. execute `sysctl -w net.core.somaxconn=512` to increase system request size (this is a test to fix 502 error when server is on for a long period of time) and add `net.core.somaxconn=512` to file `/etc/sysctl.conf` for permanent change the request size
+6. execute `uwsgi tutorial.ini` and browse website to check if it is working or not. (static files will not be served at this point)
+7. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
+8. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uWSGI in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
 ```
 [Unit]
 Description=uWSGI service (in emporer mode) for www.pcjindustries.co.th run by Django
@@ -96,9 +98,9 @@ NotifyAccess=all
 [Install]
 WantedBy=multi-user.target
 ```
-8. execute `systemctl daemon-reload` to inform system there is change from service files
-9. install NGINX with `yum install nginx`
-10. configure NGINX at `/etc/nginx/nginx.conf` by comment server directive (see below)
+9. execute `systemctl daemon-reload` to inform system there is change from service files
+10. install NGINX with `yum install nginx`
+11. configure NGINX at `/etc/nginx/nginx.conf` by comment server directive (see below)
 ```
 ...
     include /etc/nginx/conf.d/*.conf;
@@ -110,7 +112,7 @@ WantedBy=multi-user.target
 #    }
 ...
 ```
-11. then add below code instead
+12. then add below code instead
 ```
 server {
     # allow upload file as large up to 10M #
@@ -137,9 +139,9 @@ server {
     }
 }
 ```
-12. check syntax with `nginx -t`
-13. restart service to apply changes by `service nginx restart && service uwsgi restart`
-14. browse to website to check if it is working
+13. check syntax with `nginx -t`
+14. restart service to apply changes by `service nginx restart && service uwsgi restart`
+15. browse to website to check if it is working
 
 at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
 
@@ -156,7 +158,7 @@ at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
 We will use **certbot** software to handle **Let’s Encrypt** certificate automatically.
 1. install certbot by executing `yum install certbot python2-certbot-nginx`
 2. then `certbot --nginx` to let certbot configure NGINX automatically
-3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d pcjindustries.co.th -d www.pcjindustries.co.th -d server.pcjindustries.co.th` then choose option 2 (renew and replace cert)
+3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d www.pcjindustries.co.th,pcjindustries.co.th,server.pcjindustries.co.th` then choose option 2 (renew and replace cert) (use only 1 -d to create just 1 domain for all 3 addresses. There should be only 1 certificate folder which is `www.pcjindustries.co.th`)
 4. we have to force all `non-www` to `www` as well as provide `.well-known` path by changing below
 ```
 location / {
