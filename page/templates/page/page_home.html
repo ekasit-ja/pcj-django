@@ -2,7 +2,7 @@
 {% load static i18n %}
 
 {% block content %}
-    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+    <!-- <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             {% for img in carousel_images %}
                 <li data-target="#carouselIndicators" data-slide-to="{{forloop.counter0}}" {% if forloop.first %} class="active" {% endif %}></li>
@@ -21,24 +21,18 @@
         <a class="carousel-control-next" href="#carouselIndicators" data-slide="next">
             <span class="icon-chevron-right"></span>
         </a>
-    </div>
+    </div> -->
 
     <br>
     <div class="container">
-        {% if news_queryset %}
-            <h3 class="text-center text-capitalize">{% trans 'news' %}</h3>
-            {% include 'news/row_news.html' %}
-            <hr>
-        {% endif %}
-
-        <h3 class="text-center text-capitalize">{% trans 'quality-you-can-trust' %}</h3>
+        <!-- <h3 class="text-center text-capitalize">{% trans 'quality-you-can-trust' %}</h3>
         <div class="row justify-content-center">
             <p class="col-md-8 text-justify">
                 {% trans 'quality-you-can-trust-content-1' %} {{AGE}} {% trans 'quality-you-can-trust-content-2' %}
             </p>
         </div>
         <img src="{% static 'images/certificate.jpg' %}" class="img-fluid">
-        <hr>
+        <hr>-->
 
         <h3 class="text-center text-capitalize">{% trans 'products' %}</h3>
         {% include 'product/row_product.html' %}
@@ -49,7 +43,13 @@
         <div class="text-center">
             <a href="{% url 'project:project-list' %}" class="btn btn-outline-primary text-capitalize">{% trans 'view-all-projects' %}</a>
         </div>
-        <br>
+        <hr>
+
+        {% if news_queryset %}
+            <h3 class="text-center text-capitalize">{% trans 'news' %}</h3>
+            {% include 'news/row_news.html' %}
+            <hr>
+        {% endif %}
 
     </div>
 {% endblock content %}
