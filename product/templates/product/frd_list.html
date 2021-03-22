@@ -5,41 +5,92 @@
     <br>
     <div class="container">
 
-        <div class="row">
-            <div class="col-md-4 text-red">
-                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd.jpg'}}">
-                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_'|add:LANG|add:'.mp4'}}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h5>{% trans 'frd-vdo-commercial' %}</h5>
-            </div>
-            <div class="col-md-4 text-red">
-                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.jpg'}}">
-                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h5>{% trans 'frd-vdo-ul-01' %}</h5>
-            </div>
-            <div class="col-md-4 text-red">
-                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.jpg'}}">
-                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h5>{% trans 'frd-vision-vdo-ul-01' %}</h5>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-justify">
+                <h1 class="text-center text-capitalize">ประตูเหล็กทนไฟ และ ประตูเหล็กธรรมดา</h1>
+                <p>ประตูเหล็กทนไฟ (ประตูหนีไฟ) ของพีซีเจ ผลิตจากเหล็กแผ่นเรียบ ด้วยกรรมวิธีพิเศษในการเสริมความแข็งแรง (สำหรับการใช้งานหนัก) ได้รับการทดสอบและรับรองอัตราการทนไฟ 3 ชั่วโมง ตามมาตรฐาน ANSI/UL 10C & CAN/ULC-S104 จากสถาบัน Underwriter Laboratories ประเทศสหรัฐอเมริกา ประตูของเรามีให้เลือกหลากหลายประเภทและสไตล์ อาทิ</p>
+                <ul>
+                    <li>ประตูบานเดี่ยว ประตูบานคู่</li>
+                    <li>ประตูบานเรียบทึบ ประตูบานเรียบแบบมีช่องกระจก ประตูบานลูกฟัก</li>
+                    <li>เคลือบสีผง และเคลือบลายไม้</li>
+                </ul>
+                <p>และเรายังจัดจำหน่ายอุปกรณ์ประตูหลากหลายประเภทตามความต้องการอีกด้วย</p>
+
+                <div class="row justify-content-center">
+                    <img src="{% static 'images/cert fsd.jpg' %}" class="img-fluid product-cert">
+                </div>
+
+                <p>ประตูของเราเป็นสินค้าสั่งผลิต สามารถเลือกขนาดได้ตามความต้องการ โดยที่ขนาดใหญ่สุดคือ 1200 มม. X 2400 มม. สำหรับประตูบานเดี่ยว และ 2400 มม. X 2400 มม. สำหรับประตูบานคู่ แนะนำการใช้งานไม่เพียงแต่เฉพาะประตูทางหนีไฟ แต่รวมไปถึงประตูห้องที่ต้องการการทนไฟ หรือป้องกันการงัดขโมย</p>
+
+                <p>อีกทั้งเรายังมีผลิตและจัดจำหน่ายประตูเหล็กทนไฟ 2 ชั่วโมงตามมาตรฐาน BS476 และประตูเหล็กธรรมดาเพื่อตอบสนองความต้องการของการใช้งานทุกประเภท</p>
             </div>
         </div>
         <hr>
 
-        <h2 class="text-center text-capitalize">{% trans 'fire-steel-doors' %}</h2>
         <div class="row justify-content-center">
-            <div class="col-md-8 text-justify">
-                {% trans 'frd-p1' %}
+            <div class="col-md-10 text-justify text-center">
+                <h3 class="text-center">ตัวอย่างรูปสินค้า</h3>
+                <div class="product-img">
+                    <div class="row">
+                        <div class="col-sm-6 border-right border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d01.jpg' %}">
+                            <img src="{% static 'images/product/csd/detail/d03.jpg' %}">
+                            <br>
+                            ประตูบานเดี่ยว
+                        </div>
+                        <div class="col-sm-6 border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d10.jpg' %}">
+                            <img src="{% static 'images/product/csd/detail/d12.jpg' %}">
+                            <br>
+                            ประตูบานคู่
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 border-right border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d02.jpg' %}">
+                            <br>
+                            ประตูบานเรียบทึบ
+                        </div>
+                        <div class="col-6 border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d06.jpg' %}">
+                            <br>
+                            ประตูบานเรียบมีช่องกระจก
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 border-right border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d07.jpg' %}">
+                            <br>
+                            ประตูบานลูกฟัก 5 ช่อง
+                        </div>
+                        <div class="col-6 border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d09.jpg' %}">
+                            <br>
+                            ประตูบานลูกฟัก 11 ช่อง
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 border-right border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d11.jpg' %}">
+                            <br>
+                            ประตูเคลือบอบสีผง
+                        </div>
+                        <div class="col-6 border-bottom">
+                            <img src="{% static 'images/product/csd/detail/d13.jpg' %}">
+                            <br>
+                            ประตูเคลือบอบสีลายไม้
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <img src="{% static 'images/cert fsd.jpg' %}" class="img-fluid product-cert">
-        </div>
-        <br>
+
+
+
+
 
         {% include 'product/product_section.html' %}
         <br>
@@ -84,6 +135,31 @@
         {% include 'tab.html' %}
         <hr>
 
+        <div class="row">
+            <div class="col-md-4 text-red">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'frd-vdo-commercial' %}</h5>
+            </div>
+            <div class="col-md-4 text-red">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'frd-vdo-ul-01' %}</h5>
+            </div>
+            <div class="col-md-4 text-red">
+                <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.jpg'}}">
+                    <source src="{{MEDIA_URL|add:'videos/pcj_frd_vision_ul_01_'|add:LANG|add:'.mp4'}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h5>{% trans 'frd-vision-vdo-ul-01' %}</h5>
+            </div>
+        </div>
+        <hr>
+
         <div class="text-center">
             <a href="mailto:{{EMAIL_SALES}}" class="btn btn-outline-primary text-capitalize">{% trans 'get-a-quote' %}</a>
         </div>
@@ -93,3 +169,4 @@
 {% block extra_js %}
     <script src="{% static 'js/thumbnail.js' %}"></script>
 {% endblock extra_js %}
+
