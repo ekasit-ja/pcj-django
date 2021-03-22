@@ -22,6 +22,7 @@ CONSTANTS = {
 def default_context(request):
     return {
         'navbar_items': [
+            ('home', reverse('page:page-home')),
             ('about', reverse('page:page-about')),
             ('products', reverse('page:page-home')),
             ('projects', reverse('project:project-list')),

@@ -19,6 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/navbar.html:3
+msgid "home"
+msgstr "home"
+
 msgid "about"
 msgstr "about"
 

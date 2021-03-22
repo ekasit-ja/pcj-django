@@ -19,6 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: templates/navbar.html:3
+msgid "home"
+msgstr "หน้าแรก"
+
 msgid "about"
 msgstr "เกี่ยวกับเรา"
 

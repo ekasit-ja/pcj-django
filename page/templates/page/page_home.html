@@ -2,7 +2,7 @@
 {% load static i18n %}
 
 {% block content %}
-    <!-- <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             {% for img in carousel_images %}
                 <li data-target="#carouselIndicators" data-slide-to="{{forloop.counter0}}" {% if forloop.first %} class="active" {% endif %}></li>
@@ -21,20 +21,11 @@
         <a class="carousel-control-next" href="#carouselIndicators" data-slide="next">
             <span class="icon-chevron-right"></span>
         </a>
-    </div> -->
-
+    </div>
     <br>
-    <div class="container">
-        <!-- <h3 class="text-center text-capitalize">{% trans 'quality-you-can-trust' %}</h3>
-        <div class="row justify-content-center">
-            <p class="col-md-8 text-justify">
-                {% trans 'quality-you-can-trust-content-1' %} {{AGE}} {% trans 'quality-you-can-trust-content-2' %}
-            </p>
-        </div>
-        <img src="{% static 'images/certificate.jpg' %}" class="img-fluid">
-        <hr>-->
 
-        <div class="row product-home" style="background-color: yellow">
+    <div class="container">
+        <div class="row product-home csd">
             <div class="col-lg-6">
                 <br>
                 <h1 class="text-center">ประตูเหล็กทนไฟ และ ประตูเหล็กธรรมดา</h1>
@@ -52,69 +43,135 @@
                     </div>
                 </section>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 align-self-center">
                 <div class="row justify-content-center">
-                    <img src="{% static 'images/product/csd/sw_flush_sd_vision_p1.jpg' %}">
-                    <img src="{% static 'images/product/csd/sw_flush_sd_vision_p2.jpg' %}">
-                    <img src="{% static 'images/product/csd/sw_flush_dd_vision_pull_p2.jpg' %}">
+                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_sd_vision_p1.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_sd_vision_p2.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_dd_vision_pull_p2.jpg' %}"></div>
                 </div>
                 <div class="row justify-content-center">
-                    <img src="{% static 'images/product/csd/sw_embossed_sd_vision_p3.jpg' %}">
-                    <img src="{% static 'images/product/csd/sw_flush_sd_vision_p6.jpg' %}">
-                    <img src="{% static 'images/product/csd/sw_embossed_dd_p1.jpg' %}">
+                    <div class="frame"><img src="{% static 'images/product/csd/sw_embossed_sd_vision_p3.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_sd_vision_p6.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/sw_embossed_dd_p1.jpg' %}"></div>
                 </div>
             </div>
         </div>
-        <hr>
-        <div class="row product-home" style="background-color: magenta">
+
+        <div class="row product-home fdc">
             <div class="col-lg-6">
                 <br>
-                <h1 class="text-center">แดมเปอร์ทนไฟ และ แดมเปอร์อื่นๆ</h1>
+                <h1 class="text-center">แดมเปอร์ทนไฟ</h1>
                 <hr>
                 <section>
-                    <p>แดมเปอร์ทนไฟ และ แดมเปอร์อื่นๆ ภายใต้แบรนด์ Stream Air ผลิตและจัดจำหน่ายโดยบริษัท พีซีเจ อุตสาหกรรม จำกัด ผลิตจากเหล็กชุบกัลวาไนซ์ ป้องกันสนิม อายุการใช้งานยาวนาน ได้รับการทดสอบมาตรฐานชั้นนำมากมาย อาทิ มาตรฐานการทนไฟ ANSI/UL 555 & CAN/ULC-S112 จาก Underwriter Lab สหรัฐอเมริกา และ UL 555 และ UL 555S จากสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง แดมเปอร์ของเราหลากหลายประเภท เพื่อรองรับการใช้งานตามความต้องการเฉพาะทาง อาทิเช่น</p>
+                    <p>แดมเปอร์ทนไฟ ภายใต้แบรนด์ Stream Air ผลิตและจัดจำหน่ายโดยบริษัท พีซีเจ อุตสาหกรรม จำกัด มีอัตราการทนไฟ 3 ชั่วโมงตามมาตรฐาน ANSI/UL 555 & CAN/ULC-S112 ได้รับการทดสอบโดย Underwriter Lab สหรัฐอเมริกา สามารถติดตั้งในแนวตั้งกับผนังปูน หรือผนังยิปซั่มได้ แดมเปอร์ทนไฟถูกออกแบบมาให้ปิดอัตโนมัติโดยแรงโน้มถ่วงในเหตุการณ์ไฟไหม้เมื่ออุณหภูมิที่แดมเปอร์สูงถึง 165 องศาฟาเรนไฮต์ (74 องศาเซลเซียส) เพื่อป้องกันไม่ให้ไฟลามทะลุไปยังอีกฝั่งของผนัง แดมเปอร์ทนไฟของเรามีให้เลือกหลากหลายรูปแบบ อาทิ</p>
                     <ul>
-                        <li>ไฟร์แดมเปอร์ แบบม่านตก</li>
+                        <li>ไฟร์แดมเปอร์ แบบม่านตก ชนิดใบอยู่ในช่องลม</li>
+                        <li>ไฟร์แดมเปอร์ แบบม่านตก ชนิดใบอยู่นอกช่องลม</li>
+                        <li>ไฟร์แดมเปอร์ แบบม่านตก แบบหลายตัวต่อกัน</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="{% url 'product:product-fdc'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="row justify-content-center">
+                    <div class="frame long"><img src="{% static 'images/product/fdc/fdc-in.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/fdc/fdc-out.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/fdc/fdc-multi.jpg' %}"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row product-home ddp">
+            <div class="col-lg-6">
+                <br>
+                <h1 class="text-center">แดมเปอร์อื่นๆ</h1>
+                <hr>
+                <section>
+                    <p>แดมเปอร์ภายใต้แบรนด์ Stream Air ผลิตและจัดจำหน่ายโดยบริษัท พีซีเจ อุตสาหกรรม จำกัด ผลิตจากเหล็กชุบกัลวาไนซ์ ป้องกันสนิม อายุการใช้งานยาวนาน ได้รับการทดสอบมาตรฐานสากล จากสถาบันชั้นนำของประเทศไทย อาทิ มาตรฐาน UL 555 และ UL 555S จากสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง แดมเปอร์ของเรามีให้เลือกหลากหลายประเภท เพื่อรองรับการใช้งานตามความต้องการเฉพาะทาง อาทิเช่น</p>
+                    <ul>
                         <li>วอลุ่มแดมเปอร์ แบบเหลี่ยม, แบบกลม, แบบวงรี</li>
                         <li>มอเตอร์ไรซ์แดมเปอร์ แบบเหลี่ยม, แบบกลม, แบบวงรี</li>
+                        <li>ไฟร์สโม้คแดมเปอร์</li>
                         <li>กราวิตี้แดมเปอร์</li>
                         <li>รีลีฟแดมเปอร์</li>
                     </ul>
                     <div class="text-center">
-                        <a href="{% url 'product:product-frd'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                        <a href="{% url 'product:product-ddp'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
                     </div>
                 </section>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 align-self-center">
                 <div class="row justify-content-center">
-                    <img src="{% static 'images/product/ddp/fdc.jpg' %}">
-                    <img src="{% static 'images/product/ddp/vl.jpg' %}">
-                    <img src="{% static 'images/product/ddp/md.jpg' %}">
+                    <div class="frame"><img src="{% static 'images/product/ddp/vl.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/ddp/md.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/ddp/ovd.jpg' %}"></div>
                 </div>
                 <div class="row justify-content-center">
-                    <img src="{% static 'images/product/ddp/rml.jpg' %}">
-                    <img src="{% static 'images/product/ddp/gd.jpg' %}">
-                    <img src="{% static 'images/product/ddp/rd.jpg' %}">
+                    <div class="frame"><img src="{% static 'images/product/ddp/rml.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/ddp/gd.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/ddp/rd.jpg' %}"></div>
                 </div>
             </div>
         </div>
-        <hr>
 
-        <div class="row">
+        <div class="row product-home ds">
             <div class="col-lg-6">
-                <h1>{% trans 'ddp' %}</h1>
+                <br>
+                <h1 class="text-center">ดักไซเลนเซอร์ และ อคูสติกลูเวอร์</h1>
+                <hr>
+                <section>
+                    <p>ดักไซเลนเซอร์และอคูสติกลูเวอร์ ของพีซีเจผ่านการทดสอบการลดทอนเสียง และได้รับการรับรองโดย N.A.T.A., Australia, AS 1277 สินค้าของเรามีให้เลือกทั้งแบบเหลี่ยมและกลม ทุกขนาดตามต้องการ ซึ่งสามารถติดตั้งได้ตั้งแนวตั้งและแนวราบเพื่อลดทอนเสียงให้อยู่ในระดับความดังที่ต้องการ
+                    <div class="text-center">
+                        <a href="{% url 'product:product-ds'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                    </div>
+                </section>
             </div>
-            <div class="col-lg-6">
-                <h1>{% trans 'ds' %}</h1>
-            </div>
-            <div class="col-lg-6">
-                <h1>{% trans 'aol' %}</h1>
+            <div class="col-lg-6 align-self-center">
+                <div class="row justify-content-center">
+                    <div class="frame long"><img src="{% static 'images/product/ds/ds.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/ds/rds.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/ds/acl.jpg' %}"></div>
+                </div>
             </div>
         </div>
-        <hr>
 
-        <h3 class="text-center text-capitalize">{% trans 'products' %}</h3>
-        {% include 'product/row_product.html' %}
+        <div class="row product-home aol">
+            <div class="col-lg-6">
+                <br>
+                <h1 class="text-center">หน้ากากแอร์</h1>
+                <hr>
+                <section>
+                    <p>หน้ากากแอร์ (กริลแอร์) ผลิตและจัดจำหน่ายโดย พีซีเจ หลายประเภทได้รับการทดสอบประสิทธิภาพและรับรองโดย N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84 หน้ากากแอร์ของเรามีหลากหลายรูปแบบ ถูกออกแบบมาเพื่อรองรับการใช้งานตามความต้องการเฉพาะทาง อาทิเช่น</p>
+                    <ul>
+                        <li>หน้ากากแอร์แบบกลม</li>
+                        <li>หน้ากากแอร์แบบจัตุรัส/แบบสี่เหลี่ยมผืนผ้า</li>
+                        <li>หน้ากากแอร์สี่เหลี่ยมลังไข่</li>
+                        <li>หน้ากากแอร์แบบใบปรับได้สองชั้น</li>
+                        <li>หน้ากากแอร์แบบสล็อต</li>
+                        <li>หน้ากากแอร์แบบแนวยาว</li>
+                        <li>แอร์ลูเวอร์</li>
+                        <li>อุปกรณ์เสริมหน้ากากแอร์ เช่น แดมเปอร์สำหรับหน้ากากแอร์, มุ้งลวดกันแมลง, แอร์ฟิลเตอร์</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="{% url 'product:product-aol'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="row justify-content-center">
+                    <div class="frame long"><img src="{% static 'images/product/aol/scd.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/aol/egh.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/aol/af2.jpg' %}"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="frame long"><img src="{% static 'images/product/aol/obv.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/aol/rnd.jpg' %}"></div>
+                    <div class="frame long"><img src="{% static 'images/product/aol/agt.jpg' %}"></div>
+                </div>
+            </div>
+        </div>
         <hr>
 
         <h3 class="text-center text-capitalize">{% trans 'projects' %}</h3>
@@ -127,7 +184,6 @@
         {% if news_queryset %}
             <h3 class="text-center text-capitalize">{% trans 'news' %}</h3>
             {% include 'news/row_news.html' %}
-            <hr>
         {% endif %}
 
     </div>

@@ -51,10 +51,10 @@
 
     .selected {
         border: 1px solid $red;
-        box-shadow: -1px -1px 0.75rem rgba($red, .1),
-            1px -1px 0.75rem rgba($red, .1),
-            -1px 1px 0.75rem rgba($red, .1),
-            1px 1px 0.75rem rgba($red, .1);
+        box-shadow: -1px -1px 0.95rem rgba($red, .1),
+            1px -1px 0.95rem rgba($red, .1),
+            -1px 1px 0.95rem rgba($red, .1),
+            1px 1px 0.95rem rgba($red, .1);
     }
 
     .product-thumbnail {
@@ -79,7 +79,7 @@
 
 // css for door hardware section
 .door-hardware-section {
-    padding: 0.75em;
+    padding: 0.95em;
     background-color: $super-light-grey;
     border-radius: 0.25em;
 
@@ -152,6 +152,54 @@ a.text-red {
 // --- css for product slide
 
 .product-home {
+    border-radius: 5px;
+    padding: 5px 0;
+    margin-bottom: 2rem;
+
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center;
+
+    &.csd {
+        background: linear-gradient(
+                    rgba(white,.8),
+                    rgba(white,.8)),
+                    url('/static/images/product/csd/csd_bg.jpg');
+    }
+
+    &.fdc {
+        background: linear-gradient(
+                    rgba(white,.9),
+                    rgba(white,.9)),
+                    url('/static/images/product/fdc/fdc_bg.jpg');
+    }
+
+    &.ddp {
+        background: linear-gradient(
+                    rgba(white,.8),
+                    rgba(white,.8)),
+                    url('/static/images/product/ddp/ddp_bg.jpg');
+    }
+
+    &.ds {
+        background: linear-gradient(
+                    rgba(white,.9),
+                    rgba(white,.9)),
+                    url('/static/images/product/ds/ds_bg.jpg');
+    }
+
+    &.aol {
+        background: linear-gradient(
+                    rgba(white,.8),
+                    rgba(white,.8)),
+                    url('/static/images/product/aol/aol_bg.jpg');
+    }
+
+    box-shadow: -1px -1px 0.95rem rgba($black, .05),
+              1px -1px 0.95rem rgba($black, .05),
+              -1px 1px 0.95rem rgba($black, .05),
+              1px 1px 0.95rem rgba($black, .05);
+
     h1{
         font-size: 2em;
     }
@@ -165,9 +213,28 @@ a.text-red {
         margin-bottom: 1rem;
     }
 
-    img {
-        max-height: 15rem;
-        max-width: 100%;
-        padding: 0 0.5em 0.4em 0.5em;
+    div.frame {
+        max-height: 200px;
+        max-width: 160px;
+        align-self: center !important;
+        background-color: white;
+        border-radius: 5px;
+        margin: 3px;
+
+        img {
+            max-height: 200px;
+            max-width: 160px;
+            height: auto;
+            width: auto;
+            padding: 0 5px;
+        }
+
+        &.long {
+            max-width: 140px;
+
+            img {
+                max-width: 140px;
+            }
+        }
     }
 }
