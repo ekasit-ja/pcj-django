@@ -151,6 +151,10 @@ a.text-red {
 }
 // --- css for product slide
 
+.border-bottom {
+    border-width: 2px !important;
+}
+
 .product-home {
     border-radius: 5px;
     padding: 5px 0;
@@ -239,10 +243,40 @@ a.text-red {
     }
 }
 
-.product-img {
+.section-product {
+    [class^='col-'] {
+        border: 1px rgb(222, 226, 230) solid;
+    }
+
     img {
         max-height: 200px;
         max-width: 100%;
         margin: 5px;
+    }
+}
+
+.section-hardware{
+    text-align: center;
+
+    [class^='col-'] {
+        border: 1px rgb(222, 226, 230) solid;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 150px;
+        max-width: 100%;
+    }
+
+    h6 {
+        font-size: 1rem;
+        color: $red;
+        font-weight: bold;
+    }
+
+    ul {
+        text-align: left;
     }
 }
