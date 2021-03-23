@@ -37,13 +37,13 @@
                         <img src="{% static 'images/product/csd/detail/d01.jpg' %}">
                         <img src="{% static 'images/product/csd/detail/d03.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูบานเดี่ยว</strong>
+                        <h6>ประตูบานเดี่ยว</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/csd/detail/d10.jpg' %}">
                         <img src="{% static 'images/product/csd/detail/d12.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูบานคู่</strong>
+                        <h6>ประตูบานคู่</h6>
                     </div>
                 </div>
 
@@ -51,12 +51,12 @@
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/detail/d02.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูบานเรียบทึบ</strong>
+                        <h6>ประตูบานเรียบทึบ</h6>
                     </div>
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/detail/d06.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูบานเรียบมีช่องกระจก</strong>
+                        <h6>ประตูบานเรียบมีช่องกระจก</h6>
                     </div>
                 </div>
 
@@ -64,12 +64,12 @@
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/detail/d07.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูบานลูกฟัก 5 ช่อง</strong>
+                        <h6>ประตูบานลูกฟัก 5 ช่อง</h6>
                     </div>
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/detail/d09.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูบานลูกฟัก 11 ช่อง</strong>
+                        <h6>ประตูบานลูกฟัก 11 ช่อง</h6>
                     </div>
                 </div>
 
@@ -77,17 +77,18 @@
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/detail/d11.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูเคลือบอบสีผง</strong>
+                        <h6>ประตูเคลือบอบสีผง</h6>
                     </div>
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/detail/d13.jpg' %}">
                         <br>
-                        <strong class="text-red">ประตูเคลือบอบสีลายไม้</strong>
+                        <h6>ประตูเคลือบอบสีลายไม้</h6>
                     </div>
                 </div>
             </div>
         </div>
         <br>
+        <hr>
 
 
 
@@ -220,12 +221,33 @@
                 </div>
             </div>
         </div>
-
-
-
-
-        {% include 'tab.html' %}
+        <br>
         <hr>
+
+        {% for doc in docs.items %}
+            {% if doc.1 %}
+                <h3 class="text-center text-capitalize">{% trans doc.0 %}</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-10 section-document">
+                        <div class="row">
+                            {% for item in doc.1 %}
+                            <a class="card" href="{{item.doc.url}}" target="_blank">
+                                <div class="frame">
+                                    {% if item.image %}
+                                    <img src="{{item.image.url}}">
+                                    {% else %}
+                                    <img src="{% static 'images/document.jpg' %}">
+                                    {% endif %}
+                                </div>
+                                <h6>{{item.title}}</h6>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            {% endif %}
+        {% endfor %}
 
         <div class="row">
             <div class="col-md-4 text-red">
