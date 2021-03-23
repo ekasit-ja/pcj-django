@@ -2,25 +2,18 @@
 {% load static i18n %}
 
 {% block content %}
-     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            {% for img in carousel_images %}
-                <li data-target="#carouselIndicators" data-slide-to="{{forloop.counter0}}" {% if forloop.first %} class="active" {% endif %}></li>
-            {% endfor %}
-        </ol>
-        <div class="carousel-inner">
-            {% for img in carousel_images %}
-                <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                    <img src="{% static img %}" class="d-block w-100">
-                </div>
-            {% endfor %}
+    <div class="intro">
+        <div class="row">
+            <div class="col-md-5 d-flex align-items-center justify-content-center justify-content-md-end">
+                <img src="{% static 'images/pcj-logo.jpg' %}">
+            </div>
+            <div class="col-md-7 col-lg-5 d-flex align-items-center">
+                <section>
+                    <h1>บริษัท พีซีเจ อุตสาหกรรม จำกัด</h1>
+                    <p>ผลิตและจัดจำหน่าย ประตูเหล็กทนไฟ ประตูเหล็กธรรมดา แดมเปอร์ทนไฟ แดมเปอร์อื่นๆ หน้ากากแอร์ ดักไซเลนเซอร์ และอคูสติกลูเวอร์ ได้รับการรับรองตามมาตรฐานสากล ทดสอบโดยสถาบันชั้นนำมากมาย อีกทั้งประสบการณ์ในวงการมากกว่า 20 ปี จึงมั่นใจได้ในคุณภาพของสินค้าและบริการที่เป็นอันดับหนึ่งของพีซีเจ</p>
+                </section>
+            </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselIndicators" data-slide="prev">
-            <span class="icon-chevron-left"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselIndicators" data-slide="next">
-            <span class="icon-chevron-right"></span>
-        </a>
     </div>
     <br>
 
