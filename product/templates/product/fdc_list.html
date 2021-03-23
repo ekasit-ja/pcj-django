@@ -5,6 +5,84 @@
     <br>
     <div class="container">
 
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-justify">
+                <h1 class="text-center text-capitalize">{% trans 'fire-dampers' %}</h1>
+                <p>แดมเปอร์ทนไฟแบบม่านตก ของพีซีเจผลิตจากสังกะสีแผ่นเรียบ ความแข็งแรงสูง เฟรมแบบมอดูลาร์สำหรับติดตั้งในท่อดักท์ และต่อหลายตัวเข้าด้วยกัน แดมเปอร์ได้รับการทดสอบและรับรองอัตราการทนไฟ 3 ชั่วโมง ตามมาตรฐาน ANSI/UL 555 & CAN/ULC-S112 แดมเปอร์มีจำหน่ายทั้งแบบ Single Section, Multiple Section, In Air Stream และ Out of Air Stream เพื่อตอบสนองความต้องการของการใช้งานทุกประเภท แดมเปอร์สามารถผลิตได้ที่ขนาดใหญ่สุด</p>
+                <ul>
+                    <li>1220 มม. x 1220 มม. (48” x 48”) สำหรับ Single Section </li>
+                    <li>2440 มม. x 2440 มม. (96” x 96”) สำหรับ Multiple Section</li>
+                </ul>
+                <p>แนะนำการใช้งานสำหรับป้องกันไฟไม่ให้ลามผ่านท่อดักท์ พัดลมระบายอากาศ แอร์ลูเวอร์ หรือช่องกระจกภายในอาคาร โดยเฉพาะกับช่องขนาดใหญ่ เมื่อไฟหรือความร้อนมาถึงแดมเปอร์</p>
+
+                <div class="row justify-content-center">
+                    <img src="{% static 'images/cert fd.jpg' %}" class="img-fluid product-cert">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+
+
+        <h3 class="text-center text-capitalize">ตัวอย่างรูปสินค้า</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center section-product">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/product/fdc/details/fdc_in1.jpg' %}">
+                        <img src="{% static 'images/product/fdc/details/fdc_in2.jpg' %}">
+                        <br>
+                        <h6>In Air Stream, Single Section Without Damper Sleeve</h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="{% static 'images/product/fdc/details/fdc_out1.jpg' %}">
+                        <img src="{% static 'images/product/fdc/details/fdc_out2.jpg' %}">
+                        <br>
+                        <h6>Out of Air Stream, Single Section Without Damper Sleeve</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <img src="{% static 'images/product/fdc/details/fdc_in_s.jpg' %}">
+                        <br>
+                        <h6>In Air Stream, Single Section With Damper Sleeve</h6>
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/product/fdc/details/fdc_out_s.jpg' %}">
+                        <br>
+                        <h6>Out of Air Stream, Single Section With Damper Sleeve</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <img src="{% static 'images/product/fdc/details/fdc_in_mul1.jpg' %}">
+                        <br>
+                        <h6>In Air Stream, Multiple Section (2 Single Connected Together)</h6>
+                    </div>
+                    <div class="col-6">
+                        <img src="{% static 'images/product/fdc/details/fdc_out_mul1.jpg' %}">
+                        <br>
+                        <h6>Out of Air Stream, Multiple Section (2 Single Connected Together)</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <img src="{% static 'images/product/fdc/details/fdc_in_mul2.jpg' %}">
+                        <br>
+                        <h6>Multiple Section (4 Single Connected Together)</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+
+        {% include 'tab.html' %}
+
+        <h3 class="text-center text-capitalize">วิดีโอที่เกี่ยวข้อง</h3>
         <div class="row">
             <div class="col-md-6 text-red">
                 <video controls class="img-fluid" poster="{{MEDIA_URL|add:'videos/pcj_fdc.jpg'}}">
@@ -23,39 +101,12 @@
         </div>
         <hr>
 
-        <h2 class="text-center text-capitalize">{% trans 'fire-dampers' %}</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-justify">
-                {% trans 'fdc-p1' %}
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <img src="{% static 'images/cert fd.jpg' %}" class="img-fluid product-cert">
-        </div>
         <br>
-
-        {% include 'product/product_section.html' %}
-        <br>
-
-        <h3 class="text-center text-capitalize">{% trans 'option-you-can-choose' %}</h3>
-        <div class="option-table">
-            <div class="row justify-content-center">
-                <div class="col-sm-2 col-3">{% trans 'size' %}</div>
-                <div class="col-sm-9 col-9">{% trans 'available-upon-request-dampers' %}</div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-2 col-3">{% trans 'fire-rating' %}</div>
-                <div class="col-sm-9 col-9">{% trans '3-hour-dampers' %}</div>
-            </div>
-        </div>
-        <br>
-
-        {% include 'tab.html' %}
-        <hr>
-
         <div class="text-center">
             <a href="mailto:{{EMAIL_SALES}}" class="btn btn-outline-primary text-capitalize">{% trans 'get-a-quote' %}</a>
         </div>
+        <br>
+
     </div>
 {% endblock %}
 

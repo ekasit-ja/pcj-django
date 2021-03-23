@@ -13,9 +13,9 @@ CONSTANTS = {
     ],
 
     'document_choices': [
+        ('catg', 'Catalog'),
         ('cert', 'Certificate'),
         ('inst', 'Installation'),
-        ('catg', 'Catalog'),
     ],
 }
 

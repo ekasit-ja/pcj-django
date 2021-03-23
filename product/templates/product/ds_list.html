@@ -5,26 +5,53 @@
     <br>
     <div class="container">
 
-        <h2 class="text-center text-capitalize">{% trans 'ds'|striptags %}</h2>
         <div class="row justify-content-center">
             <div class="col-md-8 text-justify">
-                {% trans 'ds-p1' %}
+                <h1 class="text-center text-capitalize">{% trans 'ds'|striptags %}</h1>
+                <p>อุปกรณ์ลดทอนเสียง ดักไซเลนเซอร์ และ อคูสติกลูเวอร์ ของพีซีเจ ผลิตจากสังกะสีแผ่นเรียบ ความแข็งแรงสูง ผ่านการทดสอบการลดทอนเสียง และได้รับการรับรองโดย N.A.T.A., Australia, AS 1277 มีให้เลือกทั้งแบบเหลี่ยมและกลมทุกขนาดตามต้องการ ไซเลนเซอร์สามารถนำไปติดตั้งได้ตั้งแนวตั้งและแนวราบเพื่อลดทอนเสียงให้อยู่ในระดับความดังที่ต้องการ แนะนำการใช้งานสำหรับลดทอนเสียงในท่อดักท์ ห้องเครื่อง ที่ซึ่งต้องควบคุมความดังให้อยู่ในระดับที่ต้องการ</p>
+                <div class="row justify-content-center">
+                    <img src="{% static 'images/cert ds.jpg' %}" class="img-fluid product-cert">
+                </div>
+                <p>อคูสดิกลูเวอร์ถูกออกแบบเป็นแบบมอดูลาร์ เหมาะสำหรับต่อหลายตัวเข้าด้วยกันเป็น Multiple Section แนะนำการใช้งานสำหรับลดความดังเสียงของอากาศที่ไหลผ่านช่องผนัง</p>
+
+
             </div>
         </div>
-        <div class="row justify-content-center">
-            <img src="{% static 'images/cert ds.jpg' %}" class="img-fluid product-cert">
-        </div>
-        <br>
-
-        {% include 'product/product_section.html' %}
-        <br>
-
-        {% include 'tab.html' %}
         <hr>
 
+        <h3 class="text-center text-capitalize">ตัวอย่างรูปสินค้า</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center section-product">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="{% static 'images/product/ds/ds.jpg' %}">
+                        <br>
+                        <h6>Duct Silencer</h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="{% static 'images/product/ds/rds.jpg' %}">
+                        <br>
+                        <h6>Round Duct Silencer</h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="{% static 'images/product/ds/acl.jpg' %}">
+                        <br>
+                        <h6>Acoustic Louver</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+
+        {% include 'tab.html' %}
+
+        <br>
         <div class="text-center">
             <a href="mailto:{{EMAIL_SALES}}" class="btn btn-outline-primary text-capitalize">{% trans 'get-a-quote' %}</a>
         </div>
+        <br>
+
     </div>
 {% endblock %}
 
