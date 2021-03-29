@@ -7,8 +7,8 @@
                 <div class="card-body">
                     <div class="card-img h45" style="background-image:url('{{news_query.image.url}}')"></div>
                     <div class="card-text">
-                        <h5>{{news_query.title_short}}</h5>
-                        <span>{{news_query.content_short}}</span>
+                        <h5>{{news_query.title_short|safe}}</h5>
+                        <span>{{news_query.content_short|safe}}</span>
                     </div>
                 </div>
             </a>

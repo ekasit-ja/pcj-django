@@ -9,8 +9,8 @@
             </div>
             <div class="col-md-7 col-lg-5 d-flex align-items-center">
                 <section>
-                    <h1>บริษัท พีซีเจ อุตสาหกรรม จำกัด</h1>
-                    <p>ผลิตและจัดจำหน่าย ประตูเหล็กทนไฟ ประตูเหล็กธรรมดา แดมเปอร์ทนไฟ แดมเปอร์อื่นๆ หน้ากากแอร์ ดักไซเลนเซอร์ และอคูสติกลูเวอร์ สินค้าของเราได้รับการทดสอบตามมาตรฐานสากลจากสถาบันชั้นนำมากมาย อีกทั้งประสบการณ์ในวงการมากกว่า 20 ปี จึงมั่นใจได้ในคุณภาพของสินค้าและบริการที่เป็นอันดับหนึ่งของพีซีเจ</p>
+                    <h1>{% trans 'home-intro-header' %}</h1>
+                    <p>{% trans 'home-intro-content' %}</p>
                 </section>
             </div>
         </div>
@@ -21,31 +21,25 @@
         <div class="row product-home csd">
             <div class="col-lg-6">
                 <br>
-                <h1 class="text-center">ประตูเหล็กทนไฟ และ ประตูเหล็กธรรมดา</h1>
+                <h1 class="text-center">{% trans 'home-frd-header' %}</h1>
                 <hr>
                 <section>
-                    <p>ประตูเหล็กทนไฟ และ ประตูเหล็กธรรมดา ภายใต้แบรนด์ Classic Steel ผลิตและจัดจำหน่ายโดยบริษัท พีซีเจ อุตสาหกรรม จำกัด มีความแข็งแรง สวยงาม ทนทาน ได้รับการทดสอบมาตรฐานชั้นนำมากมาย อาทิเช่น มาตรฐานการทนไฟ ANSI/UL 10C & CAN/ULC-S104, มาตรฐานการทนไฟ BS476, มาตรฐานอุตสาหกรรม 1220-2541 และ 1288-2538 เป็นต้น ประตูเหล็กทนไฟ และประตูเหล็กธรรมดาของเรา มีให้เลือกหลากหลายรูปแบบและสไตล์ อาทิ</p>
-                    <ul>
-                        <li>ประตูบานเดี่ยว, ประตูบานคู่</li>
-                        <li>ประตูบานเรียบทึบ, ประตูบานเรียบมีช่องกระจก</li>
-                        <li>ประตูบานลูกฟัก</li>
-                        <li>เคลือบสีผง, เคลือบลายไม้</li>
-                    </ul>
+                    {% trans 'home-frd-content' %}
                     <div class="text-center">
-                        <a href="{% url 'product:product-frd'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                        <a href="{% url 'product:product-frd'%}" class="btn btn-outline-primary text-capitalize">{% trans 'more-details' %}</a>
                     </div>
                 </section>
             </div>
             <div class="col-lg-6 align-self-center">
                 <div class="row justify-content-center">
-                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_sd_vision_p1.jpg' %}"></div>
-                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_sd_vision_p2.jpg' %}"></div>
-                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_dd_vision_pull_p2.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/d01.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/d02.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/d03.jpg' %}"></div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="frame"><img src="{% static 'images/product/csd/sw_embossed_sd_vision_p3.jpg' %}"></div>
-                    <div class="frame"><img src="{% static 'images/product/csd/sw_flush_sd_vision_p6.jpg' %}"></div>
-                    <div class="frame"><img src="{% static 'images/product/csd/sw_embossed_dd_p1.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/d04.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/d05.jpg' %}"></div>
+                    <div class="frame"><img src="{% static 'images/product/csd/d06.jpg' %}"></div>
                 </div>
             </div>
         </div>
@@ -53,17 +47,12 @@
         <div class="row product-home fdc">
             <div class="col-lg-6">
                 <br>
-                <h1 class="text-center">แดมเปอร์ทนไฟ</h1>
+                <h1 class="text-center">{% trans 'home-fdc-header' %}</h1>
                 <hr>
                 <section>
-                    <p>แดมเปอร์ทนไฟ ภายใต้แบรนด์ Stream Air ผลิตและจัดจำหน่ายโดยบริษัท พีซีเจ อุตสาหกรรม จำกัด มีอัตราการทนไฟ 3 ชั่วโมงตามมาตรฐาน ANSI/UL 555 & CAN/ULC-S112 ได้รับการทดสอบโดย Underwriter Laboratories สหรัฐอเมริกา สามารถติดตั้งในแนวตั้งกับผนังปูน หรือผนังยิปซั่มได้ แดมเปอร์ทนไฟถูกออกแบบมาให้ปิดอัตโนมัติโดยแรงโน้มถ่วงในเหตุการณ์ไฟไหม้เมื่ออุณหภูมิที่แดมเปอร์สูงถึง 165 องศาฟาเรนไฮต์ (74 องศาเซลเซียส) เพื่อป้องกันไม่ให้ไฟลามทะลุไปยังอีกฝั่งของผนัง แดมเปอร์ทนไฟของเรามีให้เลือกหลากหลายรูปแบบ อาทิ</p>
-                    <ul>
-                        <li>ไฟร์แดมเปอร์ แบบม่านตก ชนิดใบอยู่ในช่องลม</li>
-                        <li>ไฟร์แดมเปอร์ แบบม่านตก ชนิดใบอยู่นอกช่องลม</li>
-                        <li>ไฟร์แดมเปอร์ แบบม่านตก แบบหลายตัวต่อกัน</li>
-                    </ul>
+                    {% trans 'home-fdc-content' %}
                     <div class="text-center">
-                        <a href="{% url 'product:product-fdc'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                        <a href="{% url 'product:product-fdc'%}" class="btn btn-outline-primary text-capitalize">{% trans 'more-details' %}</a>
                     </div>
                 </section>
             </div>
@@ -79,19 +68,12 @@
         <div class="row product-home ddp">
             <div class="col-lg-6">
                 <br>
-                <h1 class="text-center">แดมเปอร์อื่นๆ</h1>
+                <h1 class="text-center">{% trans 'home-ddp-header' %}</h1>
                 <hr>
                 <section>
-                    <p>แดมเปอร์ภายใต้แบรนด์ Stream Air ผลิตและจัดจำหน่ายโดยบริษัท พีซีเจ อุตสาหกรรม จำกัด ผลิตจากเหล็กชุบกัลวาไนซ์ ป้องกันสนิม อายุการใช้งานยาวนาน ได้รับการทดสอบมาตรฐานสากล จากสถาบันชั้นนำของประเทศไทย อาทิ มาตรฐาน UL 555 และ UL 555S จากสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง แดมเปอร์ของเรามีให้เลือกหลากหลายประเภท เพื่อรองรับการใช้งานตามความต้องการเฉพาะทาง อาทิเช่น</p>
-                    <ul>
-                        <li>วอลุ่มแดมเปอร์ แบบเหลี่ยม, แบบกลม, แบบวงรี</li>
-                        <li>มอเตอร์ไรซ์แดมเปอร์ แบบเหลี่ยม, แบบกลม, แบบวงรี</li>
-                        <li>ไฟร์สโม้คแดมเปอร์</li>
-                        <li>กราวิตี้แดมเปอร์</li>
-                        <li>รีลีฟแดมเปอร์</li>
-                    </ul>
+                    {% trans 'home-ddp-content' %}
                     <div class="text-center">
-                        <a href="{% url 'product:product-ddp'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                        <a href="{% url 'product:product-ddp'%}" class="btn btn-outline-primary text-capitalize">{% trans 'more-details' %}</a>
                     </div>
                 </section>
             </div>
@@ -112,12 +94,12 @@
         <div class="row product-home ds">
             <div class="col-lg-6">
                 <br>
-                <h1 class="text-center">ดักไซเลนเซอร์ และ อคูสติกลูเวอร์</h1>
+                <h1 class="text-center">{% trans 'home-ds-header' %}</h1>
                 <hr>
                 <section>
-                    <p>ดักไซเลนเซอร์และอคูสติกลูเวอร์ ของพีซีเจผ่านการทดสอบการลดทอนเสียง และได้รับการรับรองโดย N.A.T.A., Australia, AS 1277 สินค้าของเรามีให้เลือกทั้งแบบเหลี่ยมและกลม ทุกขนาดตามต้องการ ซึ่งสามารถติดตั้งได้ตั้งแนวตั้งและแนวราบเพื่อลดทอนเสียงให้อยู่ในระดับความดังที่ต้องการ
+                    {% trans 'home-ds-content' %}
                     <div class="text-center">
-                        <a href="{% url 'product:product-ds'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                        <a href="{% url 'product:product-ds'%}" class="btn btn-outline-primary text-capitalize">{% trans 'more-details' %}</a>
                     </div>
                 </section>
             </div>
@@ -133,22 +115,12 @@
         <div class="row product-home aol">
             <div class="col-lg-6">
                 <br>
-                <h1 class="text-center">หน้ากากแอร์</h1>
+                <h1 class="text-center">{% trans 'home-aol-header' %}</h1>
                 <hr>
                 <section>
-                    <p>หน้ากากแอร์ (กริลแอร์) ผลิตและจัดจำหน่ายโดย พีซีเจ หลายประเภทได้รับการทดสอบประสิทธิภาพและรับรองโดย N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84 หน้ากากแอร์ของเรามีหลากหลายรูปแบบ ถูกออกแบบมาเพื่อรองรับการใช้งานตามความต้องการเฉพาะทาง อาทิเช่น</p>
-                    <ul>
-                        <li>หน้ากากแอร์แบบกลม</li>
-                        <li>หน้ากากแอร์แบบจัตุรัส/แบบสี่เหลี่ยมผืนผ้า</li>
-                        <li>หน้ากากแอร์สี่เหลี่ยมลังไข่</li>
-                        <li>หน้ากากแอร์แบบใบปรับได้สองชั้น</li>
-                        <li>หน้ากากแอร์แบบสล็อต</li>
-                        <li>หน้ากากแอร์แบบแนวยาว</li>
-                        <li>แอร์ลูเวอร์</li>
-                        <li>อุปกรณ์เสริมหน้ากากแอร์ เช่น แดมเปอร์สำหรับหน้ากากแอร์, มุ้งลวดกันแมลง, แอร์ฟิลเตอร์</li>
-                    </ul>
+                    {% trans 'home-aol-content' %}
                     <div class="text-center">
-                        <a href="{% url 'product:product-aol'%}" class="btn btn-outline-primary text-capitalize">รายละเอียดเพิ่มเติม</a>
+                        <a href="{% url 'product:product-aol'%}" class="btn btn-outline-primary text-capitalize">{% trans 'more-details' %}</a>
                     </div>
                 </section>
             </div>

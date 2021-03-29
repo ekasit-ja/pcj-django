@@ -8,120 +8,107 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1 class="text-center text-capitalize">{% trans 'ddp' %}</h1>
-                <p>ผลิตจากสังกะสีแผ่นเรียบ ความแข็งแรงสูง อายุการใช้งานยาวนาน แดมเปอร์ประเภทต่างๆ ถูกออกแบบมาเพื่อรองรับการใช้งานตามความต้องการเฉพาะทาง แดมเปอร์ของเรามีจำหน่ายหลากหลายประเภท อาทิ</p>
-                <ul>
-                    <li>แดมเปอร์ทนไฟ 3 ชั่วโมง ตามมาตรฐาน UL 555 (ทดสอบโดยสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง๗</li>
-                    <li>ไฟร์สโม้คแดมเปอร์ทนไฟ 3 ชั่วโมง ตามมาตรฐาน UL 555 และ UL 555S ๖ทดสอบโดยสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง)</li>
-                    <li>วอลุ่มแดมเปอร์</li>
-                    <li>มอเตอร์ไรซ์แดมเปอร์</li>
-                    <li>กราวิตี้แดมเปอร์</li>
-                    <li>รีลีฟแดมเปอร์</li>
-                </ul>
-                <p>เพื่อตอบสนองความต้องการของการใช้งานทุกประเภท ขนาดตามสั่ง แดมเปอร์ของเราสามารถเลือกผลิตตามลักษณะการติดตั้งที่หน้างานได้หลากหลายรูปแบบ อาทิเช่น</p>
-                <ul>
-                    <li>แบบมีหน้าแปลน</li>
-                    <li>แบบใส่เข้าไปในท่อดักท์ (ก้านปรับ/แอคทูเอเตอร์ในผนัง)</li>
-                    <li>แบบใส่เข้าไปในท่อดักท์ (ก้านปรับ/แอคทูเอเตอร์นอกผนัง)</li>
-                    <li>แบบตีเสียบ</li>
-                </ul>
+                <h1 class="text-center text-capitalize">{% trans 'home-ddp-header' %}</h1>
+
+                {% trans 'list-ddp-content-1' %}
+
             </div>
         </div>
         <hr>
 
 
-        <h3 class="text-center text-capitalize">ตัวอย่างรูปสินค้า</h3>
+        <h3 class="text-center text-capitalize">{% trans 'product-images' %}</h3>
         <div class="row justify-content-center">
             <div class="col-md-10 text-center section-product">
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/vd.jpg' %}">
                         <br>
-                        <h6>วอลุ่มแดมเปอร์ แบบธรรมดา</h6>
+                        <h6>{% trans 'vd' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/vl.jpg' %}">
                         <br>
-                        <h6>วอลุ่มแดมเปอร์ แบบรั่วน้อย</h6>
+                        <h6>{% trans 'vl' %}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/md.jpg' %}">
                         <br>
-                        <h6>มอเตอร์ไรซ์แดมเปอร์ แบบธรรมดา</h6>
+                        <h6>{% trans 'md' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/ml.jpg' %}">
                         <br>
-                        <h6>มอเตอร์ไรซ์แดมเปอร์ แบบรั่วน้อย</h6>
+                        <h6>{% trans 'ml' %}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <img src="{% static 'images/product/ddp/details/fsd.jpg' %}">
                         <br>
-                        <h6>ไฟร์สโม้คแดมเปอร์</h6>
+                        <h6>{% trans 'fsd' %}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/rvd.jpg' %}">
                         <br>
-                        <h6>วอลุ่มแดมเปอร์ กลม แบบธรรมดา</h6>
+                        <h6>{% trans 'rvd' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/rvl.jpg' %}">
                         <br>
-                        <h6>วอลุ่มแดมเปอร์ กลม แบบรั่วน้อย</h6>
+                        <h6>{% trans 'rvl' %}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/rmd.jpg' %}">
                         <br>
-                        <h6>มอเตอร์ไรซ์แดมเปอร์ กลม แบบธรรมดา</h6>
+                        <h6>{% trans 'rmd' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/rml.jpg' %}">
                         <br>
-                        <h6>มอเตอร์ไรซ์แดมเปอร์ กลม แบบรั่วน้อย</h6>
+                        <h6>{% trans 'rml' %}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/ovd.jpg' %}">
                         <br>
-                        <h6>วอลุ่มแดมเปอร์ แบบรี แบบธรรมดา</h6>
+                        <h6>{% trans 'ovd' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/ovl.jpg' %}">
                         <br>
-                        <h6>วอลุ่มแดมเปอร์ แบบรี แบบรั่วน้อย</h6>
+                        <h6>{% trans 'ovl' %}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/omd.jpg' %}">
                         <br>
-                        <h6>มอเตอร์ไรซ์แดมเปอร์ แบบรี แบบธรรมดา</h6>
+                        <h6>{% trans 'omd' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/oml.jpg' %}">
                         <br>
-                        <h6>มอเตอร์ไรซ์แดมเปอร์ แบบรี แบบรั่วน้อย</h6>
+                        <h6>{% trans 'oml' %}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/gd.jpg' %}">
                         <br>
-                        <h6>กราวิตี้แดมเปอร์</h6>
+                        <h6>{% trans 'gd' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/ddp/details/rd.jpg' %}">
                         <br>
-                        <h6>รีลีฟแดมเปอร์</h6>
+                        <h6>{% trans 'rd' %}</h6>
                     </div>
                 </div>
             </div>

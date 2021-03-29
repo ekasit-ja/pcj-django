@@ -7,29 +7,23 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1 class="text-center text-capitalize">ประตูเหล็กทนไฟ และ ประตูเหล็กธรรมดา</h1>
-                <p>ประตูเหล็กทนไฟ (ประตูหนีไฟ) ของพีซีเจ ผลิตจากเหล็กแผ่นเรียบ ด้วยกรรมวิธีพิเศษในการเสริมความแข็งแรง (สำหรับการใช้งานหนัก) ได้รับการทดสอบและรับรองอัตราการทนไฟ 3 ชั่วโมง ตามมาตรฐาน ANSI/UL 10C & CAN/ULC-S104 จากสถาบัน Underwriter Laboratories ประเทศสหรัฐอเมริกา ประตูของเรามีให้เลือกหลากหลายประเภทและสไตล์ อาทิ</p>
-                <ul>
-                    <li>ประตูบานเดี่ยว ประตูบานคู่</li>
-                    <li>ประตูบานเรียบทึบ ประตูบานเรียบแบบมีช่องกระจก ประตูบานลูกฟัก</li>
-                    <li>เคลือบสีผง และเคลือบลายไม้</li>
-                </ul>
-                <p>และเรายังจัดจำหน่ายอุปกรณ์ประตูหลากหลายประเภทตามความต้องการอีกด้วย</p>
+                <h1 class="text-center text-capitalize">{% trans 'home-frd-header' %}</h1>
+
+                {% trans 'list-frd-content-1' %}
 
                 <div class="row justify-content-center">
                     <img src="{% static 'images/cert fsd.jpg' %}" class="img-fluid product-cert">
                 </div>
 
-                <p>ประตูของเราเป็นสินค้าสั่งผลิต สามารถเลือกขนาดได้ตามความต้องการ โดยที่ขนาดใหญ่สุดคือ 1200 มม. X 2400 มม. สำหรับประตูบานเดี่ยว และ 2400 มม. X 2400 มม. สำหรับประตูบานคู่ แนะนำการใช้งานไม่เพียงแต่เฉพาะประตูทางหนีไฟ แต่รวมไปถึงประตูห้องที่ต้องการการทนไฟ หรือป้องกันการงัดขโมย</p>
+                {% trans 'list-frd-content-2' %}
 
-                <p>อีกทั้งเรายังมีผลิตและจัดจำหน่ายประตูเหล็กทนไฟ 2 ชั่วโมงตามมาตรฐาน BS476 ทดสอบโดยจุฬาลงกรณ์มหาวิทยาลัย, มาตรฐาน มอก. 1220-2541 และประตูเหล็กธรรมดาตามมาตรฐาน มอก. 1288-2538 เพื่อตอบสนองความต้องการของการใช้งานทุกประเภท</p>
             </div>
         </div>
         <hr>
 
 
 
-        <h3 class="text-center text-capitalize">ตัวอย่างรูปสินค้า</h3>
+        <h3 class="text-center text-capitalize">{% trans 'product-images' %}</h3>
         <div class="row justify-content-center">
             <div class="col-md-10 text-center section-product">
                 <div class="row">
@@ -37,13 +31,13 @@
                         <img src="{% static 'images/product/csd/details/d01.jpg' %}">
                         <img src="{% static 'images/product/csd/details/d03.jpg' %}">
                         <br>
-                        <h6>ประตูบานเดี่ยว</h6>
+                        <h6>{% trans 'single-door' %}</h6>
                     </div>
                     <div class="col-sm-6">
                         <img src="{% static 'images/product/csd/details/d10.jpg' %}">
                         <img src="{% static 'images/product/csd/details/d12.jpg' %}">
                         <br>
-                        <h6>ประตูบานคู่</h6>
+                        <h6>{% trans 'double-door' %}</h6>
                     </div>
                 </div>
 
@@ -51,12 +45,12 @@
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/details/d02.jpg' %}">
                         <br>
-                        <h6>ประตูบานเรียบทึบ</h6>
+                        <h6>{% trans 'flush-style' %}</h6>
                     </div>
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/details/d06.jpg' %}">
                         <br>
-                        <h6>ประตูบานเรียบมีช่องกระจก</h6>
+                        <h6>{% trans 'vision-style' %}</h6>
                     </div>
                 </div>
 
@@ -64,12 +58,12 @@
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/details/d07.jpg' %}">
                         <br>
-                        <h6>ประตูบานลูกฟัก 5 ช่อง</h6>
+                        <h6>{% trans 'embossed-5' %}</h6>
                     </div>
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/details/d09.jpg' %}">
                         <br>
-                        <h6>ประตูบานลูกฟัก 11 ช่อง</h6>
+                        <h6>{% trans 'embossed-11' %}</h6>
                     </div>
                 </div>
 
@@ -77,12 +71,12 @@
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/details/d11.jpg' %}">
                         <br>
-                        <h6>ประตูเคลือบอบสีผง</h6>
+                        <h6>{% trans 'powder-finish' %}</h6>
                     </div>
                     <div class="col-6">
                         <img src="{% static 'images/product/csd/details/d13.jpg' %}">
                         <br>
-                        <h6>ประตูเคลือบอบสีลายไม้</h6>
+                        <h6>{% trans 'wood-grain-finish' %}</h6>
                     </div>
                 </div>
             </div>
@@ -92,130 +86,78 @@
 
 
 
-        <h3 class="text-center text-capitalize">อุปกรณ์ประตู</h3>
+        <h3 class="text-center text-capitalize">{% trans 'door-hardware' %}</h3>
         <div class="row justify-content-center">
             <div class="col-md-10 section-hardware">
                 <div class="row">
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/closer1.jpg' %}"></div>
-                        <h6>Swinging Fire Door Closer</h6>
-                        <ul>
-                            <li>ติดตั้งบนบานประตู</li>
-                            <li>แขนปกติแบบเปิดประตูค้างไม่ได้</li>
-                            <li>เปิดได้ 180°</li>
-                            <li>รองรับประตูหนัก 60-85 กิโลกรัม</li>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'door-closer-1' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/closer2.jpg' %}"></div>
-                        <h6>Swinging Fire Door Closer</h6>
-                        <ul>
-                            <li>ติดตั้งบนบานประตู</li>
-                            <li>แขนปกติแบบเปิดประตูค้างไม่ได้</li>
-                            <li>เปิดได้ 180°</li>
-                            <li>รองรับประตูหนัก 15-150 กิโลกรัม</li>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                            <li>ANSI เกรด 1</li>
-                        </ul>
+                        {% trans 'door-closer-2' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/esc.jpg' %}"></div>
-                        <h6>Escutcheon Lever Trim with Cylinder</h6>
+                        {% trans 'esc' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <img src="{% static 'images/product/csd/details/hw/lever.jpg' %}">
-                        <h6>Lever Trim with Cylinder</h6>
+                        {% trans 'lever-trim' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/fire_mortise.jpg' %}"></div>
-                        <h6>Fire Mortise Lock, Cylinder with Thumbturn</h6>
-                        <ul>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'm3485' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/mortise.jpg' %}"></div>
-                        <h6>Mortise Lock, Cylinder with Thumbturn</h6>
+                        {% trans 'ml6085' %}
                     </div>
 
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/magnet.jpg' %}"></div>
-                        <h6>Electromagnetic Door Holders</h6>
-                        <ul>
-                            <li>ติดตั้งบนพื้น</li>
-                            <li>UL 228</li>
-                        </ul>
+                        {% trans 'magnet-door-holder' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/fire_rim.jpg' %}"></div>
-                        <h6>Fire Exit Device, Rim Type</h6>
-                        <ul>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'fire-rim' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/mortise_rim.jpg' %}"></div>
-                        <h6>Fire Rated Mortise Exit Device</h6>
+                        {% trans 'fire-rim-mortise' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/panic_rim.jpg' %}"></div>
-                        <h6>Panic Exit Device, Rim Type</h6>
-                        <ul>
-                            <li>Panic rating, UL 305</li>
-                        </ul>
+                        {% trans 'panic-rim' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/fire_v.jpg' %}"></div>
-                        <h6>Fire Exit Device, Vertical Rod Type</h6>
-                        <ul>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'fire-v-rod' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/mortise_v.jpg' %}"></div>
-                        <h6>Fire Rated Concealed Vertical Rod Exit Device</h6>
-                        <ul>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'fire-v-rod-mortise' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/panic_v.jpg' %}"></div>
-                        <h6>Panic Exit Device, Vertical Rod Type</h6>
-                        <ul>
-                            <li>Panic rating, UL 305</li>
-                        </ul>
+                        {% trans 'panic-v-rod' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/seal.jpg' %}"></div>
-                        <h6>Smoke Seal</h6>
-                        <ul>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'smoke-seal' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/hinge.jpg' %}"></div>
-                        <h6>BB Hinge</h6>
-                        <ul>
-                            <li>สแตนเลสเกรด 304</li>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'bb-hinge' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/bottom_seal.jpg' %}"></div>
-                        <h6>Automatic Door Bottom Seal</h6>
-                        <ul>
-                            <li>ซีลจะเลื่อนลงมาปิดช่องว่างใต้บานประตูอัตโนมัติเมื่อประตูปิดสนิท และจะยกขึ้นอัตโนมัติเมื่อประตูเปิด</li>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'bottom-seal' %}
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="frame"><img src="{% static 'images/product/csd/details/hw/door_co.jpg' %}"></div>
-                        <h6>Fire Door Coordinator</h6>
-                        <ul>
-                            <li>ติดตั้งบนวงกบ</li>
-                            <li>อัตราการทนไฟ 3 ชั่วโมง UL 10C</li>
-                        </ul>
+                        {% trans 'door-coordinator' %}
                     </div>
                 </div>
             </div>

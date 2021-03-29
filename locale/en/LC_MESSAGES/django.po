@@ -80,7 +80,7 @@ msgid "contact-us"
 msgstr "contact us"
 
 msgid "about-us-content-1"
-msgstr "We, PCJ INDUSTRIES CO., LTD., was established in 1998, specialize in production of Fire Steel Doors, Fire Damper, Other Dampers, Duct Silencers, Acoustic Louvers, and Air Outlets. Most of our products are certified by several organization for standardization, i.e.: Underwriters Laboratories, British Standards Institutuion, Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute. Moreover, our company is certified by International Organization for Standardization, ISO 9001:2008 as well."
+msgstr "We, PCJ INDUSTRIES CO., LTD., was established in 1998, specialize in production of Fire Steel Doors, Steel Doors, Fire Damper, Other Dampers, Duct Silencers, Acoustic Louvers, and Air Outlets (Air Grilles). Most of our products are certified by several organization for standardization, i.e.: Underwriters Laboratories (UL), British Standards Institutuion (BSI), Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute. Moreover, our company is certified by International Organization for Standardization, ISO 9001:2008 as well."
 
 msgid "about-us-content-2"
 msgstr "Our factory is established on our own land, area 40,000 sq.m.(approx), in Kaengkhoi, Saraburi, Thailand. Our policy is always on-time production and delivery with quality, reliability, and competitively priced products. We have been investing in instruments and machines. Besides, we have experienced engineer teams taking full time to continuously research and develop our product lines, including new product designs to meet worldwide market demands."
@@ -497,3 +497,25 @@ msgstr "Duct Silencer, Acoutic Louver"
 
 msgid "meta-kw-aol"
 msgstr "Air Outlet, Air Grille"
+
+
+
+
+
+msgid "home-intro-header"
+msgstr "PCJ INDUSTRIES"
+
+msgid "home-intro-content"
+msgstr "We manufacture and distribute fire steel doors, steel doors, fire dampers, other dampers, air grilles (air outlets), duct silencer, and acoustic louver. Our products passed various tests of international standards from renowned institutions. We also have experience with the market for more than 20 years.  Therefore, you can trust in quality of our products and exceptional services from PCJ"
+
+msgid "home-frd-header"
+msgstr "Fire Steel Doors and Steel Doors"
+
+msgid "home-frd-content"
+msgstr "<p>Fire steel doors and steel doors Classic Steel brand manufactured and distributed by PCJ INDUSTRIES are strong, elegant, and long-lasting.  The door passed various tests of international standards. For instances, ANSI/UL 10C & CAN/ULC-S104 fire rating standard, BS476 fire rating standard , Thai Industrial Standards Institute (TISI) 1220-2541 and 1288-2538. Our fire steel doors and steel doors are avaible for many types and styles. For example,</p>"
+"<ul>"
+    "<li>Single door leaf, Double door leaf</li>"
+    "<li>Flush style, Flush with vision panel style</li>"
+    "<li>Embossed style</li>"
+    "<li>Powder finish, Wood grain finish</li>"
+"</ul>"
