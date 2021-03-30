@@ -2,19 +2,16 @@
 {% load static i18n %}
 
 {% block content %}
-    <div class="intro">
-        <div class="row">
-            <div class="col-md-5 d-flex align-items-center justify-content-center justify-content-md-end">
+    <div class="container-fluid">
+        <div class="row intro">
+            <div class="col-md-5 align-self-center text-center text-md-right">
                 <img src="{% static 'images/pcj-logo.jpg' %}">
             </div>
-            <div class="col-md-7 col-lg-5 d-flex align-items-center">
-                <section>
-                    <div class="d-flex justify-content-center justify-content-md-start">
-                        <h1>{% trans 'home-intro-header' %}</h1>
-                    </div>
-                    <p>{% trans 'home-intro-content' %}</p>
-                </section>
+            <div class="col-md-7 col-lg-5 align-self-center">
+                <h1 class="text-center text-md-left">{% trans 'home-intro-header' %}</h1>
+                <p>{% trans 'home-intro-content' %}</p>
             </div>
+
         </div>
     </div>
     <br>
