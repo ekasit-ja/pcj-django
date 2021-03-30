@@ -157,6 +157,7 @@ a.text-red {
 
 h6 {
     color: $red;
+    text-transform: capitalize;
 }
 
 .product-home {
@@ -234,7 +235,7 @@ h6 {
             max-width: 160px;
             height: auto;
             width: auto;
-            padding: 0 5px;
+            padding: 3px 5px;
         }
 
         &.long {
