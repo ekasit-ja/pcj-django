@@ -824,3 +824,6 @@ msgid "is"
 msgstr "มุ้งลวดกันแมลง"
 msgid "filter"
 msgstr "แอร์ฟิลเตอร์"
+
+msgid "vdo-gallery"
+msgstr "วิดีโอที่เกี่ยวข้อง"
