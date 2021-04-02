@@ -439,19 +439,19 @@ msgstr "Please click catalogue tab to download the catalogue for more details."
 #
 
 msgid "meta-desc-home"
-msgstr "We are one of the leading manufacturers of fire doors, duct dampers, duct silencers, and air grilles of Thailand. Our objective is to ensure fast delivery of exceptional products to let your projects complete as planned without interruption."
+msgstr "We manufacture and distribute fire steel doors, steel doors, fire dampers, duct dampers, duct silencers, acoustic louvers, and air outlets (air grilles). With experience in this market for more than 20 years as well as certificates as per many international standards from world class instituitions, you can trust in excellent quality of our products and services."
 
 msgid "meta-title-frd"
-msgstr "Fire steel doors, UL certified"
+msgstr "Fire steel doors (UL certified), steel door"
 
 msgid "meta-desc-frd"
-msgstr "We manufacture and distribute Fire Steel Doors, 3 Hr Fire Rating (UL 10C), 2 Hr Fire Rating (BS 476), and Non-Fire Steel upon any requests to fulfill most requirements."
+msgstr "PCJ manufactures and distributes Fire Steel Doors, 3 Hr Fire Rating (UL 10C), 2 Hr Fire Rating (BS 476), and Non-Fire Steel doors upon any requests to fulfill most requirements."
 
 msgid "meta-title-fdc"
 msgstr "Fire dampers, UL certified"
 
 msgid "meta-desc-fdc"
-msgstr "We manufacture and distribute Fire Dampers, 3 Hr Fire Rating (UL 555). The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C)"
+msgstr "PCJ manufactures and distributes Fire Dampers, 3 Hr Fire Rating (UL 555). The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C)"
 
 msgid "meta-title-fsd-ul"
 msgstr "Fire & smoke dampers"
@@ -463,19 +463,19 @@ msgid "meta-title-ddp"
 msgstr "Duct dampers, Other dampers"
 
 msgid "meta-desc-ddp"
-msgstr "We manufacture and distribute various types of dampers, i.e. : Fire Dampers (KMIT UL555 tested), Fire & Smoke Dampers (KMIT UL 555 and UL555S tested), Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers."
+msgstr "PCJ manufactures and distributes Fire Dampers, Fire & Smoke Dampers, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers, and many others"
 
 msgid "meta-title-ds"
 msgstr "Duct silencers"
 
 msgid "meta-desc-ds"
-msgstr "We manufacture and distribute Duct Silencers and Acoustic Louvers which are dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277. Available for rectangular and round shape at any sizes (made to order) upon request."
+msgstr "PCJ manufactures and distributes Duct Silencers and Acoustic Louvers which are dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277. Available for rectangular and round shape at any sizes (made to order) upon request."
 
 msgid "meta-title-aol"
-msgstr "Air outlets, Air grilles"
+msgstr "Air outlets (Air grilles)"
 
 msgid "meta-desc-aol"
-msgstr "We manufacture and distribute various types of Air Outlets, i.e. : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers. Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84. Each type is designed suitable for each particular function."
+msgstr "PCJ manufactures and distributes various types of Air Outlets, i.e. : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers. Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84. Each type is designed suitable for each particular function."
 
 msgid "meta-kw-home"
 msgstr "Fire Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Steel Door, Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type, Fire Smoke Damper, Duct Damper, Other Damper, Damper, Duct Silencer, Acoutic Louver, Air Outlet, Air Grille"
