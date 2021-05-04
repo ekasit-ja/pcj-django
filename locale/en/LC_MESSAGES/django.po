@@ -41,7 +41,7 @@ msgid "career"
 msgstr "careers"
 
 msgid "frd-&-non-frd"
-msgstr "Fire Steel Doors & Non-Fire Steel Doors"
+msgstr "Steel Doors & Fire Steel Doors"
 
 msgid "fdc"
 msgstr "Fire Dampers"
@@ -96,6 +96,9 @@ msgstr "PCJ INDUSTRIES COMPANY LIMITED"
 
 msgid "pcj-industries-short"
 msgstr "PCJ INDUSTRIES"
+
+msgid "pcj-industries-long"
+msgstr "PCJ INDUSTRIES steel doors, dampers, air grilles (air outlets)"
 
 msgid "headquarters"
 msgstr "Headquarters"
@@ -439,10 +442,10 @@ msgstr "Please click catalogue tab to download the catalogue for more details."
 #
 
 msgid "meta-desc-home"
-msgstr "We manufacture and distribute fire steel doors, steel doors, fire dampers, duct dampers, duct silencers, acoustic louvers, and air outlets (air grilles). With experience in this market for more than 20 years as well as certificates as per many international standards from world class instituitions, you can trust in excellent quality of our products and services."
+msgstr "We manufacture and distribute steel doors, fire steel doors, fire dampers, duct dampers, duct silencers, acoustic louvers, and air outlets (air grilles). With experience in this market for more than 20 years as well as certificates as per many international standards from world class instituitions, you can trust in excellent quality of our products and services."
 
 msgid "meta-title-frd"
-msgstr "Fire steel doors (UL certified), steel door"
+msgstr "Steel doors"
 
 msgid "meta-desc-frd"
 msgstr "PCJ manufactures and distributes Fire Steel Doors, 3 Hr Fire Rating (UL 10C), 2 Hr Fire Rating (BS 476), and Non-Fire Steel doors upon any requests to fulfill most requirements."
@@ -506,13 +509,13 @@ msgid "home-intro-header"
 msgstr "PCJ INDUSTRIES"
 
 msgid "home-intro-content"
-msgstr "We are a manufacturer and distributor of fire steel doors, steel doors, fire dampers, other dampers, air outlets (air grilles), duct silencers, and acoustic louvers. Our products have been tested and certified in accordance with various international standards from world class institutions. We also have experience in this market for more than 20 years. Therefore, you can trust in excellent quality of our products as well as services from us"
+msgstr "We are a manufacturer and distributor of steel doors, fire steel doors, fire dampers, other dampers, air outlets (air grilles), duct silencers, and acoustic louvers. Our products have been tested and certified in accordance with various international standards from world class institutions. We also have experience in this market for more than 20 years. Therefore, you can trust in excellent quality of our products as well as services from us"
 
 msgid "home-frd-header"
-msgstr "Fire Steel Doors and Steel Doors"
+msgstr "Steel Doors and Fire Steel Doors"
 
 msgid "home-frd-content"
-msgstr "<p>Fire steel doors and steel doors, \"Classic Steel\" brand, manufactured and distributed by PCJ INDUSTRIES are strong, elegant, and durable.  The doors have been tested and certified as per many international standards, for instance, ANSI/UL 10C & CAN/ULC-S104 fire rating standard, BS476 fire rating standard , Thai Industrial Standards (TIS) 1220-2541 and 1288-2538. Our fire steel doors and steel doors are available in a variety of types and styles, for example,</p>"
+msgstr "<p>Steel doors and fire steel doors, \"Classic Steel\" brand, manufactured and distributed by PCJ INDUSTRIES are strong, elegant, and durable.  The doors have been tested and certified as per many international standards, for instance, ANSI/UL 10C & CAN/ULC-S104 fire rating standard, BS476 fire rating standard , Thai Industrial Standards (TIS) 1220-2541 and 1288-2538. Our fire steel doors and steel doors are available in a variety of types and styles, for example,</p>"
 "<ul>"
     "<li>Single door leaf, Double door leaf</li>"
     "<li>Flush style, Flush with vision panel style</li>"

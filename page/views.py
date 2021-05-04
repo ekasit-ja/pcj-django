@@ -27,7 +27,7 @@ def page_home(request):
         'project_queryset': project_queryset,
         'carousel_images': carousel_images,
         'AGE': AGE,
-        'meta_title': _('pcj-industries-short'),
+        'meta_title': _('pcj-industries-long'),
         'meta_desc': _('meta-desc-home'),
         'meta_kw': _('meta-kw-home'),
         'meta_img': request.build_absolute_uri(static('images/pcj-logo-og.jpg')),
