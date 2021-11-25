@@ -136,19 +136,6 @@
                 </div>
             </div>
         </div>
-        <hr>
-
-        <h3 class="text-center text-capitalize">{% trans 'projects' %}</h3>
-        {% include 'project/row_project.html' %}
-        <div class="text-center">
-            <a href="{% url 'project:project-list' %}" class="btn btn-outline-primary text-capitalize">{% trans 'view-all-projects' %}</a>
-        </div>
-        <hr>
-
-        {% if news_queryset %}
-            <h3 class="text-center text-capitalize">{% trans 'news' %}</h3>
-            {% include 'news/row_news.html' %}
-        {% endif %}
 
     </div>
 {% endblock content %}

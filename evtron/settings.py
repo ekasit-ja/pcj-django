@@ -66,7 +66,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'pcj.urls'
+ROOT_URLCONF = 'evtron.urls'
 
 TEMPLATES = [
     {
@@ -80,13 +80,13 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'pcj.constants.default_context',
+                'evtron.constants.default_context',
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'pcj.wsgi.application'
+WSGI_APPLICATION = 'evtron.wsgi.application'
 
 
 # Database
