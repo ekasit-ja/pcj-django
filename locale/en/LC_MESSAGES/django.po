@@ -110,7 +110,7 @@ msgid "pcj-office-road"
 msgstr "199/24-25 Vibhavadeerangsit road,"
 
 msgid "pcj-office-area"
-msgstr "Samsennai, Phayathai,"
+msgstr "Samsennai, Payathai,"
 
 msgid "pcj-office-province"
 msgstr "Bangkok 10400, Thailand"
