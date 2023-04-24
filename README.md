@@ -73,7 +73,7 @@ chdir = /home/ekasit/pcj-django/source
 wsgi-file = /home/ekasit/pcj-django/source/pcj/wsgi.py
 
 http = 0.0.0.0:8000
-#socket = /home/ekasit/pcj-django/site/tutorial.sock
+#socket = /home/ekasit/pcj-django/site/pcjdjango.sock
 #vacuum = true
 #chown-socket = root:root
 #chmod-socket = 666
@@ -135,7 +135,7 @@ server {
 
     location / {
         include uwsgi_params;
-        uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+        uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
     }
 }
 ```
@@ -163,7 +163,7 @@ We will use **certbot** software to handle **Let’s Encrypt** certificate autom
 ```
 location / {
     include uwsgi_params;
-    uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+    uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
 }
 ```
 to
@@ -174,7 +174,7 @@ location /.well-known/ {
 
 location / {
     include uwsgi_params;
-    uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+    uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
 }
 
 if ($host = server.pcjindustries.co.th) {
