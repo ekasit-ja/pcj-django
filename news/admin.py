@@ -8,7 +8,7 @@ from .models import News
 
 class NewsAdmin(SortableAdminMixin, admin.ModelAdmin):
     list_per_page = 20
-    list_display = ['order', 'short_title_en', 'short_content_en', 'image_preview', ]
+    list_display = ['order', 'short_title_en', 'short_content_en', 'image_preview', 'publish', ]
     list_display_links = ['short_title_en', 'image_preview', ]
 
     def image_preview(self, obj):
