@@ -165,10 +165,11 @@ CKEDITOR_CONFIGS = {
             {'items': ['Link', 'Unlink']},
             {'items': ['Image', 'Table', 'HorizontalRule', 'SpecialChar']},
             {'items': ['Maximize']},
-            {'items': ['Html5video']},
+            {'items': ['Html5video','Youtube']},
             {'items': ['Source']},
         ],
-        'extraPlugins': ','.join(['html5video',]),
+        'extraPlugins': ','.join(['html5video','youtube','',]),
+
     },
     'small': {
         'height' : 100,
