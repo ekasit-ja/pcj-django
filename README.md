@@ -224,6 +224,19 @@ if ($host = pcjindustries.co.th) {
 
 ---
 
+### Note about auto-renew SSL
+1. look for
+```
+listen 443 ssl; # managed by Certbot
+        ssl_certificate /etc/letsencrypt/live/pcjindustries.co.th/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/pcjindustries.co.th/privkey.pem; # managed by Certbot
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+```
+2. auto renewal of SSL may keep updating on folder `www.pcjindustries.co.th` instead.  Therefore, we have to change from `pcjindustries.co.th` to `www.pcjindustries.co.th`.
+
+---
+
 ### Auto restart service
 After long period of deployment time, service alawys crashes for unknown reason.  Therefore, we need to restart service automatically by `crontab`.  Thus set up to restart the service daily.
 1. Open file `/var/spool/cron/root`
@@ -237,3 +250,6 @@ After long period of deployment time, service alawys crashes for unknown reason.
 1. Do not forget to change `DEBUG=False` in `settings.py`
 2. execute `python3 manage.py collectstatic` (under virtual environment) to collect all updated static files
 3. and restart both services with `service nginx restart && service uwsgi restart`
+
+### To use new SSL certificate on WHM
+search for `Manage Service SSL Certificates`
