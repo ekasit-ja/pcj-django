@@ -77,3 +77,11 @@
         font-weight: bold;
     }
 }
+
+.intro-video {
+    width: 100%;
+
+    video {
+        display: block;
+    }
+}

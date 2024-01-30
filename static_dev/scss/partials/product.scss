@@ -203,6 +203,12 @@ h6 {
                     url('/static/images/product/aol/aol_bg.jpg');
     }
 
+    &.black {
+        background: linear-gradient(
+                    rgba(0,0,0,.75),
+                    rgba(0,0,0,.75));
+    }
+
     box-shadow: -1px -1px 0.95rem rgba($black, .05),
               1px -1px 0.95rem rgba($black, .05),
               -1px 1px 0.95rem rgba($black, .05),
