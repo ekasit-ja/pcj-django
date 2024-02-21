@@ -80,7 +80,7 @@ msgid "contact-us"
 msgstr "contact us"
 
 msgid "about-us-content-1"
-msgstr "We, PCJ INDUSTRIES CO., LTD., was established in 1998, specialize in production of Fire Steel Doors, Steel Doors, Fire Damper, Other Dampers, Duct Silencers, Acoustic Louvers, and Air Outlets (Air Grilles). Most of our products are certified by several organization for standardization, i.e.: Underwriters Laboratories (UL), British Standards Institutuion (BSI), Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute. Moreover, our company is certified by International Organization for Standardization, ISO 9001:2008 as well."
+msgstr "We, PCJ INDUSTRIES CO., LTD., was established in 1998, specialize in production of Steel Doors, Fire Steel Doors, Fire Damper, Other Dampers, Duct Silencers, Acoustic Louvers, and Air Outlets (Air Grilles). Most of our products are certified by several organization for standardization, i.e.: Underwriters Laboratories (UL), British Standards Institutuion (BSI), Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute. Moreover, our company is certified by International Organization for Standardization, ISO 9001:2008 as well."
 
 msgid "about-us-content-2"
 msgstr "Our factory is established on our own land, area 40,000 sq.m.(approx), in Kaengkhoi, Saraburi, Thailand. Our policy is always on-time production and delivery with quality, reliability, and competitively priced products. We have been investing in instruments and machines. Besides, we have experienced engineer teams taking full time to continuously research and develop our product lines, including new product designs to meet worldwide market demands."
@@ -212,7 +212,7 @@ msgstr "Sorry, we couldn't find a page you are looking for."
 
 
 msgid "fire-steel-doors"
-msgstr "Fire Steel Doors & Non-Fire Steel Doors"
+msgstr "Steel Doors & Fire Steel Doors"
 
 msgid "frd-vdo-commercial"
 msgstr "PCJ Fire Steel Doors TV advertisement"
@@ -377,22 +377,22 @@ msgid "no-file-available"
 msgstr "No file is available at this time."
 
 msgid "frd-p1"
-msgstr "We manufacture and distribute Fire Steel Doors, 3 Hr Fire Rating, ANSI/UL 10C & CAN/ULC-S104. Various type, styles, finish : Single Doors, Double Doors, Flush Doors, Flush with Vision Panels, Embossed Doors, Powder Finish, Wood Grain Finish as well as various types of hardware are available upon request. 2 Hr Fire Steel Doors and Non-Fire Steel Doors are also available upon request to fulfill most requirements."
+msgstr "We manufacture and supply Fire Steel Doors, 3 Hr Fire Rating, ANSI/UL 10C & CAN/ULC-S104. Various type, styles, finish : Single Doors, Double Doors, Flush Doors, Flush with Vision Panels, Embossed Doors, Powder Finish, Wood Grain Finish as well as various types of hardware are available upon request. 2 Hr Fire Steel Doors and Non-Fire Steel Doors are also available upon request to fulfill most requirements."
 
 msgid "fdc-p1"
-msgstr "We manufacture and distribute fire dampers, 3 Hr Fire Rating, ANSI/UL 555 & CAN/ULC-S112 that can be mounted vertically on masonry/gypsum walls.  The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C) in order to block the spread of flame pass through the walls."
+msgstr "We manufacture and supply fire dampers, 3 Hr Fire Rating, ANSI/UL 555 & CAN/ULC-S112 that can be mounted vertically on masonry/gypsum walls.  The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C) in order to block the spread of flame pass through the walls."
 
 msgid "ddp-p1"
-msgstr "We manufacture and distribute various types of dampers, ie. : Fire Dampers, 3 Hr Fire Rating, tested by KMIT in accordance with UL 555, Combination of Fire Dampers and Smoke Dampers, 3 Hr Fire Rating, tested by KMIT in accordance with UL 555&UL 555S, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers. Each type is designed suitable for each particular function."
+msgstr "We manufacture and supply various types of dampers, ie. : Fire Dampers, 3 Hr Fire Rating, tested by KMIT in accordance with UL 555, Combination of Fire Dampers and Smoke Dampers, 3 Hr Fire Rating, tested by KMIT in accordance with UL 555&UL 555S, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers. Each type is designed suitable for each particular function."
 
 msgid "aol-p1"
-msgstr "We manufacture and distribute various types of Air Outlets : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers.  Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84.  Each type is designed suitable for each particular function."
+msgstr "We manufacture and supply various types of Air Outlets : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers.  Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84.  Each type is designed suitable for each particular function."
 
 msgid "ds-p1"
-msgstr "We manufacture and distribute Duct Silencers and Acoustic Louvers.  The duct silencers have been dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277.  Available for rectangular and round shape at any sizes (made to order) upon request that can be mounted vertically or horizontally to reduce sound to desire levels as requrements."
+msgstr "We manufacture and supply Duct Silencers and Acoustic Louvers.  The duct silencers have been dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277.  Available for rectangular and round shape at any sizes (made to order) upon request that can be mounted vertically or horizontally to reduce sound to desire levels as requrements."
 
 msgid "fsd-ul-p1"
-msgstr "We manufacture and distribute combination of Fire and Smoke Dampers, 3 Hr Fire Rating, that can be mounted vertically on masonry/gypsum walls, for both In-Wall and Out-of-Wall installation.  The dampers are designed to automatically close by Actuators in the event of fire when temperature at the dampers and/or at the heat detectors that linked to the dampers reach up to 165°F (74°C), and/or when smoke at the smoke detector that linked to the dampers in order to block the spread of flame and/or smoke pass through the walls."
+msgstr "We manufacture and supply combination of Fire and Smoke Dampers, 3 Hr Fire Rating, that can be mounted vertically on masonry/gypsum walls, for both In-Wall and Out-of-Wall installation.  The dampers are designed to automatically close by Actuators in the event of fire when temperature at the dampers and/or at the heat detectors that linked to the dampers reach up to 165°F (74°C), and/or when smoke at the smoke detector that linked to the dampers in order to block the spread of flame and/or smoke pass through the walls."
 
 msgid "low-leak"
 msgstr "Low Leak"
@@ -442,49 +442,49 @@ msgstr "Please click catalogue tab to download the catalogue for more details."
 #
 
 msgid "meta-desc-home"
-msgstr "We manufacture and distribute steel doors, fire steel doors, fire dampers, duct dampers, duct silencers, acoustic louvers, and air outlets (air grilles). With experience in this market for more than 20 years as well as certificates as per many international standards from world class instituitions, you can trust in excellent quality of our products and services."
+msgstr "We manufacture and supply steel doors, fire steel doors, fire dampers, duct dampers, duct silencers, acoustic louvers, and air outlets (air grilles). With experience in this market for more than 20 years as well as certificates as per many international standards from world class instituitions, you can trust in excellent quality of our products and services."
 
 msgid "meta-title-frd"
 msgstr "Steel doors"
 
 msgid "meta-desc-frd"
-msgstr "PCJ manufactures and distributes Fire Steel Doors, 3 Hr Fire Rating (UL 10C), 2 Hr Fire Rating (BS 476), and Non-Fire Steel doors upon any requests to fulfill most requirements."
+msgstr "PCJ manufactures and supplies Steel doors, and Fire Steel Doors, 3 Hr Fire Rating (UL 10C), 2 Hr Fire Rating (BS 476) upon any requests to fulfill most requirements."
 
 msgid "meta-title-fdc"
 msgstr "Fire dampers, UL certified"
 
 msgid "meta-desc-fdc"
-msgstr "PCJ manufactures and distributes Fire Dampers, 3 Hr Fire Rating (UL 555). The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C)"
+msgstr "PCJ manufactures and supplies Fire Dampers, 3 Hr Fire Rating (UL 555). The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C)"
 
 msgid "meta-title-fsd-ul"
 msgstr "Fire & smoke dampers"
 
 msgid "meta-desc-fsd-ul"
-msgstr "We manufacture and distribute combination of Fire and Smoke Dampers, 3 Hr Fire Rating. The dampers are designed to automatically close by Actuators in the event of fire to block the spread of flame and/or smoke pass through the walls."
+msgstr "We manufacture and supply combination of Fire and Smoke Dampers, 3 Hr Fire Rating. The dampers are designed to automatically close by Actuators in the event of fire to block the spread of flame and/or smoke pass through the walls."
 
 msgid "meta-title-ddp"
 msgstr "Duct dampers, Other dampers"
 
 msgid "meta-desc-ddp"
-msgstr "PCJ manufactures and distributes Fire Dampers, Fire & Smoke Dampers, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers, and many others"
+msgstr "PCJ manufactures and supplies Fire Dampers, Fire & Smoke Dampers, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers, and many others"
 
 msgid "meta-title-ds"
 msgstr "Duct silencers"
 
 msgid "meta-desc-ds"
-msgstr "PCJ manufactures and distributes Duct Silencers and Acoustic Louvers which are dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277. Available for rectangular and round shape at any sizes (made to order) upon request."
+msgstr "PCJ manufactures and supplies Duct Silencers and Acoustic Louvers which are dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277. Available for rectangular and round shape at any sizes (made to order) upon request."
 
 msgid "meta-title-aol"
 msgstr "Air outlets (Air grilles)"
 
 msgid "meta-desc-aol"
-msgstr "PCJ manufactures and distributes various types of Air Outlets, i.e. : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers. Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84. Each type is designed suitable for each particular function."
+msgstr "PCJ manufactures and supplies various types of Air Outlets, i.e. : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers. Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84. Each type is designed suitable for each particular function."
 
 msgid "meta-kw-home"
-msgstr "Fire Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Steel Door, Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type, Fire Smoke Damper, Duct Damper, Other Damper, Damper, Duct Silencer, Acoutic Louver, Air Outlet, Air Grille"
+msgstr "Steel Door, Fire Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type, Fire Smoke Damper, Duct Damper, Other Damper, Damper, Duct Silencer, Acoutic Louver, Air Outlet, Air Grille"
 
 msgid "meta-kw-frd"
-msgstr "Fire Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Steel Door"
+msgstr "Steel Door, Fire Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door"
 
 msgid "meta-kw-fdc"
 msgstr "Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type"
@@ -509,13 +509,13 @@ msgid "home-intro-header"
 msgstr "PCJ INDUSTRIES"
 
 msgid "home-intro-content"
-msgstr "We are a manufacturer and distributor of steel doors, fire steel doors, fire dampers, other dampers, air outlets (air grilles), duct silencers, and acoustic louvers. Our products have been tested and certified in accordance with various international standards from world class institutions. We also have experience in this market for more than 20 years. Therefore, you can trust in excellent quality of our products as well as services from us"
+msgstr "We are a manufacturer and supplier of steel doors, fire steel doors, fire dampers, other dampers, air outlets (air grilles), duct silencers, and acoustic louvers. Our products have been tested and certified in accordance with various international standards from world class institutions. We also have experience in this market for more than 20 years. Therefore, you can trust in excellent quality of our products as well as services from us"
 
 msgid "home-frd-header"
 msgstr "Steel Doors and Fire Steel Doors"
 
 msgid "home-frd-content"
-msgstr "<p>Steel doors and fire steel doors, \"Classic Steel\" brand, manufactured and distributed by PCJ INDUSTRIES are strong, elegant, and durable.  The doors have been tested and certified as per many international standards, for instance, ANSI/UL 10C & CAN/ULC-S104 fire rating standard, BS476 fire rating standard , Thai Industrial Standards (TIS) 1220-2541 and 1288-2538. Our fire steel doors and steel doors are available in a variety of types and styles, for example,</p>"
+msgstr "<p>Steel doors and fire steel doors, \"Classic Steel\" brand, manufactured and supplied by PCJ INDUSTRIES are strong, elegant, and durable.  The doors have been tested and certified as per many international standards, for instance, ANSI/UL 10C & CAN/ULC-S104 fire rating standard, BS476 fire rating standard , Thai Industrial Standards (TIS) 1220-2541 and 1288-2538. Our fire steel doors and steel doors are available in a variety of types and styles, for example,</p>"
 "<ul>"
     "<li>Single door leaf, Double door leaf</li>"
     "<li>Flush style, Flush with vision panel style</li>"
@@ -530,7 +530,7 @@ msgid "home-fdc-header"
 msgstr "Fire Dampers"
 
 msgid "home-fdc-content"
-msgstr "Fire dampers, \"Stream Air\" brand, manufactured and distributed by PCJ INDUSTRIES, have been tested and certified by Underwriter Laboratories (UL), USA, for 3 hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Fire dampers can be mounted vertically on masonry/gypsum walls. The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reaches up to 165°F (74°C) in order to block the spread of flame passing through the walls.  Our dampers are available in many types, for example,</p>"
+msgstr "Fire dampers, \"Stream Air\" brand, manufactured and supplied by PCJ INDUSTRIES, have been tested and certified by Underwriter Laboratories (UL), USA, for 3 hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Fire dampers can be mounted vertically on masonry/gypsum walls. The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reaches up to 165°F (74°C) in order to block the spread of flame passing through the walls.  Our dampers are available in many types, for example,</p>"
 "<ul>"
     "<li>Fire damper, curtain type, in airstream</li>"
     "<li>Fire damper, curtain type, out of airstream</li>"
@@ -541,7 +541,7 @@ msgid "home-ddp-header"
 msgstr "Other Dampers"
 
 msgid "home-ddp-content"
-msgstr "<p>Dampers, \"Stream Air\" brand, manufactured and distributed by PCJ INDUSTRIES, are constructed of galvanized steel sheets for rustproof and durability properties.  The dampers have been tested as per many international standards by leading institutions of Thailand, such as, UL 555 and UL 555s by King Mongkut's Institute of Technology Ladkrabang (KMIT). Our dampers are available in various type to fulfill most requirements, for example,</p>"
+msgstr "<p>Dampers, \"Stream Air\" brand, manufactured and supplied by PCJ INDUSTRIES, are constructed of galvanized steel sheets for rustproof and durability properties.  The dampers have been tested as per many international standards by leading institutions of Thailand, such as, UL 555 and UL 555s by King Mongkut's Institute of Technology Ladkrabang (KMIT). Our dampers are available in various type to fulfill most requirements, for example,</p>"
 "<ul>"
     "<li>Volume dampers (rectangular shape, round shape, flat oval shape)</li>"
     "<li>Motorized dampers (rectangular shape, round shape, flat oval shape)</li>"
@@ -560,7 +560,7 @@ msgid "home-aol-header"
 msgstr "Air Outlets"
 
 msgid "home-aol-content"
-msgstr "<p>A variety of types of air outlets (air grilles), \"Stream Air\" brand, manufactured and distributed by PCJ INDUSTRIES have been tested and certified by N.A.T.A., Australia, for acoustic and air flow performance in accordance with AS 1277 & ADC 1062 : GRID-84. Our air outlets are available in many designs to fulfill most requirements, for example,</p>"
+msgstr "<p>A variety of types of air outlets (air grilles), \"Stream Air\" brand, manufactured and supplied by PCJ INDUSTRIES have been tested and certified by N.A.T.A., Australia, for acoustic and air flow performance in accordance with AS 1277 & ADC 1062 : GRID-84. Our air outlets are available in many designs to fulfill most requirements, for example,</p>"
 "<ul>"
     "<li>Round ceiling diffusers</li>"
     "<li>Square/Rectangular ceiling diffusers</li>"
@@ -584,7 +584,7 @@ msgstr "<p>Fire steel doors (fire emergency exit doors) by PCJ are constructed o
 
 msgid "list-frd-content-2"
 msgstr "<p>Our doors are made to order.  Sizes are available upon request up to maximum 1200 mm. X 2400 mm. for single door and 2400 mm. X 2400 mm. for double door. We recommend application of our doors for not only fire escape purpose, but also any other where fire/burglar protection are needed.</p>"
-"<p>We also manufacture and distribute 2 hour fire rating door, tested by Chulalongkorn University in accordance with BS476 and TIS (Thai Industrial Standards) 1220-2541 as well as steel door as per TIS 1288-2538 to fulfill most requirements.</p>"
+"<p>We also manufacture and supply 2 hour fire rating door, tested by Chulalongkorn University in accordance with BS476 and TIS (Thai Industrial Standards) 1220-2541 as well as steel door as per TIS 1288-2538 to fulfill most requirements.</p>"
 
 msgid "product-images"
 msgstr "Product Gallery"
