@@ -248,8 +248,9 @@ After long period of deployment time, service alawys crashes for unknown reason.
 
 ### Before signing off & Every later update
 1. Do not forget to change `DEBUG=False` in `settings.py`
-2. execute `python3 manage.py collectstatic` (under virtual environment) to collect all updated static files
-3. and restart both services with `service nginx restart && service uwsgi restart`
+2. execute `django-admin compilemessages` (under virtual environment) to update text file
+3. execute `python3 manage.py collectstatic` (under virtual environment) to collect all updated static files
+4. and restart both services with `service nginx restart && service uwsgi restart`
 
 ### To use new SSL certificate on WHM
 search for `Manage Service SSL Certificates`
