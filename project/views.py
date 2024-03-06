@@ -41,7 +41,7 @@ class ProjectListView(FormMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['meta_title'] = _('projects').capitalize()
-        context['meta_robots'] = 'noindex, nofollow'
+        context['meta_robots'] = 'index, nofollow'
         return context
 
 def project_detail(request, id):

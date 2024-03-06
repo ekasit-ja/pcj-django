@@ -17,7 +17,7 @@ class NewsListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['meta_title'] = _('news').capitalize()
-        context['meta_robots'] = 'noindex, follow'
+        context['meta_robots'] = 'index, follow'
         return context
 
 def news_detail(request, id):
