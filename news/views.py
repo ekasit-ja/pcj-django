@@ -11,13 +11,13 @@ class NewsListView(ListView):
     context_object_name = 'news_queryset'
 
     def get_queryset(self):
-        queryset = News.objects.all()
+        queryset = News.objects.filter(publish=True)
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['meta_title'] = _('news').capitalize()
-        context['meta_robots'] = 'noindex, follow'
+        context['meta_robots'] = 'index, follow'
         return context
 
 def news_detail(request, id):
@@ -39,5 +39,5 @@ def news_detail(request, id):
     })
 
 def news_list(request, qty):
-    news = News.objects.all()[:qty]
+    news = News.objects.filter(publish=True)[:qty]
     return news

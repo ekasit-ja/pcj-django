@@ -13,7 +13,7 @@ import datetime
 # Create your views here.
 def page_home(request):
     news_queryset = news_list(request, 2)
-    project_queryset = project_list(request, 6)
+    project_queryset = project_list(request, 12)
     AGE = datetime.datetime.now().year-1998
 
     LANG = get_language()

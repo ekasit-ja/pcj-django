@@ -122,7 +122,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = (
+  ('th', 'Thai'),
+  ('en', 'English'),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -160,10 +165,11 @@ CKEDITOR_CONFIGS = {
             {'items': ['Link', 'Unlink']},
             {'items': ['Image', 'Table', 'HorizontalRule', 'SpecialChar']},
             {'items': ['Maximize']},
-            {'items': ['Html5video']},
+            {'items': ['Html5video','Youtube']},
             {'items': ['Source']},
         ],
-        'extraPlugins': ','.join(['html5video',]),
+        'extraPlugins': ','.join(['html5video','youtube','',]),
+
     },
     'small': {
         'height' : 100,

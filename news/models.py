@@ -12,6 +12,7 @@ class News(models.Model):
     content_th  = RichTextUploadingField(default='', blank=True, verbose_name='content thai')
     image       = models.ImageField(upload_to='news')
     order       = models.PositiveIntegerField(default=0, blank=False, null=False)
+    publish     = models.BooleanField(default=False)
 
     class Meta:
         ordering = ('-order',)

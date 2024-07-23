@@ -73,14 +73,14 @@ chdir = /home/ekasit/pcj-django/source
 wsgi-file = /home/ekasit/pcj-django/source/pcj/wsgi.py
 
 http = 0.0.0.0:8000
-#socket = /home/ekasit/pcj-django/site/tutorial.sock
+#socket = /home/ekasit/pcj-django/site/pcjdjango.sock
 #vacuum = true
 #chown-socket = root:root
 #chmod-socket = 666
 #listen = 512
 ```
 5. execute `sysctl -w net.core.somaxconn=512` to increase system request size (this is a test to fix 502 error when server is on for a long period of time) and add `net.core.somaxconn=512` to file `/etc/sysctl.conf` for permanent change the request size
-6. execute `uwsgi tutorial.ini` and browse website to check if it is working or not. (static files will not be served at this point)
+6. execute `uwsgi pcj.ini` and browse website to check if it is working or not. (static files will not be served at this point)
 7. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
 8. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uWSGI in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
 ```
@@ -135,7 +135,7 @@ server {
 
     location / {
         include uwsgi_params;
-        uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+        uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
     }
 }
 ```
@@ -156,14 +156,14 @@ at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
 
 ### SSL for https
 We will use **certbot** software to handle **Let’s Encrypt** certificate automatically.
-1. install certbot by executing `yum install certbot python2-certbot-nginx`
+1. install certbot by executing `yum install certbot python3-certbot-nginx`
 2. then `certbot --nginx` to let certbot configure NGINX automatically
 3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d www.pcjindustries.co.th,pcjindustries.co.th,server.pcjindustries.co.th` then choose option 2 (renew and replace cert) (use only 1 -d to create just 1 domain for all 3 addresses. There should be only 1 certificate folder which is `www.pcjindustries.co.th`)
 4. we have to force all `non-www` to `www` as well as provide `.well-known` path by changing below
 ```
 location / {
     include uwsgi_params;
-    uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+    uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
 }
 ```
 to
@@ -174,7 +174,7 @@ location /.well-known/ {
 
 location / {
     include uwsgi_params;
-    uwsgi_pass unix:/home/ekasit/pcj-django/site/tutorial.sock;
+    uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
 }
 
 if ($host = server.pcjindustries.co.th) {
@@ -224,6 +224,19 @@ if ($host = pcjindustries.co.th) {
 
 ---
 
+### Note about auto-renew SSL
+1. look for
+```
+listen 443 ssl; # managed by Certbot
+        ssl_certificate /etc/letsencrypt/live/pcjindustries.co.th/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/pcjindustries.co.th/privkey.pem; # managed by Certbot
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+```
+2. auto renewal of SSL may keep updating on folder `www.pcjindustries.co.th` instead.  Therefore, we have to change from `pcjindustries.co.th` to `www.pcjindustries.co.th`.
+
+---
+
 ### Auto restart service
 After long period of deployment time, service alawys crashes for unknown reason.  Therefore, we need to restart service automatically by `crontab`.  Thus set up to restart the service daily.
 1. Open file `/var/spool/cron/root`
@@ -235,5 +248,9 @@ After long period of deployment time, service alawys crashes for unknown reason.
 
 ### Before signing off & Every later update
 1. Do not forget to change `DEBUG=False` in `settings.py`
-2. execute `python3 manange.py collectstatic` (under virtual environment) to collect all updated static files
-3. and restart both services with `service nginx restart && service uwsgi restart`
+2. execute `django-admin compilemessages` (under virtual environment) to update text file
+3. execute `python3 manage.py collectstatic` (under virtual environment) to collect all updated static files
+4. and restart both services with `service nginx restart && service uwsgi restart`
+
+### To use new SSL certificate on WHM
+search for `Manage Service SSL Certificates`
