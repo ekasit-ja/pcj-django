@@ -15,6 +15,6 @@ class ProjectAdmin(SortableAdminMixin, admin.ModelAdmin):
         return mark_safe('<div><img src="{url}"/></div>'.format(url=obj.image.url))
 
     class Media:
-        css = {'all': [sass_processor('scss/admin.scss'),]}
+        css = {'all': (sass_processor('scss/admin.scss'),)}
 
 admin.site.register(Project, ProjectAdmin)

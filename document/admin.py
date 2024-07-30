@@ -19,6 +19,6 @@ class DocumentAdmin(SortableAdminMixin, admin.ModelAdmin):
             return mark_safe('<div><img src="' + settings.STATIC_URL + 'images/document.jpg"/></div>')
 
     class Media:
-        css = {'all': [sass_processor('scss/admin.scss'),]}
+        css = {'all': (sass_processor('scss/admin.scss'),)}
 
 admin.site.register(Document, DocumentAdmin)

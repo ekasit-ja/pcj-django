@@ -7,7 +7,7 @@ from sorl.thumbnail import ImageField
 # Create your models here.
 class Product(models.Model):
     product_type = models.CharField(
-        max_length=3,
+        max_length=10,
         choices=settings.CONSTANTS['product_choices'],
         default=settings.CONSTANTS['product_choices'][0][0],
     )
