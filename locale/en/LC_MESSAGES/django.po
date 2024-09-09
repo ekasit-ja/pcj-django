@@ -44,7 +44,7 @@ msgid "frd-&-non-frd"
 msgstr "Steel Doors & Fire-Rated Steel Doors"
 
 msgid "fdc"
-msgstr "Fire Dampers"
+msgstr "Fire-Rated Dampers"
 
 msgid "fsd-ul"
 msgstr "Combination of Fire & Smoke Dampers"
@@ -80,7 +80,7 @@ msgid "contact-us"
 msgstr "contact us"
 
 msgid "about-us-content-1"
-msgstr "We, PCJ INDUSTRIES CO., LTD., was established in 1998, specialize in production of Steel Doors, Fire-Rated Steel Doors, Fire Damper, Other Dampers, Duct Silencers, Acoustic Louvers, and Air Outlets (Air Grilles). Most of our products are certified by several organization for standardization, i.e.: Underwriters Laboratories (UL), British Standards Institutuion (BSI), Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute. Moreover, our company is certified by International Organization for Standardization, ISO 9001:2008 as well."
+msgstr "We, PCJ INDUSTRIES CO., LTD., was established in 1998, specialize in production of Steel Doors, Fire-Rated Steel Doors, Fire-Rated Damper, Other Dampers, Duct Silencers, Acoustic Louvers, and Air Outlets (Air Grilles). Most of our products are certified by several organization for standardization, i.e.: Underwriters Laboratories (UL), British Standards Institutuion (BSI), Standards Australia, Air Diffusion Council, Thai Industrial Standards Institute. Moreover, our company is certified by International Organization for Standardization, ISO 9001:2008 as well."
 
 msgid "about-us-content-2"
 msgstr "Our factory is established on our own land, area 40,000 sq.m.(approx), in Kaengkhoi, Saraburi, Thailand. Our policy is always on-time production and delivery with quality, reliability, and competitively priced products. We have been investing in instruments and machines. Besides, we have experienced engineer teams taking full time to continuously research and develop our product lines, including new product designs to meet worldwide market demands."
@@ -218,22 +218,22 @@ msgid "frd-vdo-commercial"
 msgstr "PCJ Fire-Rated Steel Doors TV advertisement"
 
 msgid "fire-dampers"
-msgstr "Fire Dampers"
+msgstr "Fire-Rated Dampers"
 
 msgid "vertical-only"
 msgstr ", Vertical only"
 
 msgid "fdc-vdo-demonstrate"
-msgstr "VDO demonstrates function of Fire Dampers, Model : FDC"
+msgstr "VDO demonstrates function of Fire-Rated Dampers, Model : FDC"
 
 msgid "fdc-vdo-ul-01"
-msgstr "Fire Damper of PCJ INDUSTRIES CO., LTD. tested for 3-hour fire rating in accordance with ANSI/UL 555 & CAN/ULC-S112 at UL LLC Northbrook, USA"
+msgstr "Fire-Rated Damper of PCJ INDUSTRIES CO., LTD. tested for 3-hour fire rating in accordance with ANSI/UL 555 & CAN/ULC-S112 at UL LLC Northbrook, USA"
 
 msgid "frd-vdo-ul-01"
 msgstr "Fire-Rated Steel Door of PCJ INDUSTRIES CO., LTD. tested for 3-hour fire rating in accordance with ANSI/UL 10C & CAN/ULC-S104 at UL LLC Northbrook, USA"
 
 msgid "frd-vision-vdo-ul-01"
-msgstr "Fire Door Glass Light Frame of PCJ INDUSTRIES CO., LTD. tested for 3-hour fire rating in accordance with ANSI/UL 10C & CAN/ULC-S104 at UL LLC Northbrook, USA"
+msgstr "Fire-Rated Door Glass Light Frame of PCJ INDUSTRIES CO., LTD. tested for 3-hour fire rating in accordance with ANSI/UL 10C & CAN/ULC-S104 at UL LLC Northbrook, USA"
 
 msgid "duct-dampers"
 msgstr "Other Dampers"
@@ -380,10 +380,10 @@ msgid "frd-p1"
 msgstr "We manufacture and supply Fire-Rated Steel Doors, 3-Hour Fire Rating, ANSI/UL 10C & CAN/ULC-S104. Various type, styles, finish : Single Doors, Double Doors, Flush Doors, Flush with Vision Panels, Embossed Doors, Powder Finish, Wood Grain Finish as well as various types of hardware are available upon request. 2 Hour Fire-Rated Steel Doors and Steel Doors are also available upon request to fulfill most requirements."
 
 msgid "fdc-p1"
-msgstr "We manufacture and supply fire dampers, 3-Hour Fire Rating, ANSI/UL 555 & CAN/ULC-S112 that can be mounted vertically on masonry/gypsum walls.  The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C) in order to block the spread of flame pass through the walls."
+msgstr "We manufacture and supply fire-rated dampers, 3-Hour Fire Rating, ANSI/UL 555 & CAN/ULC-S112 that can be mounted vertically on masonry/gypsum walls.  The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C) in order to block the spread of flame pass through the walls."
 
 msgid "ddp-p1"
-msgstr "We manufacture and supply various types of dampers, ie. : Fire Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555, Combination of Fire Dampers and Smoke Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555&UL 555S, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers. Each type is designed suitable for each particular function."
+msgstr "We manufacture and supply various types of dampers, ie. : Fire-Rated Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555, Combination of Fire Dampers and Smoke Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555&UL 555S, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers. Each type is designed suitable for each particular function."
 
 msgid "aol-p1"
 msgstr "We manufacture and supply various types of Air Outlets : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers.  Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84.  Each type is designed suitable for each particular function."
@@ -410,7 +410,7 @@ msgid "no-finance-record"
 msgstr "No finance record is available at this moment"
 
 msgid "frd-desc"
-msgstr "Constructed of steel sheets with high technic of reinforcement to be very strong (very heavy duty). The doors have been tested and certified for 3-hour fire rating as per ANSI/UL 10C & CAN/ULC-S104. Various type, styles, finish : Single Doors, Double Doors, Flush Doors, Flush with Vision Panels, Embossed Doors, Powder Finish, Wood Grain Finish as well as various types of hardware are available upon request to fulfill most requirements. Sizes can be made to order up to 1200 mm. x 2400 mm. for single door, and 2400 mm. x 2400 mm. for double door. Recommend to be used not only for fire escape doors, but also for room doors where fire/burglar protection are needed. 2-Hour Fire-Rated Steel Doors and Steel Doors are also available upon request to fulfill most requirements."
+msgstr "Constructed of steel sheets with high technic of reinforcement to be very strong (very heavy duty). The doors have been tested and certified for 3-hour fire rating as per ANSI/UL 10C & CAN/ULC-S104. Various type, styles, finish : Single Doors, Double Doors, Flush Doors, Flush with Vision Panels, Embossed Doors, Powder Finish, Wood Grain Finish as well as various types of hardware are available upon request to fulfill most requirements. Sizes can be made to order up to 1200 mm. x 2400 mm. for single door, and 2400 mm. x 2400 mm. for double door. Recommend to be used not only for fire-rated escape doors, but also for room doors where fire/burglar protection are needed. 2-Hour Fire-Rated Steel Doors and Steel Doors are also available upon request to fulfill most requirements."
 
 msgid "fdc-desc"
 msgstr "Constructed of galvanized steel sheets, high strength structure, frame shape is modular design to be suitable for mounted in duct line as well as conecting together as multiple section. The dampers have been tested and certified for 3-hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Single Section, Multiple Section, In Air Stream, Out of Air Stream are available upon request to fulfill most requirements. Sizes can be made to order up to 1220 mm. x 1220 mm. (48\" x 48\") for single section, and 2440 mm. x 2440 mm.(96\" x 96\") for multiple section. Recommend to be used for blocking spread of fire pass through duct line, ventilation fan, air louver as well as indoor glass panel, especially large size of glass panel, etc, when fire or heat approach the dampers."
@@ -419,7 +419,7 @@ msgid "fsd-ul-desc"
 msgstr "Constructed of galvanized steel sheets, high strength structure, frame shape is modular design to be suitable for mounted in duct line. The dampers have been tested and certified for 3-hour fire rating In-Wall Installation, Out-of-Wall Installation are available upon request to fulfill most requirements. Sizes can be made to order up to 1220 mm. x 1220 mm. (48\" x 48\"). Recommend to be used for blocking spread of fire and/or smoke pass through duct line, ventilation fan, air louver as well as indoor glass panel, especially large size of glass panel, etc., when fire/heat and/or smoke approach the dampers and/or the heat/smoke detector linked to the dampers."
 
 msgid "ddp-desc"
-msgstr "Constructed of galvanized steel sheets, high strength structure. Various types of dampers designed suitable for each particular function, Various type available, ie. : Fire Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555, Combination of Fire Dampers and Smoke Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555&UL 555S, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers. Flange type, Plain End type, in-wall mounted actuator, out-of-wall mounted actuator are available upon request to fulfill most requirements. Sizes can be made to order."
+msgstr "Constructed of galvanized steel sheets, high strength structure. Various types of dampers designed suitable for each particular function, Various type available, ie. : Fire-Rated Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555, Combination of Fire Dampers and Smoke Dampers, 3-Hour Fire Rating, tested by KMIT in accordance with UL 555&UL 555S, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers. Flange type, Plain End type, in-wall mounted actuator, out-of-wall mounted actuator are available upon request to fulfill most requirements. Sizes can be made to order."
 
 msgid "ds-desc-1"
 msgstr "Constructed of galvanized steel sheets, high strength structure. The duct silencers have been dynamic insertion loss (dB) tested and certified by N.A.T.A., Australia, AS 1277. Available for rectangular and round shape at any sizes (made to order) upon request to fulfill most requirements. They can be mounted vertically or horizontally to reduce sound level to desire levels as requirements. Recommended to be used for reducing sound level in duct line, machine room where sound level is needed to be at required level."
@@ -442,7 +442,7 @@ msgstr "Please click catalogue tab to download the catalogue for more details."
 #
 
 msgid "meta-desc-home"
-msgstr "We manufacture and supply steel doors, fire-rated steel doors, fire dampers, duct dampers, duct silencers, acoustic louvers, and air outlets (air grilles). With experience in this market for more than 20 years as well as certificates as per many international standards from world class instituitions, you can trust in excellent quality of our products and services."
+msgstr "We manufacture and supply steel doors, fire-rated steel doors, fire-rated dampers, duct dampers, duct silencers, acoustic louvers, and air outlets (air grilles). With experience in this market for more than 20 years as well as certificates as per many international standards from world class instituitions, you can trust in excellent quality of our products and services."
 
 msgid "meta-title-frd"
 msgstr "Steel doors"
@@ -451,10 +451,10 @@ msgid "meta-desc-frd"
 msgstr "PCJ manufactures and supplies Steel doors, and Fire-Rated Steel Doors, 3-Hour Fire Rating (UL 10C), 2-Hour Fire Rating (BS 476) upon any requests to fulfill most requirements."
 
 msgid "meta-title-fdc"
-msgstr "Fire dampers, UL certified"
+msgstr "Fire-rated dampers, UL certified"
 
 msgid "meta-desc-fdc"
-msgstr "PCJ manufactures and supplies Fire Dampers, 3-Hour Fire Rating (UL 555). The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C)"
+msgstr "PCJ manufactures and supplies Fire-Rated Dampers, 3-Hour Fire Rating (UL 555). The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reach up to 165°F (74°C)"
 
 msgid "meta-title-fsd-ul"
 msgstr "Fire & smoke dampers"
@@ -466,7 +466,7 @@ msgid "meta-title-ddp"
 msgstr "Duct dampers, Other dampers"
 
 msgid "meta-desc-ddp"
-msgstr "PCJ manufactures and supplies Fire Dampers, Fire & Smoke Dampers, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers, and many others"
+msgstr "PCJ manufactures and supplies Fire-Rated Dampers, Fire & Smoke Dampers, Volume Dampers, Motorized Dampers, Gravity Dampers, Relief Dampers, and many others"
 
 msgid "meta-title-ds"
 msgstr "Duct silencers"
@@ -481,13 +481,13 @@ msgid "meta-desc-aol"
 msgstr "PCJ manufactures and supplies various types of Air Outlets, i.e. : Round Ceiling Diffusers, Square Ceiling Diffusers, Rectangular Ceiling Diffusers, Air Grilles, Egg Crate Grilles, Supply Air Registers, Opposed Blade Volume Dampers, Linear Slot Diffusers, Linear Bar Grilles, Insect Screens, Air Filters, Air Louvers. Some types are performance tested and certified by N.A.T.A., Australia, AS 1277 & ADC 1062 : GRID-84. Each type is designed suitable for each particular function."
 
 msgid "meta-kw-home"
-msgstr "Steel Door, Fire-Rated Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type, Fire Smoke Damper, Duct Damper, Other Damper, Damper, Duct Silencer, Acoutic Louver, Air Outlet, Air Grille"
+msgstr "Steel Door, Fire-Rated Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door, Fire-Rated Damper, UL Fire-Rated Damper, UL Damper, Fire-Rated Damper Curtain Type, Fire Smoke Damper, Duct Damper, Other Damper, Damper, Duct Silencer, Acoutic Louver, Air Outlet, Air Grille"
 
 msgid "meta-kw-frd"
 msgstr "Steel Door, Fire-Rated Steel Door, Fire Door, Fireproof Door, Fire Resistance Door, UL, UL Door, BS, BS Door"
 
 msgid "meta-kw-fdc"
-msgstr "Fire Damper, UL Fire Damper, UL Damper, Fire Damper Curtain Type"
+msgstr "Fire-Rated Damper, UL Fire-Rated Damper, UL Damper, Fire-Rated Damper Curtain Type"
 
 msgid "meta-kw-fsd-ul"
 msgstr "Fire Smoke Damper"
@@ -509,7 +509,7 @@ msgid "home-intro-header"
 msgstr "PCJ INDUSTRIES"
 
 msgid "home-intro-content"
-msgstr "We are a manufacturer and supplier of steel doors, fire-rated steel doors, fire dampers, other dampers, air outlets (air grilles), duct silencers, and acoustic louvers. Our products have been tested and certified in accordance with various international standards from world class institutions. We also have experience in this market for more than 20 years. Therefore, you can trust in excellent quality of our products as well as services from us"
+msgstr "We are a manufacturer and supplier of steel doors, fire-rated steel doors, fire-rated dampers, other dampers, air outlets (air grilles), duct silencers, and acoustic louvers. Our products have been tested and certified in accordance with various international standards from world class institutions. We also have experience in this market for more than 20 years. Therefore, you can trust in excellent quality of our products as well as services from us"
 
 msgid "home-frd-header"
 msgstr "Steel Doors and Fire-Rated Steel Doors"
@@ -527,14 +527,14 @@ msgid "more-details"
 msgstr "More Details"
 
 msgid "home-fdc-header"
-msgstr "Fire Dampers"
+msgstr "Fire-Rated Dampers"
 
 msgid "home-fdc-content"
-msgstr "Fire dampers, \"Stream Air\" brand, manufactured and supplied by PCJ INDUSTRIES, have been tested and certified by Underwriter Laboratories (UL), USA, for 3-hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Fire dampers can be mounted vertically on masonry/gypsum walls. The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reaches up to 165°F (74°C) in order to block the spread of flame passing through the walls.  Our dampers are available in many types, for example,</p>"
+msgstr "Fire-Rated dampers, \"Stream Air\" brand, manufactured and supplied by PCJ INDUSTRIES, have been tested and certified by Underwriter Laboratories (UL), USA, for 3-hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Fire-rated dampers can be mounted vertically on masonry/gypsum walls. The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reaches up to 165°F (74°C) in order to block the spread of flame passing through the walls.  Our dampers are available in many types, for example,</p>"
 "<ul>"
-    "<li>Fire damper, curtain type, in airstream</li>"
-    "<li>Fire damper, curtain type, out of airstream</li>"
-    "<li>Fire damper, curtain type, multiple section</li>"
+    "<li>Fire-rated damper, curtain type, in airstream</li>"
+    "<li>Fire-rated damper, curtain type, out of airstream</li>"
+    "<li>Fire-rated damper, curtain type, multiple section</li>"
 "</ul>"
 
 msgid "home-ddp-header"
@@ -722,17 +722,17 @@ msgstr "<h6>Fire Door Coordinator</h6>"
 "</ul>"
 
 msgid "list-fdc-content-1"
-msgstr "<p>Fire dampers, curtain type, by PCJ, are constructed of galvanized steel sheets, high strength structure, frame shape is modular design to be suitable for mounting in duct line or connecting together with other fire dampers as multiple section. The dampers have been tested and certified for 3-hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Single Section, Multiple Section, In Airstream, Out of Airstream are available upon request to fulfill most requirements. Size can be made to order up to maximum :</p>"
+msgstr "<p>Fire-rated dampers, curtain type, by PCJ, are constructed of galvanized steel sheets, high strength structure, frame shape is modular design to be suitable for mounting in duct line or connecting together with other fire-rated dampers as multiple section. The dampers have been tested and certified for 3-hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Single Section, Multiple Section, In Airstream, Out of Airstream are available upon request to fulfill most requirements. Size can be made to order up to maximum :</p>"
 "<ul>"
     "<li>1220 mm. x 1220 mm. (48” x 48”) for Single Section</li>"
     "<li>2440 mm. x 2440 mm. (96” x 96”) for Multiple Section</li>"
 "</ul>"
-"<p>We recommend application of our fire dampers for blocking spread of fire passing through duct line, ventilation fan, air louver as well as indoor glass panel, especially large size of glass panel when fire or heat approaches the dampers.</p>"
+"<p>We recommend application of our fire-rated dampers for blocking spread of fire passing through duct line, ventilation fan, air louver as well as indoor glass panel, especially large size of glass panel when fire or heat approaches the dampers.</p>"
 
 msgid "list-ddp-content-1"
 msgstr "<p>Dampers, by PCJ, are constructed of galvanized steel sheets, high strength structure and durable. Our dampers are designed to suit each particular function and are available in many types, such as,</p>"
 "<ul>"
-    "<li>Fire dampers, 3-hour fire rating as per UL 555, tested by King Mongkut's Institute of Technology Ladkrabang (KMIT)</li>"
+    "<li>Fire-rated dampers, 3-hour fire rating as per UL 555, tested by King Mongkut's Institute of Technology Ladkrabang (KMIT)</li>"
     "<li>Combination of fire & smoke dampers, 3-hour fire rating as per UL 555 and UL 555s, tested by King Mongkut's Institute of Technology Ladkrabang (KMIT)</li>"
     "<li>Volume dampers</li>"
     "<li>Motorized dampers</li>"
