@@ -584,7 +584,7 @@ msgstr "<p>Fire-rated steel doors (fire emergency exit doors) by PCJ are constru
 
 msgid "list-frd-content-2"
 msgstr "<p>Our doors are made to order.  Sizes are available upon request up to maximum 1200 mm. X 2400 mm. for single door and 2400 mm. X 2400 mm. for double door. We recommend application of our doors for not only fire escape purpose, but also any other where fire/burglar protection are needed.</p>"
-"<p>We also manufacture and supply 2-hour fire rating door, tested by Chulalongkorn University in accordance with BS476 and TIS (Thai Industrial Standards) 1220-2541 as well as steel door as per TIS 1288-2538 to fulfill most requirements.</p>"
+"<p>We also manufacture and supply 2-hour fire rated door, tested by Chulalongkorn University in accordance with BS476 and TIS (Thai Industrial Standards) 1220-2541 as well as steel door as per TIS 1288-2538 to fulfill most requirements.</p>"
 
 msgid "product-images"
 msgstr "Product Gallery"
