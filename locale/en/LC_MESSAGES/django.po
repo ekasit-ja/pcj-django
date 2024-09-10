@@ -530,7 +530,7 @@ msgid "home-fdc-header"
 msgstr "Fire-Rated Dampers"
 
 msgid "home-fdc-content"
-msgstr "Fire-Rated dampers, \"Stream Air\" brand, manufactured and supplied by PCJ INDUSTRIES, have been tested and certified by Underwriter Laboratories (UL), USA, for 3-hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Fire-rated dampers can be mounted vertically on masonry/gypsum walls. The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reaches up to 165°F (74°C) in order to block the spread of flame passing through the walls.  Our dampers are available in many types, for example,</p>"
+msgstr "Fire-rated dampers, \"Stream Air\" brand, manufactured and supplied by PCJ INDUSTRIES, have been tested and certified by Underwriter Laboratories (UL), USA, for 3-hour fire rating as per ANSI/UL 555 & CAN/ULC-S112. Fire-rated dampers can be mounted vertically on masonry/gypsum walls. The dampers are designed to automatically close by gravity in the event of fire when temperature at the dampers reaches up to 165°F (74°C) in order to block the spread of flame passing through the walls.  Our dampers are available in many types, for example,</p>"
 "<ul>"
     "<li>Fire-rated damper, curtain type, in airstream</li>"
     "<li>Fire-rated damper, curtain type, out of airstream</li>"
