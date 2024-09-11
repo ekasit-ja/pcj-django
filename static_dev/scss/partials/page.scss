@@ -85,3 +85,17 @@
         display: block;
     }
 }
+
+.row.exhibition {
+    img {
+        max-height: 600px;
+        max-width: 100%;
+    }
+
+    background: linear-gradient(90deg,
+                    rgba(black,.1) 0%,
+                    rgba(black,.3) 50%),
+                    url('/static/images/intersec_dubai_2025_banner_blur.jpg');
+    background-position: center;
+    background-size: cover;
+}
