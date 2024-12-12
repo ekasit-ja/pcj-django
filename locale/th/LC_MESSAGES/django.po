@@ -119,7 +119,7 @@ msgid "pcj-office-work-hour"
 msgstr "จันทร์ - เสาร์, เวลา 8:30 - 17:30"
 
 msgid "pcj-factory-road"
-msgstr "45/2 ถนนแก่งคอย-แสลงพัน หมู่ 8"
+msgstr "45/2 หมู่ 8 ถนนแก่งคอย-แสลงพัน"
 
 msgid "pcj-factory-area"
 msgstr "ตำบลบ้านป่า อำเภอแก่งคอย"
