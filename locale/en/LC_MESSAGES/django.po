@@ -119,7 +119,7 @@ msgid "pcj-office-work-hour"
 msgstr "Mon - Sat, 8:30AM - 5:30PM (ICT)"
 
 msgid "pcj-factory-road"
-msgstr "45/2 Kaengkhoi-Salaengpan Road, Moo 8,"
+msgstr "45/2, Moo 8, Kaengkhoi-Salaengpan Road,"
 
 msgid "pcj-factory-area"
 msgstr "Banpa, Kaengkhoi,"
