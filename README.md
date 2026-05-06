@@ -141,6 +141,7 @@ server {
 ```
 13. check syntax with `nginx -t`
 14. restart service to apply changes by `service nginx restart && service uwsgi restart`
+15. Don't forget to disable Apache auto boot from WHM by `systemctl disable --now httpd` and login to WHM and browse `WHM → Service Configuration → Service Manager → Apache Web Server (httpd)` and remove tick from both `Enabled` and `Monitor` then save the change.
 15. browse to website to check if it is working
 
 at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
@@ -159,68 +160,175 @@ We will use **certbot** software to handle **Let’s Encrypt** certificate autom
 1. install certbot by executing `yum install certbot python3-certbot-nginx`
 2. then `certbot --nginx` to let certbot configure NGINX automatically
 3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d www.pcjindustries.co.th,pcjindustries.co.th,server.pcjindustries.co.th` then choose option 2 (renew and replace cert) (use only 1 -d to create just 1 domain for all 3 addresses. There should be only 1 certificate folder which is `www.pcjindustries.co.th`)
-4. we have to force all `non-www` to `www` as well as provide `.well-known` path by changing below
+4. we have to force all `non-www` to `www` as well as provide `.well-known` path.  But we will change entire `/etc/nginx/nginx.conf` with below code
 ```
-location / {
-    include uwsgi_params;
-    uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
-}
-```
-to
-```
-location /.well-known/ {
-    alias /home/ekasit/pcj-django/.well-known/;
-}
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log warn;
+pid /run/nginx.pid;
 
-location / {
-    include uwsgi_params;
-    uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
+include /usr/share/nginx/modules/*.conf;
+
+events {
+    worker_connections 1024;
 }
 
-if ($host = server.pcjindustries.co.th) {
-    return 301 https://www.pcjindustries.co.th$request_uri;
-} # managed by Certbot
+http {
 
-if ($host = pcjindustries.co.th) {
-    return 301 https://www.pcjindustries.co.th$request_uri;
-} # managed by Certbot
+################################################################################
+# BASIC
+################################################################################
+
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+
+################################################################################
+# LOG
+################################################################################
+
+    log_format main '$remote_addr - $remote_user [$time_local] "$request" '
+                    '$status $body_bytes_sent "$http_referer" '
+                    '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log /var/log/nginx/access.log main;
+
+################################################################################
+# GZIP
+################################################################################
+
+    gzip on;
+    gzip_comp_level 5;
+    gzip_min_length 256;
+    gzip_vary on;
+
+    gzip_types
+        text/plain
+        text/css
+        text/xml
+        application/json
+        application/javascript
+        application/xml
+        application/rss+xml
+        image/svg+xml;
+
+################################################################################
+# HTTP → HTTPS
+################################################################################
+
+    server {
+        listen 80;
+        server_name pcjindustries.co.th *.pcjindustries.co.th;
+
+        location /.well-known/acme-challenge/ {
+            alias /home/ekasit/pcj-django/.well-known/acme-challenge/;
+        }
+
+        return 301 https://www.pcjindustries.co.th$request_uri;
+    }
+
+################################################################################
+# NON-WWW → WWW
+################################################################################
+
+    server {
+        listen 443 ssl;
+        server_name pcjindustries.co.th *.pcjindustries.co.th;
+
+        ssl_certificate /etc/letsencrypt/live/www.pcjindustries.co.th/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/www.pcjindustries.co.th/privkey.pem;
+
+        include /etc/letsencrypt/options-ssl-nginx.conf;
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+        return 301 https://www.pcjindustries.co.th$request_uri;
+    }
+
+################################################################################
+# MAIN WEBSITE
+################################################################################
+
+    server {
+
+        listen 443 ssl;
+        http2 on;
+        server_name www.pcjindustries.co.th;
+
+        access_log /home/ekasit/pcj-django/site/access.log;
+        error_log  /home/ekasit/pcj-django/site/error.log;
+
+        client_max_body_size 20M;
+
+        ssl_certificate /etc/letsencrypt/live/www.pcjindustries.co.th/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/www.pcjindustries.co.th/privkey.pem;
+
+        include /etc/letsencrypt/options-ssl-nginx.conf;
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+################################################################################
+# SECURITY HEADERS
+################################################################################
+
+        add_header X-Frame-Options SAMEORIGIN;
+        add_header X-Content-Type-Options nosniff;
+        add_header X-XSS-Protection "1; mode=block";
+        add_header Referrer-Policy strict-origin-when-cross-origin;
+
+################################################################################
+# DJANGO STATIC
+################################################################################
+
+        location /static/ {
+            alias /home/ekasit/pcj-django/static/;
+            expires 30d;
+            access_log off;
+        }
+
+################################################################################
+# DJANGO MEDIA
+################################################################################
+
+        location /media/ {
+            alias /home/ekasit/pcj-django/upload/;
+            expires 30d;
+        }
+
+################################################################################
+# LETSENCRYPT
+################################################################################
+
+        location /.well-known/ {
+            alias /home/ekasit/pcj-django/.well-known/;
+        }
+
+################################################################################
+# FAVICON
+################################################################################
+
+        location = /favicon.ico {
+            access_log off;
+            log_not_found off;
+        }
+
+################################################################################
+# DJANGO UWSGI
+################################################################################
+
+        location / {
+            include uwsgi_params;
+            uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
+        }
+
+    }
+}
 ```
-5. in server directive which listen to port 80, change
-```
-server {
-if ($host = www.pcjindustries.co.th) {
-    return 301 https://$host$request_uri;
-} # managed by Certbot
-
-
-if ($host = server.pcjindustries.co.th) {
-    return 301 https://$host$request_uri;
-} # managed by Certbot
-
-
-if ($host = pcjindustries.co.th) {
-    return 301 https://$host$request_uri;
-} # managed by Certbot
-```
-to
-```
-if ($host = www.pcjindustries.co.th) {
-    return 301 https://www.pcjindustries.co.th$request_uri;
-} # managed by Certbot
-
-
-if ($host = server.pcjindustries.co.th) {
-    return 301 https://www.pcjindustries.co.th$request_uri;
-} # managed by Certbot
-
-
-if ($host = pcjindustries.co.th) {
-    return 301 https://www.pcjindustries.co.th$request_uri;
-} # managed by Certbot
-```
-6. restart NGINX with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
-7. set job to auto-renew certificate by executing `crontab -e`. cronjob file will be opened
-8. then put `0 4 2 * * /usr/bin/certbot renew >> /home/ekasit/pcj-django/site/renew_cert.log 2>&1` on the last line. (it means every month, on 2nd day at 04.00, execute `certbot renew` and log it in that file either output is normal or error)
+5. restart NGINX with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
+6. set job to auto-renew certificate by executing `crontab -e`. cronjob file will be opened
+7. then put `0 4 2 * * /usr/bin/certbot renew >> /home/ekasit/pcj-django/site/renew_cert.log 2>&1` on the last line. (it means every month, on 2nd day at 04.00, execute `certbot renew` and log it in that file either output is normal or error)
 
 ---
 
@@ -239,15 +347,15 @@ listen 443 ssl; # managed by Certbot
 
 ### Auto restart service
 After long period of deployment time, service alawys crashes for unknown reason.  Therefore, we need to restart service automatically by `crontab`.  Thus set up to restart the service daily.
-1. Open file `/var/spool/cron/root`
+1. set job to auto restart service by executing `crontab -e`. cronjob file will be opened
 2. add `0 4 * * * /home/ekasit/pcj-django/source/daily_restart.sh >> /home/ekasit/pcj-django/site/daily_restart.log 2>&1` on the last line
 3. save the file
-4. change permission of `daily_restart.sh` file in source code folder to 744 (executable by owner)
+4. change permission of file `/home/ekasit/pcj-django/source/daily_restart.sh` to 744 (executable by owner)
 
 ---
 
 ### Before signing off & Every later update
-1. Do not forget to change `DEBUG=False` in `settings.py`
+1. Do not forget to change `DEBUG=False` in `/home/ekasit/pcj-django/source/pcj/settings.py`
 2. execute `django-admin compilemessages` (under virtual environment) to update text file
 3. execute `python3 manage.py collectstatic` (under virtual environment) to collect all updated static files
 4. and restart both services with `service nginx restart && service uwsgi restart`
