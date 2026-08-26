@@ -85,10 +85,10 @@ NotifyAccess=all
 [Install]
 WantedBy=multi-user.target
 ```
-9. execute `systemctl daemon-reload` to inform system there is change from service files
-10. install NGINX with `apt install nginx`
-11. configure NGINX at by creating a file `/etc/nginx/sites-available/pcjindustries`
-12. Put below code in `pcjindustries` file. Replace with actual IP address.
+8. execute `systemctl daemon-reload` to inform system there is change from service files
+9. install NGINX with `apt install nginx`
+10. configure NGINX at by creating a file `/etc/nginx/sites-available/pcjindustries`
+11. Put below code in `pcjindustries` file. Replace with actual IP address.
 ```
 server {
     client_max_body_size 10M;
@@ -123,7 +123,7 @@ server {
     }
 }
 ```
-13. execute `ln -s /etc/nginx/sites-available/pcjindustries /etc/nginx/sites-enabled/pcjindustries`
+12. execute `ln -s /etc/nginx/sites-available/pcjindustries /etc/nginx/sites-enabled/pcjindustries`
 13. check syntax with `nginx -t`
 14. restart service to apply changes by `service nginx restart && service uwsgi restart`
 15. browse to website to check if it is working
@@ -143,9 +143,7 @@ at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
 We will use **certbot** software to handle **Let’s Encrypt** certificate automatically.
 1. install certbot by executing `apt install certbot python3-certbot-nginx`
 2. then execute `certbot certonly --webroot -w /home/ekasit/pcj-django -d pcjindustries.co.th -d www.pcjindustries.co.th`
-
-
-4. we have to force all `non-www` redirect to `www` and `http` redirect to `https`. We change entire `/etc/nginx/sites-available/pcjindustries` with below code
+3. we have to force all `non-www` redirect to `www` and `http` redirect to `https`. We change entire `/etc/nginx/sites-available/pcjindustries` with below code
 ```
 # HTTP → HTTPS + www
 server {
@@ -214,8 +212,8 @@ server {
     }
 }
 ```
-5. restart NGINX with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
-6. `certbot` already have timer to run `renew` by default twice a day. No need to do auto renewal code.
+4. restart NGINX with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
+5. `certbot` already have timer to run `renew` by default twice a day. No need to do auto renewal code.
 
 ---
 
@@ -229,7 +227,7 @@ After long period of deployment time, service may crash for unknown reason.  The
 
 ### Before signing off & Every later update
 1. Do not forget to change `DEBUG=False` in `/home/ekasit/pcj-django/source/pcj/settings.py`
-2. execute `(cd /home/ekasit/pcj-django/source && /home/ekasit/pcj-django/venv/bin/django-admin compilemessages)` to update text file (May need to install `apt update && apt install gettext` if `GNU gettext tools` is not installed)
+2. execute `(cd /home/ekasit/pcj-django/source && /home/ekasit/pcj-django/venv/bin/django-admin compilemessages)` to update text file (may need to install `apt update && apt install gettext` if `GNU gettext tools` is not installed)
 3. execute `(cd /home/ekasit/pcj-django/source && /home/ekasit/pcj-django/venv/bin/python manage.py collectstatic)` to collect all updated static files
 4. and restart both services with `service nginx restart && service uwsgi restart`
 
