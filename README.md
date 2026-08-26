@@ -1,15 +1,6 @@
 # pcj-django
 
-### This is development and deployment note for future use.
-
-### Problem on Cent OS 7 with SQLite3 and mod-wsgi
-Default python in Cent OS 7 persist to use Sqlite version **3.7.17** while Django version 2.2.x requires sqlite version **3.8.3 or higher**. Many attempts to install sqlite newer version succeeded at development level. However, it failed at deployment stage. As a result, the latest version of Django we can use is **2.1.x**.
-
-EasyApache4 on Cent OS also prevents us to use normal version of Apache2 and mod_wsgi.  Experiment (customized) version of mod_wsgi for EasyApache4 is not working neither. Therefore, deploying Django using EasyApache4 is not possible.
-
-Deployment option is narrowed to **NGINX**. After doing research, we chose **uWSGI** for middleware over GUnicorn because deployment tutorial and community on Cent OS prefers uWSGI to GUnicorn.
-
-In conclusion, we use **NGINX** for web server (which will serve static files). NGINX will communicate **uWSGI** via unix socket to invoke callable object of **Django** for dynamic data.
+### This is development and deployment note for Ubuntu 24.04.4 LTS
 
 ---
 
@@ -39,18 +30,15 @@ Development is conducted on Windows 10. We use _Ubuntu_ CLI to work with UNIX co
 **Do NOT place project folder in** `/root`.  Place somewhere else like `/home/ekasit` (in this case). We will not give NGINX permission to access root folder.
 1. First of all, create project folder with `mkdir pcj-django && cd pcj-django`
 2. execute `mkdir source static upload site`
-   - if this is first run, install python virtual environment executing `pip3 install virtualenv`
+   - if this is first run, install python virtual environment executing `pip3 install virtualenv` (Ubuntu will ask to use `apt` instead of installing with `pip` when not in virtual environment. Do so)
    - also copy everything into `upload` folder.  We use SQLite database so the data is already in repository.
 3. execute `virtualenv -p python3 venv` to create python virtual environment
 4. then `source venv/bin/activate`
 5. then `cd source`
    - if this is first run, execute `git clone https://github.com/ekasit-ja/pcj-django.git .` to clone source code first
    - then execute `pip3 install -r pip_packages.txt` to install all required packages
-   - on **Cent OS**, there may be problem with installing **django-compressor** package.  Run below first to solve the issue.
-     - `pip3 install rcssmin --install-option="--without-c-extensions"`
-     - `pip3 install rjsmin --install-option="--without-c-extensions"`
    - then execute `python3 manage.py collectstatic` to gather all static files and put them into `static` folder
-6. then `python3 manage.py runserver 0.0.0.0:8000`.  Note that this is remotely access to server.  127.0.0.1:8000 is **NOT** remotely accessible.
+6. then `python3 manage.py runserver 0.0.0.0:8000`.  Do not forget to add IP address to `settings.py` file.
 
 **Note that video elements are all non-seekable on Django development environment**
 
@@ -62,8 +50,8 @@ Note that Django is **NOT** working when we put the process into background.
 ---
 
 ## Deployment
-1. `deactivate` virtual environment first
-2. We install uWSGI globally with `pip3 install uwsgi`
+1. `activate` virtual environment first
+2. We install uWSGI in virtual environment with `pip3 install uwsgi`
 3. create file `pcj.ini` (uWSGI initial file) in folder `site`
 4. paste below configuration in the file
 ```
@@ -79,17 +67,16 @@ http = 0.0.0.0:8000
 #chmod-socket = 666
 #listen = 512
 ```
-5. execute `sysctl -w net.core.somaxconn=512` to increase system request size (this is a test to fix 502 error when server is on for a long period of time) and add `net.core.somaxconn=512` to file `/etc/sysctl.conf` for permanent change the request size
-6. execute `uwsgi pcj.ini` and browse website to check if it is working or not. (static files will not be served at this point)
-7. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
-8. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uWSGI in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
+5. execute `uwsgi pcj.ini` and browse website to check if it is working or not. (static files will not be served at this point)
+6. if everything is fine, comment line `http = 0.0.0.0:8000` and remove comment from the rest
+7. create service file at `/etc/systemd/system/uwsgi.service` to enable us to use command `service uwsgi restart`. This service file will run uWSGI in emperor mode. (Emperor mode means uWSGI will restart automatically when initial file is modified.). Paste below code into the file.
 ```
 [Unit]
 Description=uWSGI service (in emporer mode) for www.pcjindustries.co.th run by Django
 
 [Service]
 ExecStartPre=/bin/bash -c 'mkdir -p /run/uwsgi; chown root:root /run/uwsgi'
-ExecStart=/usr/local/bin/uwsgi --emperor /home/ekasit/pcj-django/site/pcj.ini
+ExecStart=/home/ekasit/pcj-django/venv/bin/uwsgi --emperor /home/ekasit/pcj-django/site/pcj.ini
 Restart=always
 KillSignal=SIGQUIT
 Type=notify
@@ -99,32 +86,29 @@ NotifyAccess=all
 WantedBy=multi-user.target
 ```
 9. execute `systemctl daemon-reload` to inform system there is change from service files
-10. install NGINX with `yum install nginx`
-11. configure NGINX at `/etc/nginx/nginx.conf` by comment server directive (see below)
-```
-...
-    include /etc/nginx/conf.d/*.conf;
-
-#    server {
-#        listen       80 default_server;
-#        listen       [::]:80 default_server;
-#        ...
-#    }
-...
-```
-12. then add below code instead
+10. install NGINX with `apt install nginx`
+11. configure NGINX at by creating a file `/etc/nginx/sites-available/pcjindustries`
+12. Put below code in `pcjindustries` file. Replace with actual IP address.
 ```
 server {
-    # allow upload file as large up to 10M #
     client_max_body_size 10M;
 
     listen 80;
-    server_name    pcjindustries.co.th www.pcjindustries.co.th server.pcjindustries.co.th;
+    server_name pcjindustries.co.th www.pcjindustries.co.th;
 
-    access_log     /home/ekasit/pcj-django/site/access.log;
-    error_log      /home/ekasit/pcj-django/site/error.log;
+    access_log /home/ekasit/pcj-django/site/access.log;
+    error_log /home/ekasit/pcj-django/site/error.log;
 
-    location = favicon.ico { access_log off; log_not_found off; }
+    location = favicon.ico {
+        access_log off;
+        log_not_found off;
+    }
+
+    location /.well-known/acme-challenge/ {
+        root /home/ekasit/pcj-django;
+        try_files $uri =404;
+    }
+
     location /static/ {
         alias /home/ekasit/pcj-django/static/;
     }
@@ -139,9 +123,9 @@ server {
     }
 }
 ```
+13. execute `ln -s /etc/nginx/sites-available/pcjindustries /etc/nginx/sites-enabled/pcjindustries`
 13. check syntax with `nginx -t`
 14. restart service to apply changes by `service nginx restart && service uwsgi restart`
-15. Don't forget to disable Apache auto boot from WHM by `systemctl disable --now httpd` and login to WHM and browse `WHM → Service Configuration → Service Manager → Apache Web Server (httpd)` and remove tick from both `Enabled` and `Monitor` then save the change.
 15. browse to website to check if it is working
 
 at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
@@ -157,207 +141,96 @@ at this point, we can use `service [nginx, uwsgi] [start, stop, restart]`
 
 ### SSL for https
 We will use **certbot** software to handle **Let’s Encrypt** certificate automatically.
-1. install certbot by executing `yum install certbot python3-certbot-nginx`
-2. then `certbot --nginx` to let certbot configure NGINX automatically
-3. certbot will put check key on `/root/static` by default (called webroot-path). However, we do not let nginx have root access.  So we have to change webroot-path by `certbot certonly --webroot -w /home/ekasit/pcj-django -d www.pcjindustries.co.th,pcjindustries.co.th,server.pcjindustries.co.th` then choose option 2 (renew and replace cert) (use only 1 -d to create just 1 domain for all 3 addresses. There should be only 1 certificate folder which is `www.pcjindustries.co.th`)
-4. we have to force all `non-www` to `www` as well as provide `.well-known` path.  But we will change entire `/etc/nginx/nginx.conf` with below code
+1. install certbot by executing `apt install certbot python3-certbot-nginx`
+2. then execute `certbot certonly --webroot -w /home/ekasit/pcj-django -d pcjindustries.co.th -d www.pcjindustries.co.th`
+
+
+4. we have to force all `non-www` redirect to `www` and `http` redirect to `https`. We change entire `/etc/nginx/sites-available/pcjindustries` with below code
 ```
-user nginx;
-worker_processes auto;
-error_log /var/log/nginx/error.log warn;
-pid /run/nginx.pid;
+# HTTP → HTTPS + www
+server {
+    listen 80;
+    server_name pcjindustries.co.th www.pcjindustries.co.th;
 
-include /usr/share/nginx/modules/*.conf;
+    # Allow Let's Encrypt ACME challenge
+    location /.well-known/acme-challenge/ {
+        root /home/ekasit/pcj-django;
+        try_files $uri =404;
+    }
 
-events {
-    worker_connections 1024;
+    location / {
+        return 301 https://www.pcjindustries.co.th$request_uri;
+    }
 }
 
-http {
 
-################################################################################
-# BASIC
-################################################################################
+# HTTPS non-www → HTTPS www
+server {
+    listen 443 ssl;
+    server_name pcjindustries.co.th;
 
-    include       /etc/nginx/mime.types;
-    default_type  application/octet-stream;
+    ssl_certificate /etc/letsencrypt/live/pcjindustries.co.th/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/pcjindustries.co.th/privkey.pem;
 
-    sendfile on;
-    tcp_nopush on;
-    tcp_nodelay on;
-    keepalive_timeout 65;
+    return 301 https://www.pcjindustries.co.th$request_uri;
+}
 
-################################################################################
-# LOG
-################################################################################
 
-    log_format main '$remote_addr - $remote_user [$time_local] "$request" '
-                    '$status $body_bytes_sent "$http_referer" '
-                    '"$http_user_agent" "$http_x_forwarded_for"';
+# HTTPS www → Django
+server {
+    listen 443 ssl;
+    server_name www.pcjindustries.co.th;
 
-    access_log /var/log/nginx/access.log main;
+    client_max_body_size 10M;
 
-################################################################################
-# GZIP
-################################################################################
+    ssl_certificate /etc/letsencrypt/live/pcjindustries.co.th/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/pcjindustries.co.th/privkey.pem;
 
-    gzip on;
-    gzip_comp_level 5;
-    gzip_min_length 256;
-    gzip_vary on;
+    access_log /home/ekasit/pcj-django/site/access.log;
+    error_log /home/ekasit/pcj-django/site/error.log;
 
-    gzip_types
-        text/plain
-        text/css
-        text/xml
-        application/json
-        application/javascript
-        application/xml
-        application/rss+xml
-        image/svg+xml;
-
-################################################################################
-# HTTP → HTTPS
-################################################################################
-
-    server {
-        listen 80;
-        server_name pcjindustries.co.th *.pcjindustries.co.th;
-
-        location /.well-known/acme-challenge/ {
-            alias /home/ekasit/pcj-django/.well-known/acme-challenge/;
-        }
-
-        return 301 https://www.pcjindustries.co.th$request_uri;
+    location = favicon.ico {
+        access_log off;
+        log_not_found off;
     }
 
-################################################################################
-# NON-WWW → WWW
-################################################################################
-
-    server {
-        listen 443 ssl;
-        server_name pcjindustries.co.th *.pcjindustries.co.th;
-
-        ssl_certificate /etc/letsencrypt/live/www.pcjindustries.co.th/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/www.pcjindustries.co.th/privkey.pem;
-
-        include /etc/letsencrypt/options-ssl-nginx.conf;
-        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-
-        return 301 https://www.pcjindustries.co.th$request_uri;
+    # Allow Let's Encrypt ACME challenge
+    location /.well-known/acme-challenge/ {
+        root /home/ekasit/pcj-django;
+        try_files $uri =404;
     }
 
-################################################################################
-# MAIN WEBSITE
-################################################################################
+    location /static/ {
+        alias /home/ekasit/pcj-django/static/;
+    }
 
-    server {
+    location /media/ {
+        alias /home/ekasit/pcj-django/upload/;
+    }
 
-        listen 443 ssl;
-        http2 on;
-        server_name www.pcjindustries.co.th;
-
-        access_log /home/ekasit/pcj-django/site/access.log;
-        error_log  /home/ekasit/pcj-django/site/error.log;
-
-        client_max_body_size 20M;
-
-        ssl_certificate /etc/letsencrypt/live/www.pcjindustries.co.th/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/www.pcjindustries.co.th/privkey.pem;
-
-        include /etc/letsencrypt/options-ssl-nginx.conf;
-        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-
-################################################################################
-# SECURITY HEADERS
-################################################################################
-
-        add_header X-Frame-Options SAMEORIGIN;
-        add_header X-Content-Type-Options nosniff;
-        add_header X-XSS-Protection "1; mode=block";
-        add_header Referrer-Policy strict-origin-when-cross-origin;
-
-################################################################################
-# DJANGO STATIC
-################################################################################
-
-        location /static/ {
-            alias /home/ekasit/pcj-django/static/;
-            expires 30d;
-            access_log off;
-        }
-
-################################################################################
-# DJANGO MEDIA
-################################################################################
-
-        location /media/ {
-            alias /home/ekasit/pcj-django/upload/;
-            expires 30d;
-        }
-
-################################################################################
-# LETSENCRYPT
-################################################################################
-
-        location /.well-known/ {
-            alias /home/ekasit/pcj-django/.well-known/;
-        }
-
-################################################################################
-# FAVICON
-################################################################################
-
-        location = /favicon.ico {
-            access_log off;
-            log_not_found off;
-        }
-
-################################################################################
-# DJANGO UWSGI
-################################################################################
-
-        location / {
-            include uwsgi_params;
-            uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
-        }
-
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/ekasit/pcj-django/site/pcjdjango.sock;
     }
 }
 ```
 5. restart NGINX with `service nginx restart` and execute `certbot renew --dry-run` to check if renewal succeed or not.
-6. set job to auto-renew certificate by executing `crontab -e`. cronjob file will be opened
-7. then put `0 4 2 * * /usr/bin/certbot renew >> /home/ekasit/pcj-django/site/renew_cert.log 2>&1` on the last line. (it means every month, on 2nd day at 04.00, execute `certbot renew` and log it in that file either output is normal or error)
-
----
-
-### Note about auto-renew SSL
-1. look for
-```
-listen 443 ssl; # managed by Certbot
-        ssl_certificate /etc/letsencrypt/live/pcjindustries.co.th/fullchain.pem; # managed by Certbot
-        ssl_certificate_key /etc/letsencrypt/live/pcjindustries.co.th/privkey.pem; # managed by Certbot
-        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-```
-2. auto renewal of SSL may keep updating on folder `www.pcjindustries.co.th` instead.  Therefore, we have to change from `pcjindustries.co.th` to `www.pcjindustries.co.th`.
+6. `certbot` already have timer to run `renew` by default twice a day. No need to do auto renewal code.
 
 ---
 
 ### Auto restart service
-After long period of deployment time, service alawys crashes for unknown reason.  Therefore, we need to restart service automatically by `crontab`.  Thus set up to restart the service daily.
+After long period of deployment time, service may crash for unknown reason.  Therefore, we need to restart service automatically by `crontab`.  Thus set up to restart the service daily.
 1. set job to auto restart service by executing `crontab -e`. cronjob file will be opened
-2. add `0 4 * * * /home/ekasit/pcj-django/source/daily_restart.sh >> /home/ekasit/pcj-django/site/daily_restart.log 2>&1` on the last line
-3. save the file
-4. change permission of file `/home/ekasit/pcj-django/source/daily_restart.sh` to 744 (executable by owner)
+2. add `0 4 * * * (service nginx restart && service uwsgi restart) >> /home/ekasit/pcj-django/site/daily_restart.log 2>&1` on the last line
+3. save the file (Ctrl+x then Ctrl+o)
 
 ---
 
 ### Before signing off & Every later update
 1. Do not forget to change `DEBUG=False` in `/home/ekasit/pcj-django/source/pcj/settings.py`
-2. execute `django-admin compilemessages` (under virtual environment) to update text file
-3. execute `python3 manage.py collectstatic` (under virtual environment) to collect all updated static files
+2. execute `(cd /home/ekasit/pcj-django/source && /home/ekasit/pcj-django/venv/bin/django-admin compilemessages)` to update text file (May need to install `apt update && apt install gettext` if `GNU gettext tools` is not installed)
+3. execute `(cd /home/ekasit/pcj-django/source && /home/ekasit/pcj-django/venv/bin/python manage.py collectstatic)` to collect all updated static files
 4. and restart both services with `service nginx restart && service uwsgi restart`
 
 ### To use new SSL certificate on WHM
