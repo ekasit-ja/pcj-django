@@ -33,7 +33,7 @@ def default_context(request):
             ('th', '/th' + request.get_full_path()[3:], 'images/flag_th.png'),
         ],
         'navbar_dropdown_items': [
-            ('frd-&-non-frd', reverse('product:product-frd'), 'images/fire_doors.jpg'),
+            ('frd-&-non-frd', reverse('product:product-frd'), 'images/fire_doors_02.jpg'),
             ('fdc', reverse('product:product-fdc'), 'images/fire_dampers.jpg'),
             # ('fsd-ul', reverse('product:product-fsd-ul'), 'images/fsd_ul.jpg'),
             ('ddp', reverse('product:product-ddp'), 'images/duct_dampers.jpg'),
